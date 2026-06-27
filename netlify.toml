@@ -1,0 +1,11 @@
+# Netlify configuration for armenianeventsla.com
+#
+# Static site: publish the repo root as-is (no build step).
+[build]
+  publish = "."
+
+# Protect limited deploy credits: skip the production deploy UNLESS the actual
+# site files changed. Commits that only touch docs/, site-history/, or
+# deploy-previews/ will NOT trigger a build/deploy.
+# (Netlify runs this "ignore" command; exit 0 = skip build, non-zero = build.)
+  ignore = "git diff --quiet HEAD^ HEAD -- index.html images/"
