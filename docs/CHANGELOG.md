@@ -20,6 +20,31 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 
 ---
 
+## 2026-06-27 (later) — GitHub migration complete, reconciliation & first git deploy
+
+- **Migrated the whole operation to GitHub** (`github.com/armenianeventsla/calendar`, branch `main`)
+  with a clean structure: `index.html`, `images/`, `docs/`, `deploy-previews/`, `site-history/`,
+  `README.md`, and `CLAUDE.md` (permanent deploy guardrails).
+- **Found and fixed a two-copy drift:** the live/canonical site was the `E:\Calendar` copy (28 events,
+  with the World Cup series, Arevahike walk, real ticket links, SOLD OUT badge, nav logo); the
+  separate `C:` copy (26 events) had the 3 newest events but an older base. **Reconciled** production
+  `index.html` = E: (28) + 3 new events = **31 events**, using the real Hye Notes flyer.
+- **Archived everything as a rolodex** in `site-history/` (versions v1–v5, oldest→newest) plus the raw
+  Instagram flyer downloads in `site-history/source-flyers/`. Nothing preferred, nothing deleted.
+- **Connected Netlify to GitHub**: `amazing-cranachan-4cc940` now *deploys from GitHub `main`* (was
+  Netlify Drop). Publish dir = repo root, no build command.
+- **Deployed and verified** the 31-event site live at armenianeventsla.com (all posters return HTTP 200;
+  new events + World Cup series + SOLD OUT all present).
+- **New deploy-preview structure**: `deploy-previews/<YYYY>/<MM-Month>/<date>_<NNN>_<label>.html`.
+  First: `deploy-previews/2026/06-June/2026-06-27_001_updated-calendar-3-new-events.html`.
+- **Added handoff docs** for a senior developer / Claude Code: `docs/DEVELOPER-HANDOFF.md` and
+  `docs/INSTAGRAM-INGESTION.md` (Instagram Graph API vs. likes/browser, and the iPhone Remote-Control workflow).
+- Connected the **Netlify MCP connector**. (A GitHub MCP isn't in Claude's registry; GitHub edits use the web/API.)
+
+> Reminder going forward: the **GitHub repo is the single source of truth.** Local drive copies are scratch.
+
+---
+
 ## 2026-06-27 — New events + GitHub migration
 
 **Events added** (to both the Google Calendar and `index.html`):
