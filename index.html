@@ -48,6 +48,10 @@
   .meta{color:var(--muted);font-size:.85rem;display:flex;flex-direction:column;gap:3px}
   .meta .l{display:flex;gap:7px;align-items:flex-start}
   .desc{color:#c6ccd6;font-size:.88rem}
+  .ctop{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
+  .cattag{display:inline-block;color:#fff;font-size:.64rem;font-weight:800;letter-spacing:.6px;text-transform:uppercase;padding:5px 11px;border-radius:999px}
+  .cdate{font-size:.82rem;font-weight:800;color:var(--apricot);white-space:nowrap}
+  .rangebadge{display:inline-block;background:var(--violet);color:#fff;font-size:.6rem;font-weight:800;letter-spacing:.3px;text-transform:uppercase;padding:2px 8px;border-radius:999px;vertical-align:middle;white-space:nowrap}
   .acts{display:flex;gap:8px;margin-top:auto;padding-top:8px}
   .mini{flex:1;text-align:center;font-weight:700;font-size:.82rem;padding:10px;border-radius:10px;transition:.15s}
   .mini-cal{background:var(--apricot);color:#1a1205}
@@ -87,6 +91,10 @@
   .ldate .dow{font-size:.62rem;color:var(--muted);text-transform:uppercase;display:block}
   .ldate .d{font-size:1.3rem;font-weight:900;line-height:1;display:block}
   .ldate .m{font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:.5px;color:var(--red);display:block}
+  .ldate.multi{flex:0 0 56px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0}
+  .ldate.multi .d{font-size:1.05rem;line-height:1.12}
+  .ldate.multi .arr{font-size:.6rem;line-height:.9;color:var(--muted);margin:1px 0}
+  .ldate.multi .mdtag{font-size:.5rem;font-weight:800;letter-spacing:.4px;text-transform:uppercase;color:var(--muted);margin-top:3px}
   .lmain{flex:1;min-width:0}
   .lmain h3{font-size:1.05rem;font-weight:800;margin-bottom:2px}
   .lmain .lm{color:var(--muted);font-size:.84rem}
@@ -120,9 +128,34 @@
   .scrollnav button:hover{background:var(--apricot);color:#1a1205;border-color:var(--apricot)}
   @media(max-width:560px){.scrollnav{right:10px}.scrollnav button{width:38px;height:38px}}
   .freenote{margin-top:22px;background:rgba(22,163,74,.12);border:1px solid rgba(22,163,74,.5);color:#d7f5e3;border-radius:12px;padding:14px 18px;font-size:.95rem;text-align:center}
+  .topbar{position:fixed;top:0;left:0;right:0;z-index:45;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 16px;background:rgba(14,16,20,.85);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .topbar .brand{display:flex;align-items:center;gap:10px;cursor:pointer;background:none;border:none;color:var(--ink);padding:0;font-family:inherit}
+  .topbar .brand img{width:38px;height:38px;border-radius:50%;display:block;object-fit:cover}
+  .topbar .brand b{font-weight:800;font-size:.98rem;letter-spacing:.2px}
+  .hamb{display:flex;flex-direction:column;justify-content:center;gap:5px;width:46px;height:40px;background:transparent;border:1px solid var(--line);border-radius:10px;cursor:pointer;transition:.15s}
+  .hamb:hover{border-color:var(--apricot)}
+  .hamb span{display:block;width:20px;height:2px;margin:0 auto;background:var(--ink);border-radius:2px}
+  .navmenu{position:fixed;top:56px;right:12px;z-index:46;min-width:190px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:8px;display:none;flex-direction:column;box-shadow:0 18px 44px rgba(0,0,0,.55)}
+  .navmenu.open{display:flex}
+  .navmenu a{padding:11px 14px;border-radius:10px;font-weight:600;font-size:.92rem;color:var(--ink)}
+  .navmenu a:hover{background:var(--bg2);color:var(--apricot)}
+  body{padding-top:55px}
+  #week,#events,#partner,#contact{scroll-margin-top:66px}
+  @media(max-width:560px){.topbar .brand b{font-size:.84rem}.topbar .brand img{width:34px;height:34px}}
 </style>
 </head>
 <body>
+<div class="topbar">
+  <button class="brand" onclick="goTop()" aria-label="Home - back to top"><img src="images/logo.png" alt="Armenian Events LA" onerror="this.style.display='none'"><b>Armenian Events LA</b></button>
+  <button class="hamb" id="hambBtn" aria-label="Open menu" aria-expanded="false" aria-controls="navmenu" onclick="toggleNav(this)"><span></span><span></span><span></span></button>
+</div>
+<nav class="navmenu" id="navmenu" aria-label="Site navigation">
+  <a href="#" onclick="navGo(event,'top')">Home</a>
+  <a href="#week" onclick="navGo(event,'week')">This Week</a>
+  <a href="#events" onclick="navGo(event,'events')">Events</a>
+  <a href="#partner" onclick="navGo(event,'partner')">Partner</a>
+  <a href="#contact" onclick="navGo(event,'contact')">Contact</a>
+</nav>
 <img class="banner-img" src="images/banner.png" alt="Armenian Calendar in Los Angeles - new events added weekly">
 <header class="hero">
   <span class="badge-top">New events added weekly - In Los Angeles</span>
@@ -163,7 +196,7 @@
     <div style="margin-top:24px"><a class="btn btn-primary" href="https://forms.gle/Uqok2yWX7R9vaKXk8" target="_blank" rel="noopener">Let's talk - start the form</a></div>
   </div>
 </section>
-<footer>
+<footer id="contact">
   <div class="flinks">
     <a href="mailto:armenianeventsla@gmail.com" aria-label="Email" title="Email"><svg viewBox="0 0 24 24"><path d="M3 5h18a1 1 0 011 1v12a1 1 0 01-1 1H3a1 1 0 01-1-1V6a1 1 0 011-1zm1.2 1.2L12 11l7.8-4.8H4.2zM20 8.1l-8 4.9-8-4.9V17h16V8.1z"/></svg></a>
     <a href="https://www.instagram.com/armenianeventsla/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.43.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.43.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.43-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.43-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zm0 2.7A7.14 7.14 0 1019.14 12 7.14 7.14 0 0012 4.86zm0 11.78A4.64 4.64 0 1116.64 12 4.64 4.64 0 0112 16.64zm7.43-12.1a1.67 1.67 0 11-1.67-1.66 1.67 1.67 0 011.67 1.66z"/></svg></a>
@@ -213,7 +246,7 @@ const EVENTS = [
     art:{bg:"linear-gradient(160deg,#b8541f,#e08a3c)",fg:"#ffffff",t:"CASCAD<br>COLLECTIVE<br>#25",ts:"1.5rem",s:"Thu &middot; June 25 &middot; 5:30PM",serif:false}
   },
   {
-    title:"World Cup Watch Party - Homenetmen Burbank Sipan",
+    title:"World Cup Watch Party — Brazil vs Morocco",
     date:"2026-06-13", start:"15:00", end:"18:00", endDate:"",
     location:"Homenetmen Burbank 'Sipan' Chapter, 75 E Santa Anita Ave, Burbank, CA 91502",
     category:"Sports", free:true,
@@ -221,6 +254,46 @@ const EVENTS = [
     link:"https://www.instagram.com/p/DYX48FOyV0X", linkLabel:"Instagram",
     poster:"images/worldcup.jpg",
     art:{bg:"linear-gradient(160deg,#b91c1c,#1d4ed8)",fg:"#ffffff",t:"WORLD CUP<br>VIEWING",ts:"1.5rem",s:"Sat &middot; Jun 13 &middot; Free",serif:false}
+  },
+  {
+    title:"World Cup Watch Party — Germany vs Ivory Coast",
+    date:"2026-06-20", start:"13:00", end:"16:00", endDate:"",
+    location:"Homenetmen Burbank 'Sipan' Chapter, 75 E Santa Anita Ave, Burbank, CA 91502",
+    category:"Sports", free:true,
+    description:`⚽️ World Cup Viewing — Every Saturday Featured Match, with Homenetmen Burbank "Sipan" Chapter Youth Division.<br><br>🏆 Germany vs Ivory Coast<br>📅 Saturday, June 20, 2026<br>⏰ 1:00 PM<br>📍 75 E Santa Anita Ave, Burbank, CA 91502<br><br>~ FREE ENTRY ~ Pull up, rep your team, and be part of something bigger ❤️💙🧡`,
+    link:"https://www.instagram.com/p/DYX48FOyV0X", linkLabel:"Instagram",
+    poster:"images/worldcup.jpg",
+    art:{bg:"linear-gradient(160deg,#b91c1c,#1d4ed8)",fg:"#ffffff",t:"WORLD CUP<br>VIEWING",ts:"1.5rem",s:"Sat &middot; Jun 20 &middot; Free",serif:false}
+  },
+  {
+    title:"World Cup Watch Party — Colombia vs Portugal",
+    date:"2026-06-27", start:"16:30", end:"19:30", endDate:"",
+    location:"Homenetmen Burbank 'Sipan' Chapter, 75 E Santa Anita Ave, Burbank, CA 91502",
+    category:"Sports", free:true,
+    description:`⚽️ World Cup Viewing — Every Saturday Featured Match, with Homenetmen Burbank "Sipan" Chapter Youth Division.<br><br>🏆 Colombia vs Portugal<br>📅 Saturday, June 27, 2026<br>⏰ 4:30 PM<br>📍 75 E Santa Anita Ave, Burbank, CA 91502<br><br>~ FREE ENTRY ~ Pull up, rep your team, and be part of something bigger ❤️💙🧡`,
+    link:"https://www.instagram.com/p/DYX48FOyV0X", linkLabel:"Instagram",
+    poster:"images/worldcup.jpg",
+    art:{bg:"linear-gradient(160deg,#b91c1c,#1d4ed8)",fg:"#ffffff",t:"WORLD CUP<br>VIEWING",ts:"1.5rem",s:"Sat &middot; Jun 27 &middot; Free",serif:false}
+  },
+  {
+    title:"World Cup Watch Party — Quarterfinals",
+    date:"2026-07-11", start:"14:00", end:"20:00", endDate:"",
+    location:"Homenetmen Burbank 'Sipan' Chapter, 75 E Santa Anita Ave, Burbank, CA 91502",
+    category:"Sports", free:true,
+    description:`⚽️ World Cup Viewing — Every Saturday Featured Match, with Homenetmen Burbank "Sipan" Chapter Youth Division.<br><br>🏆 Quarterfinals — two matches<br>📅 Saturday, July 11, 2026<br>⏰ 2:00 PM &amp; 6:00 PM<br>📍 75 E Santa Anita Ave, Burbank, CA 91502<br><br>~ FREE ENTRY ~ Pull up, rep your team, and be part of something bigger ❤️💙🧡`,
+    link:"https://www.instagram.com/p/DYX48FOyV0X", linkLabel:"Instagram",
+    poster:"images/worldcup.jpg",
+    art:{bg:"linear-gradient(160deg,#b91c1c,#1d4ed8)",fg:"#ffffff",t:"WORLD CUP<br>VIEWING",ts:"1.5rem",s:"Sat &middot; Jul 11 &middot; QF",serif:false}
+  },
+  {
+    title:"World Cup Watch Party — Bronze Final",
+    date:"2026-07-18", start:"14:00", end:"17:00", endDate:"",
+    location:"Homenetmen Burbank 'Sipan' Chapter, 75 E Santa Anita Ave, Burbank, CA 91502",
+    category:"Sports", free:true,
+    description:`⚽️ World Cup Viewing — Every Saturday Featured Match, with Homenetmen Burbank "Sipan" Chapter Youth Division.<br><br>🏆 Bronze Final<br>📅 Saturday, July 18, 2026<br>⏰ 2:00 PM<br>📍 75 E Santa Anita Ave, Burbank, CA 91502<br><br>~ FREE ENTRY ~ Pull up, rep your team, and be part of something bigger ❤️💙🧡`,
+    link:"https://www.instagram.com/p/DYX48FOyV0X", linkLabel:"Instagram",
+    poster:"images/worldcup.jpg",
+    art:{bg:"linear-gradient(160deg,#b91c1c,#1d4ed8)",fg:"#ffffff",t:"WORLD CUP<br>VIEWING",ts:"1.5rem",s:"Sat &middot; Jul 18 &middot; Free",serif:false}
   },
   {
     title:"RTUN After Dark",
@@ -255,10 +328,10 @@ const EVENTS = [
   {
     title:"Past, Present, Future: Sonic Memory - Armenian Groove",
     date:"2026-06-23", start:"19:00", end:"23:00", endDate:"",
-    location:"Zizou, Los Angeles, CA",
+    location:"Zizou, Silver Lake, Los Angeles, CA",
     category:"Music",
     description:`&#119816;&#119833;&#119820;&#119811;&#119813;&#119816;&#119808;&#119813; &#119814;&#119831;&#119822;&#119822;&#119831;&#119813;: For our next Past, Present, Future @zizou_losangeles we're teaming up with our friend Darone Sassounian at @rockyhillrecords to present a special selection of Armenian grooves! Dubbed "Sonic Memory" the listening session will explore Armenian diasporic music going deeper beyond the works featured on Sassounian's acclaimed compilation "Silk Road: Journey of the Armenian Diaspora (1971 - 1982)"<br><br>As usual, each event features dedicated listening of 8 albums from a beloved genre with a DJ set following&hellip;<br><br>Avo Sarkissian &ndash; From Montreal With Love<br>Ara Kekedjian - Bourj Hammoud Groove<br>Avo Haroutiounian &ndash; Sunrise<br>Jozeph - Siroun Aghtcik<br>Hamlet Minassian &ndash; Armenian Pop Music<br>Marten Yorgantz &ndash; Yorgantz 1979<br>Konstantin Petrosyan (featuring Tatevik Hovhannisyan) - Concerto For Voice And Orchestra<br>Ferkat Al Ard - Oghneya<br><br>Tickets are available now ~ link in bio ~`,
-    link:"https://linktr.ee/insheepsclothinghifi", linkLabel:"Tickets",
+    link:"https://dice.fm/partner/tickets/event/q2vk8a-past-present-future-armenian-grooves-23rd-jun-zizou-los-angeles-tickets", linkLabel:"Tickets",
     poster:"images/past-present-future.jpg",
     art:{bg:"linear-gradient(160deg,#831843,#4c1d95)",fg:"#ffffff",t:"SONIC<br>MEMORY",ts:"1.7rem",s:"Tue &middot; Jun 23 &middot; 7PM",serif:true}
   },
@@ -268,7 +341,7 @@ const EVENTS = [
     location:"Cal State LA, Los Angeles, CA",
     category:"Sports",
     description:`19 days.<br><br>19 days until Armenia takes the court in Los Angeles &#127462;&#127474;&#127936;<br><br>Join us for an unforgettable night of basketball as Armenia faces Ireland at Cal State LA.<br><br>&#128205; Cal State LA<br>&#128197; June 27, 2026<br>&#9200; 5:00 PM<br><br>Get your tickets now:<br>tickets.armeniabasketball.com`,
-    link:"https://www.instagram.com/p/DZVgCdvPt54", linkLabel:"Tickets",
+    link:"https://tickets.armeniabasketball.com/", linkLabel:"Tickets",
     poster:"images/armenia-ireland.jpg",
     art:{bg:"linear-gradient(160deg,#1e3a8a,#b45309)",fg:"#ffffff",t:"ARMENIA<br>vs IRELAND",ts:"1.5rem",s:"Sat &middot; Jun 27 &middot; 5PM",serif:false}
   },
@@ -278,7 +351,7 @@ const EVENTS = [
     location:"Los Angeles area",
     category:"Community",
     description:`Join us on Thursday, July 2 as we kick off the 49th Homenetmen Navasartian Games & Festival with an unforgettable evening of music, dance, talent, and celebration.<br><br>&#127908; Tata | Suro | Armen & Hagop<br>&#129489;&#127995;&zwj;&#129464; Armenian Dance Show Ballet<br>&#11088; Talent Show<br><br>Bring your family, friends, and community spirit as we celebrate the start of the biggest Armenian event of the summer. See you there!<br><br>&#127915;&#65039; Secure your tickets today at navasartiangames.com`,
-    link:"https://www.instagram.com/p/DZVqO0rSqGN", linkLabel:"Instagram",
+    link:"https://navasartiangames.com", linkLabel:"Tickets",
     poster:"images/navasartian.jpg",
     art:{bg:"linear-gradient(160deg,#0d2b6b,#143b8f)",fg:"#ffffff",t:"NAVASARTIAN<br>GAMES",ts:"1.5rem",s:"July 2 - 5",serif:false}
   },
@@ -328,7 +401,7 @@ const EVENTS = [
     location:"Vibiana, Los Angeles, CA",
     category:"Community",
     description:`TUMO is hosting its first-ever gala ✨<br><br>On September 20, 2026, we're bringing the TUMO community together at the historic Vibiana in Los Angeles to mark 15 years of impact and support the next phase of our growth across Armenia.<br><br>We'll be honoring Vahe Kuzoyan, Rev Lebaredian, and Ara Mahdessian, three visionary leaders at the forefront of global technology, innovation and Armenian excellence.<br><br>Join us for an evening of immersive storytelling, special performances, and a bold look at TUMO's next chapter.<br><br>100% of proceeds will support TUMO's expansion across Armenia.<br><br>Sponsorship opportunities are now available. Visit the link in bio to learn more.`,
-    link:"https://www.instagram.com/p/DYpjVVQjazb", linkLabel:"Details",
+    link:"https://aesbid.co/ELP/TUMO", linkLabel:"Tickets",
     poster:"images/tumo-gala.jpg",
     art:{bg:"linear-gradient(160deg,#0f172a,#334155)",fg:"#fff",t:"TUMO<br>GALA",ts:"1.9rem",s:"Sun &middot; Sep 20 &middot; Vibiana",serif:true}
   },
@@ -346,7 +419,7 @@ const EVENTS = [
     title:"Navasartian Victory Ball",
     date:"2026-06-28", start:"", end:"", endDate:"",
     location:"Taglyan Complex, Los Angeles, CA",
-    category:"Community",
+    category:"Community", discount:"SOLD OUT",
     description:`Celebrate the 49th Navasartian Games & Festival with us at the annual Victory Ball ✨🥂<br>Join us for a night of music, dancing, celebration, and unforgettable memories 🇦🇲<br><br>📅 June 28, 2026<br>📍 Taglyan Complex | Los Angeles, CA<br>📞 For tickets call: (323) 344-4300`,
     link:"https://www.instagram.com/p/DYAVinkgCH1", linkLabel:"Instagram",
     poster:"images/victory-ball.jpg",
@@ -358,7 +431,7 @@ const EVENTS = [
     location:"Eye For Sound at Kavat Coffee, Los Angeles, CA",
     category:"Cultural", free:true,
     description:`Check out my upcoming exhibit titled "Collective Noise" at @eyeforsound @kavatcoffee from June 12th thru July 31st. Art will be available to view and purchase. Stop by and grab yourself a cup of coffee and hang out. ❤️`,
-    link:"https://www.instagram.com/p/DZG5U97hZnP", linkLabel:"Instagram",
+    link:"https://www.eyeforsound.com/exhibitions/krikor-tchay-collective-noise", linkLabel:"Details",
     poster:"images/collective-noise.jpg",
     art:{bg:"linear-gradient(160deg,#312e81,#6d28d9)",fg:"#fff",t:"COLLECTIVE<br>NOISE",ts:"1.6rem",s:"Jun 12 - Jul 31",serif:false}
   },
@@ -373,14 +446,44 @@ const EVENTS = [
     art:{bg:"linear-gradient(160deg,#be185d,#7c3aed 55%,#2563eb)",fg:"#fff",t:"AMOT CHE<br>PRIDE",ts:"1.7rem",s:"Sat &middot; Jun 13 &middot; 5-9PM",serif:false}
   },
   {
+    title:"Arevahike Community 10K Walk",
+    date:"2026-06-14", start:"18:30", end:"21:30", endDate:"",
+    location:"Verdugo Park, 1621 Canada Blvd, Glendale, CA 91208",
+    category:"Community", free:true,
+    description:`Due to the summer heat, we'll be taking a short break from our hikes. ☀️<br><br>But that doesn't mean we're slowing down! Join us for a fun evening walk to stay active, connect with friends, and enjoy the outdoors together. 🥰<br><br>DM us if you'd like to join!<br><br>📅 Sunday, June 14 &middot; 6:30 – 9:30 PM<br>📍 Verdugo Park, 1621 Canada Blvd, Glendale, CA 91208<br>All Armenians are welcome!`,
+    link:"https://www.instagram.com/p/DZf1QvSvAc6", linkLabel:"Instagram",
+    poster:"images/arevahike-walk.jpg",
+    art:{bg:"linear-gradient(160deg,#1b5e20,#2e7d32 55%,#7cb342)",fg:"#ffffff",t:"COMMUNITY<br>10K WALK",ts:"1.6rem",s:"Sun &middot; Jun 14 &middot; 6:30PM",serif:false}
+  },
+  {
     title:"Armenians in Television — Panel",
     date:"2026-06-28", start:"19:30", end:"", endDate:"",
     location:"LOOK Dine-In Cinemas, Glendale, CA",
     category:"Cultural",
     description:`Speaker Spotlight: Edgar Damatian<br><br>Armenian Film Society presents Armenians in Television, a special panel featuring Armenian actors who have appeared in some of this year's biggest series, including EUPHORIA, LINCOLN LAWYER, and THE PITT. The evening will explore their journeys, experiences navigating the industry, and the growing presence of Armenian talent on television today.<br><br>📅 Sunday, June 28<br>⏰ 7:30pm<br>📍 LOOK Cinemas<br><br>Speakers<br>🎤 Sofia Hasmik (@sofiahasmik)<br>🎤 Jack Topalian (@jacktopalian)<br>🎤 Michael Goorjian (@michaelgoorjian)<br>🎤 Edgar Damatian (@dimpledamat)<br>🎙️ Moderated by Ellina Abovian (@ellina_abovian)<br><br>Link in bio for tickets.`,
-    link:"https://www.instagram.com/p/DZxee4uOmHt", linkLabel:"Instagram",
+    link:"https://armeniansintelevision.eventbrite.com/", linkLabel:"Tickets",
     poster:"images/armenians-in-television.jpg",
     art:{bg:"linear-gradient(160deg,#111827,#4c1d95 60%,#b91c1c)",fg:"#ffffff",t:"ARMENIANS<br>IN<br>TELEVISION",ts:"1.45rem",s:"Sun &middot; Jun 28 &middot; 7:30PM",serif:false}
+  },
+  {
+    title:"APS Annual Beach Day",
+    date:"2026-07-11", start:"11:00", end:"", endDate:"",
+    location:"Point Dume, Malibu, CA",
+    category:"Social", free:true,
+    description:`Hosted by Armenian Professional Society<br><br>Join us at Point Dume in Malibu for the APS Annual Beach Day! Feel free to bring whatever your heart desires — we will have soft drinks and snacks. Exact location will be shared day of.<br><br>This is a free event! However, if you'd like to support our programming of providing scholarships to Armenian students, you can always do so by Zelle: hello@armenianprofessionalsociety.org.<br><br>Thank you for your support — see you in Malibu!<br><br>📅 Saturday, July 11, 2026<br>⏰ 11:00 AM<br>📍 Point Dume, Malibu, CA (exact location shared day-of)`,
+    link:"https://partiful.com/e/9drU0ZMCwbn0ny89r5ct", linkLabel:"RSVP",
+    poster:"images/aps-beach-day.jpg",
+    art:{bg:"linear-gradient(160deg,#0369a1,#0ea5e9 55%,#fcd34d)",fg:"#ffffff",t:"APS<br>BEACH DAY",ts:"1.7rem",s:"Sat &middot; Jul 11 &middot; 11AM",serif:false}
+  },
+  {
+    title:"GENÄTZ Vol. III",
+    date:"2026-07-25", start:"", end:"", endDate:"",
+    location:"Glendale, CA",
+    category:"Social", free:true,
+    description:`Everybody's going to the party… July 25th 🥂<br><br>GENÄTZ Vol. III — Saturday, July 25 &middot; Glendale, CA &middot; Lineup TBA &middot; Evening–Late &middot; Tickets at Posh.com.<br><br>Hosted by @genatz.la.`,
+    link:"https://posh.vip/e/gentz-vol-iii", linkLabel:"Tickets",
+    poster:"images/genatz-vol-3.jpg",
+    art:{bg:"linear-gradient(160deg,#2a0a0a,#7f1d1d 55%,#dc2626)",fg:"#fee2e2",t:"GENÄTZ<br>VOL. III",ts:"1.8rem",s:"Sat &middot; Jul 25 &middot; Glendale",serif:false}
   },
   {
     title:"Echoes of Our Ancestors II — Heroes & Saints",
@@ -391,26 +494,6 @@ const EVENTS = [
     link:"https://www.instagram.com/p/DZ7otzAm_v9", linkLabel:"Instagram",
     poster:"images/echoes-of-our-ancestors-2.jpg",
     art:{bg:"linear-gradient(160deg,#1a0b2e,#6d28d9 55%,#db2777)",fg:"#f3e8ff",t:"ECHOES OF OUR<br>ANCESTORS II",ts:"1.4rem",s:"Thu &middot; Sep 3 &middot; Greek Theatre",serif:false}
-  },
-  {
-    title:"GENÄTZ Vol. III",
-    date:"2026-07-25", start:"", end:"", endDate:"",
-    location:"Glendale, CA",
-    category:"Social",
-    description:`Everybody's going to the party… July 25th 🥂<br><br>GENÄTZ Vol. III — Saturday, July 25 &middot; Glendale, CA &middot; Lineup TBA &middot; Evening–Late &middot; Tickets at Posh.com.<br><br>Hosted by @genatz.la.`,
-    link:"https://www.instagram.com/p/DZ5x2YSygp3", linkLabel:"Instagram",
-    poster:"images/genatz-vol-3.jpg",
-    art:{bg:"linear-gradient(160deg,#2a0a0a,#7f1d1d 55%,#dc2626)",fg:"#fee2e2",t:"GENÄTZ<br>VOL. III",ts:"1.8rem",s:"Sat &middot; Jul 25 &middot; Glendale",serif:false}
-  },
-  {
-    title:"APS Annual Beach Day",
-    date:"2026-07-11", start:"11:00", end:"15:00", endDate:"",
-    location:"Point Dume, Malibu, CA",
-    category:"Social", free:true,
-    description:`Hosted by Armenian Professional Society<br><br>Join us at Point Dume in Malibu for the APS Annual Beach Day! Feel free to bring whatever your heart desires — we will have soft drinks and snacks. Exact location will be shared day of.<br><br>This is a free event! However, if you'd like to support our programming of providing scholarships to Armenian students, you can always do so by Zelle: hello@armenianprofessionalsociety.org.<br><br>Thank you for your support — see you in Malibu!<br><br>📅 Saturday, July 11, 2026<br>⏰ 11:00 AM<br>📍 Point Dume, Malibu, CA (exact location shared day-of)<br>🎟️ Free`,
-    link:"https://partiful.com/e/9drU0ZMCwbn0ny89r5ct", linkLabel:"RSVP",
-    poster:"images/aps-beach-day.jpg",
-    art:{bg:"linear-gradient(160deg,#0c4a6e,#0891b2 55%,#fcd34d)",fg:"#ecfeff",t:"APS<br>BEACH DAY",ts:"1.7rem",s:"Sat &middot; Jul 11 &middot; Malibu",serif:false}
   },
   {
     title:"Ejanish Summer Series — Moving the Needle With Embroidery",
@@ -467,23 +550,23 @@ function posterHTML(e){
   var fam=a.serif?'Georgia,"Times New Roman",serif':'inherit';
   var art='<div class="art" style="background:'+a.bg+';color:'+a.fg+';font-family:'+fam+'"><div class="t" style="font-size:'+a.ts+'">'+a.t+'</div>'+(a.s?'<div class="s">'+a.s+'</div>':'')+'</div>';
   var img=e.poster?'<img src="'+e.poster+'" alt="'+e.title+' poster" loading="lazy" onerror="this.style.display=\'none\'">':'';
-  var dt=pd(e.date);
-  var chip=dt?'<div class="datechip"><span class="d">'+dt.getDate()+'</span><span class="m">'+MON[dt.getMonth()]+'</span></div>':'';
-  return '<div class="poster">'+art+img+'<span class="cat" style="background:'+(CAT_COLORS[e.category]||CAT_COLORS.Other)+'">'+(e.category||"Event")+'</span>'+chip+'</div>';
+  return '<div class="poster">'+art+img+'</div>';
 }
+function rangeBadge(e){if(!e.endDate||!e.date||e.endDate===e.date)return"";var s=pd(e.date),en=pd(e.endDate);if(!s||!en)return"";return ' <span class="rangebadge">'+MON[s.getMonth()]+' '+s.getDate()+' &ndash; '+MON[en.getMonth()]+' '+en.getDate()+'</span>';}
 function cardHTML(e){
   var dt=pd(e.date);
-  var dl=dt?DAYF[dt.getDay()]+", "+MONF[dt.getMonth()]+" "+dt.getDate()+(e.endDate?" - "+MONF[pd(e.endDate).getMonth()]+" "+pd(e.endDate).getDate():""):"Date TBD";
+  var dl=dt?DAYF[dt.getDay()].slice(0,3)+", "+MON[dt.getMonth()]+" "+dt.getDate()+(e.endDate?" - "+MON[pd(e.endDate).getMonth()]+" "+pd(e.endDate).getDate():""):"Date TBD";
   var t=tr(e);
   var d=document.createElement("div");d.className="card";d.dataset.idx=EVENTS.indexOf(e);
   var linkBtn=e.link?'<a class="mini mini-ig" target="_blank" rel="noopener" href="'+e.link+'">'+(e.linkLabel||"Details")+'</a>':'';
-  d.innerHTML=posterHTML(e)+'<div class="cbody"><div class="meta"><div class="l">'+dl+'</div>'+(t?'<div class="l">'+t+'</div>':'')+'<div class="l">'+(e.location||"Location TBD")+'</div></div><h3>'+e.title+(e.free?' <span class="freebadge">FREE</span>':'')+(e.discount?' <span class="discbadge">'+e.discount+'</span>':'')+'</h3><div class="desc">'+(e.description||"")+'</div><div class="acts"><a class="mini mini-cal" target="_blank" rel="noopener" href="'+gcal(e)+'">+ Calendar</a>'+linkBtn+'</div></div>';
+  d.innerHTML=posterHTML(e)+'<div class="cbody"><div class="ctop"><span class="cattag" style="background:'+(CAT_COLORS[e.category]||CAT_COLORS.Other)+'">'+(e.category||"Event")+'</span><span class="cdate">'+dl+'</span></div><div class="meta">'+(t?'<div class="l">'+t+'</div>':'')+'<div class="l">'+(e.location||"Location TBD")+'</div></div><h3>'+e.title+(e.free?' <span class="freebadge">FREE</span>':'')+(e.discount?' <span class="discbadge">'+e.discount+'</span>':'')+'</h3><div class="desc">'+(e.description||"")+'</div><div class="acts"><a class="mini mini-cal" target="_blank" rel="noopener" href="'+gcal(e)+'">+ Calendar</a>'+linkBtn+'</div></div>';
   return d;
 }
 function listItemHTML(e){
   var dt=pd(e.date);
   var d=document.createElement("div");d.className="litem";d.dataset.idx=EVENTS.indexOf(e);
-  var dchip=dt?'<div class="ldate"><span class="dow">'+DAYF[dt.getDay()].slice(0,3)+'</span><span class="d">'+dt.getDate()+'</span><span class="m">'+MON[dt.getMonth()]+'</span></div>':'<div class="ldate"><span class="m">TBD</span></div>';
+  var _en=(e.endDate&&e.endDate!==e.date)?pd(e.endDate):null;
+  var dchip=dt?(_en?'<div class="ldate multi"><span class="d">'+dt.getDate()+'</span><span class="m">'+MON[dt.getMonth()]+'</span><span class="arr">&darr;</span><span class="d">'+_en.getDate()+'</span><span class="m">'+MON[_en.getMonth()]+'</span><span class="mdtag">Multi-day</span></div>':'<div class="ldate"><span class="dow">'+DAYF[dt.getDay()].slice(0,3)+'</span><span class="d">'+dt.getDate()+'</span><span class="m">'+MON[dt.getMonth()]+'</span></div>'):'<div class="ldate"><span class="m">TBD</span></div>';
   var thumb=e.poster?'<div class="lthumb"><img src="'+e.poster+'" alt="" loading="lazy" onerror="this.parentNode.style.display=\'none\'"></div>':'';
   var t=tr(e);
   var meta=(t?t+' &middot; ':'')+(e.location||'Location TBD');
@@ -514,14 +597,9 @@ function inDate(e){
   if(dateActive==="Fall")return d.getFullYear()===y&&d.getMonth()>=8&&d.getMonth()<=10;
   return true;
 }
-function notPast(e){
-  var now=new Date();now.setHours(0,0,0,0);
-  var end=pd(e.endDate||e.date);
-  if(!end)return true;
-  return end>=now;
-}
+function isPast(e){var end=pd(e.endDate||e.date);if(!end)return false;var now=new Date();now.setHours(0,0,0,0);return end<now;}
 function renderGrid(){
-  var list=byDate(EVENTS).filter(function(e){return notPast(e)&&(active==="All"||(active==="Free"?e.free:e.category===active))&&inDate(e);});
+  var list=byDate(EVENTS).filter(function(e){return !isPast(e)&&(active==="All"||(active==="Free"?e.free:e.category===active))&&inDate(e);});
   var g=document.getElementById("grid");g.innerHTML="";
   document.getElementById("empty").style.display=list.length?"none":"block";
   list.forEach(function(e){g.appendChild(listItemHTML(e));});
@@ -554,6 +632,11 @@ document.addEventListener("keydown",function(ev){if(ev.key==="Escape")closeModal
 document.addEventListener("click",function(ev){var row=ev.target.closest("[data-idx]");if(row&&!ev.target.closest("a")){openModal(EVENTS[+row.dataset.idx]);}});
 function secOffsets(){var arr=[0];["week","events","partner"].forEach(function(id){var el=document.getElementById(id);if(el)arr.push(el.offsetTop-10);});var f=document.querySelector("footer");if(f)arr.push(f.offsetTop-10);return arr;}
 function navSection(dir){var s=secOffsets();var y=window.scrollY;if(dir>0){for(var i=0;i<s.length;i++){if(s[i]>y+30){window.scrollTo({top:s[i],behavior:"smooth"});return;}}window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"});}else{for(var j=s.length-1;j>=0;j--){if(s[j]<y-30){window.scrollTo({top:s[j],behavior:"smooth"});return;}}window.scrollTo({top:0,behavior:"smooth"});}}
+function toggleNav(btn){var m=document.getElementById('navmenu');var open=m.classList.toggle('open');if(btn)btn.setAttribute('aria-expanded',open);}
+function closeNav(){var m=document.getElementById('navmenu');m.classList.remove('open');var h=document.getElementById('hambBtn');if(h)h.setAttribute('aria-expanded','false');}
+function goTop(){closeNav();window.scrollTo({top:0,behavior:'smooth'});}
+function navGo(e,id){if(e)e.preventDefault();closeNav();if(id==='top'){window.scrollTo({top:0,behavior:'smooth'});return;}var el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth'});}
+document.addEventListener('click',function(ev){var m=document.getElementById('navmenu');if(m&&m.classList.contains('open')&&!m.contains(ev.target)&&!ev.target.closest('.hamb')){closeNav();}});
 renderWeek();buildChips();buildDateChips();renderGrid();
 </script>
 <div id="modal" class="modal" onclick="if(event.target===this)closeModal()">
