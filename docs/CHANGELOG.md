@@ -20,6 +20,19 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 
 ---
 
+## 2026-06-27 (cont.) — Reinforced no-deploy rule; repo-visibility decision pending
+
+- Added a prominent bold callout at the top of `CLAUDE.md`'s guardrails: never push to `main`/production
+  or deploy to Netlify without Gohar's explicit green light.
+- **Repo visibility:** owner wants the repo **private**. Note for whoever does it: changing visibility is
+  an access-control setting (done by the owner in GitHub Settings → Danger Zone). Caveat — on a free
+  GitHub plan, a **private repo disables GitHub Pages**, which would break the rendered preview URLs
+  (`armenianeventsla.github.io/calendar/...`). Netlify deploys keep working (the Netlify GitHub app
+  retains access). If going private, use Netlify deploy previews, a paid GitHub plan for private Pages,
+  or self-contained local preview files for review.
+
+---
+
 ## 2026-06-27 (cont.) — Instagram fetch script, GitHub Pages previews, deploy-credit guard
 
 - Added **`netlify.toml`** with an `ignore` rule: production deploys are skipped unless `index.html`
