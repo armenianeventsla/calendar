@@ -12,6 +12,8 @@ override convenience.** Follow them exactly.
 
 ## The deploy guardrails — NON-NEGOTIABLE
 
+> **NEVER push to `main`/production or deploy to Netlify without Gohar's explicit green light. Prepare the change, build a preview, and WAIT for a clear "deploy it." When in doubt, stop and ask.**
+
 1. **Never auto-deploy. Never publish to Netlify and never merge to `main` without Gohar's
    explicit green light.** "Green light" means Gohar reviews the change and clearly says to deploy
    (e.g. "deploy it", "green light", "push it live"). Silence is not approval.
