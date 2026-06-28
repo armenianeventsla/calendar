@@ -20,6 +20,21 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 
 ---
 
+## 2026-06-27 (cont.) — Instagram fetch script, GitHub Pages previews, deploy-credit guard
+
+- Added **`netlify.toml`** with an `ignore` rule: production deploys are skipped unless `index.html`
+  or `images/` changed — so docs, previews, scripts, and history commits don't burn deploy credits.
+- Confirmed `@armenianeventsla` is a **Professional (Creator/Business) account** → qualifies for the
+  Instagram Graph API.
+- Added **`scripts/fetch-instagram.mjs`** + `scripts/README.md`: a read-only Graph API script that
+  pulls the account's own posts and downloads each post's **exact original poster image** (`media_url`)
+  for use on the site. Added `.gitignore` for the pull output and tokens.
+- Enabled **GitHub Pages** (`main`/root) so deploy previews render at
+  `https://armenianeventsla.github.io/calendar/...` — reviewable on any device, no Netlify credits.
+- New deploy-preview folder convention in use: `deploy-previews/<YYYY>/<MM-Month>/<date>_<NNN>_<label>.html`.
+
+---
+
 ## 2026-06-27 (later) — GitHub migration complete, reconciliation & first git deploy
 
 - **Migrated the whole operation to GitHub** (`github.com/armenianeventsla/calendar`, branch `main`)

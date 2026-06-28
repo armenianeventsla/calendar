@@ -2,6 +2,35 @@
 
 _Last updated: 2026-06-27. Audience: a senior developer (or Claude Code session) taking over this project._
 
+## 0. Current status & where to pick up (READ THIS FIRST)
+
+**Live & healthy.** armenianeventsla.com serves the reconciled **31-event** site, deployed from
+GitHub `main` via Netlify. The repo is the single source of truth.
+
+**What's wired up:**
+- Git → Netlify continuous deploy (manual/gated by the guardrails). `netlify.toml` skips deploys
+  unless `index.html`/`images/` change, so docs/preview/script commits don't burn deploy credits.
+- **GitHub Pages is enabled** (source: `main` / root). Rendered preview URLs:
+  `https://armenianeventsla.github.io/calendar/<path-to-preview>.html` — open on any device to review
+  a change before approving a production push. (No Netlify credits used.)
+- **Instagram ingestion script** at `scripts/fetch-instagram.mjs` (Graph API, read-only). See `scripts/README.md`.
+
+**The end goal we're building toward (confirmed with the owner):** poster images on the site should be
+the **exact, full-resolution original image from each individual Instagram post** — not generated
+stand-ins. The Graph API's `media_url` returns precisely that. A few current posters
+(`ejanish.jpg`, `mary-basmadjian.jpg`) are still *generated* placeholders from before this was wired
+up; replace them by dropping the real post image into `images/` with the same filename.
+
+**Suggested next steps:**
+1. Owner sets up an Instagram Graph API long-lived token (`scripts/README.md`) — this is the one
+   manual prerequisite (creating the Meta app + token can't be automated).
+2. Run `node scripts/fetch-instagram.mjs`, pick new upcoming LA Armenian events from the manifest,
+   copy each real poster into `images/<slug>.jpg`, add `EVENTS` objects, build a dated preview,
+   review via the GitHub Pages URL, then push to `main` on green light.
+3. Backfill: replace the two generated placeholder posters with the real post images.
+
+---
+
 ## 1. What this is
 
 A community calendar of upcoming Armenian events in greater Los Angeles, live at

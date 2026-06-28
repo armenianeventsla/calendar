@@ -3,6 +3,15 @@
 _Researched 2026-06-27. Answers two questions: (1) Can we cleanly grab Instagram posts/posters in a
 Claude Code environment? (2) Can the owner trigger "update my site from Instagram" from an iPhone?_
 
+## End goal (confirmed with the owner)
+
+Each event's poster on the website should be the **exact, full-resolution original image from that
+individual Instagram post** — the same 100% image, one per post — not a generated stand-in. The Graph
+API's `media_url` returns exactly that, and `scripts/fetch-instagram.mjs` downloads it. For carousel
+posts it pulls every slide so the correct flyer can be chosen. This is now the implemented path; the
+only manual prerequisite is a Graph API token (below). Previews render via GitHub Pages
+(`https://armenianeventsla.github.io/calendar/...`) for review on any device before deploying.
+
 ## TL;DR
 
 - **Yes, both are possible.**
