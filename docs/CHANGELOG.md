@@ -20,6 +20,23 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 
 ---
 
+## 2026-07-02 — Event-ingestion runbook; calendar/site gap check; no scheduled runs
+
+- Added **`docs/EVENT-INGESTION-RUNBOOK.md`**: the owner's standing step-by-step procedure for
+  filling in the website from the Instagram likes feed (qualify → cross-check Google Calendar →
+  add/update calendar → add event + original poster to site → dated preview → green light),
+  including the free/multi-day labeling rules, the "card, not poster" rule for category/date,
+  the "link in bio" resolution rule, and the verified cloud-sandbox division of labor
+  (Instagram needs Gohar; Google Calendar + site edits are automatable).
+- Confirmed **no scheduled/recurring runs** are active in the session (cron list empty).
+- **Gap check (calendar 15 upcoming vs site 31 events):** *Armenian Open 2026 — Golf Tournament*
+  (Aug 16, added to calendar 2026-07-01) is not yet on the website; *AUA 35th Anniversary Gala*
+  (Nov 7) is on the calendar but not the site (confirm intent). July 12 Vartavar titles differ
+  between site and calendar (same event).
+- **Deploy:** none (docs only; no site change).
+
+---
+
 ## 2026-06-27 (cont.) — Reinforced no-deploy rule; repo-visibility decision pending
 
 - Added a prominent bold callout at the top of `CLAUDE.md`'s guardrails: never push to `main`/production
