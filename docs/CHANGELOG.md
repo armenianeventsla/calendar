@@ -33,6 +33,10 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
   (Aug 16, added to calendar 2026-07-01) is not yet on the website; *AUA 35th Anniversary Gala*
   (Nov 7) is on the calendar but not the site (confirm intent). July 12 Vartavar titles differ
   between site and calendar (same event).
+- Added **`docs/COWORK-INGEST-PROMPT.md`**: a paste-in kickoff prompt for a Cowork session on
+  Gohar's computer that collects the week's qualifying Instagram posts (photos + manifest.json)
+  and pushes them to an `ingest/<date>` branch, which the cloud Code session then turns into
+  calendar entries, site events, and a dated preview.
 - **Deploy:** none (docs only; no site change).
 
 ---
