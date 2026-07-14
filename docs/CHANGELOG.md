@@ -20,6 +20,27 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 
 ---
 
+## 2026-07-06 — Twice-weekly ingestion schedule (Cowork collect + Code assemble)
+
+- Added **`docs/WEEKLY-INGESTION-PROMPTS.md`** (supersedes and removes `COWORK-INGEST-PROMPT.md`):
+  - **Part 1 (Cowork, Mon & Fri 11:00 AM PT):** paste-in prompt that asks the desktop session to
+    schedule itself, scrub Instagram likes since the last run, qualify events, **add/update the
+    Google Calendar entries directly**, save each post's photo as the poster, and push posters +
+    manifest to an `ingest/<date>` branch.
+  - **Part 2 (Code, Mon & Fri ~12:00 PM PT):** assembly prompt that turns calendar data + ingest
+    posters into website `EVENTS` entries, builds the dated preview, and **stops for the green
+    light** before any `main`/Netlify deploy.
+  - Documented schedule limits honestly: in-session cloud schedules are memory-only (lost on
+    container restart/rewind) and expire after 7 days; the durable path is the paste-in prompt
+    (or a future GitHub Actions cron).
+- Note: the first version of this change (committed earlier today) was erased by a session
+  checkpoint rollback and has been recreated with the updated Mon/Fri 11 AM schedule.
+- **Still blocked:** session GitHub access is read-only (403 on push); write access needed before
+  Part 2 can publish branches/previews.
+- **Deploy:** none (docs only; no site change).
+
+---
+
 ## 2026-07-02 — Event-ingestion runbook; calendar/site gap check; no scheduled runs
 
 - Added **`docs/EVENT-INGESTION-RUNBOOK.md`**: the owner's standing step-by-step procedure for
