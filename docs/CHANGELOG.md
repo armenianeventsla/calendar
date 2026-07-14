@@ -20,6 +20,23 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 
 ---
 
+## 2026-07-14 (cont.) — Site features: "This Month" section, favicon, compact cards
+
+- **New "This Month" section** on the homepage, between "Happening This Week" and the full
+  "Calendar of Events." Shows every event in the **next 30 days** (`renderMonth()`), with a live
+  count hint ("N events in the next 30 days"). Added a "This Month" nav-menu link and wired the
+  section into the up/down scroll-nav.
+- **Compact cards** for the "This Month" grid at Gohar's request — ~1/3 the footprint of the
+  week cards (measured area ratio 0.29): more columns (min 185px vs 320px), tighter padding,
+  smaller type, description hidden; 2-up on mobile. Same card component, so posters/badges/links
+  all carry over. Note: this-week events also appear here (nested time windows) — say the word if
+  you'd rather "This Month" start after this week to avoid the overlap.
+- **Favicon added:** the site logo (`images/logo.png`) now serves as the browser-tab icon
+  (`<link rel="icon">` + `apple-touch-icon`).
+- **Deploy:** preview updated in place; production? **no — awaiting green light.**
+
+---
+
 ## 2026-07-14 — First assembly run: 5 events added, GENÄTZ updated (31 → 36 events)
 
 **Events added** (from the Armenian Events of LA Google Calendar, populated by the 2026-07-14

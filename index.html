@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Armenian Events of LA</title>
+<link rel="icon" type="image/png" href="images/logo.png">
+<link rel="apple-touch-icon" href="images/logo.png">
 <style>
   :root{--bg:#0e1014;--bg2:#15181f;--card:#181c24;--line:#262b35;--ink:#f3f4f6;--muted:#9aa3b2;--apricot:#F5A623;--red:#e23b3b;--blue:#3b6fe2;--violet:#9b6bff;}
   *{box-sizing:border-box;margin:0;padding:0}
@@ -32,6 +34,17 @@
   .chip.active{background:var(--ink);color:#0e1014;border-color:var(--ink)}
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:22px}
   .grid.week{grid-template-columns:repeat(auto-fill,minmax(320px,1fr))}
+  .grid.month{grid-template-columns:repeat(auto-fill,minmax(185px,1fr));gap:14px}
+  .grid.month .cbody{padding:10px 11px 12px;gap:5px}
+  .grid.month .cbody h3{font-size:.9rem;line-height:1.2}
+  .grid.month .meta{font-size:.74rem}
+  .grid.month .desc{display:none}
+  .grid.month .ctop{gap:6px}
+  .grid.month .cattag{font-size:.55rem;padding:4px 8px}
+  .grid.month .cdate{font-size:.72rem}
+  .grid.month .acts{padding-top:6px;gap:6px}
+  .grid.month .mini{font-size:.71rem;padding:7px 6px}
+  .grid.month .freebadge,.grid.month .discbadge{font-size:.52rem;padding:2px 6px}
   .card{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:transform .16s,box-shadow .16s,border-color .16s}
   .card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(0,0,0,.45);border-color:#39414f}
   .poster{position:relative;width:100%;overflow:hidden;background:#0b0d11;min-height:40px}
@@ -79,7 +92,7 @@
   .femail a{color:var(--muted)} .femail a:hover{color:var(--apricot)}
   .submit{display:inline-block;margin-top:8px;background:var(--red);color:#fff;font-weight:800;padding:12px 22px;border-radius:12px}
   .submit:hover{background:#ef5b5b}
-  @media(max-width:560px){.grid,.grid.week{grid-template-columns:1fr}}
+  @media(max-width:560px){.grid,.grid.week{grid-template-columns:1fr}.grid.month{grid-template-columns:1fr 1fr}}
   .banner-img{display:block;width:100%;height:250px;object-fit:cover;object-position:center}
   .list{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--card)}
   .litem{display:flex;align-items:center;gap:14px;padding:14px 16px;border-bottom:1px solid var(--line);transition:background .15s}
@@ -152,6 +165,7 @@
 <nav class="navmenu" id="navmenu" aria-label="Site navigation">
   <a href="#" onclick="navGo(event,'top')">Home</a>
   <a href="#week" onclick="navGo(event,'week')">This Week</a>
+  <a href="#month" onclick="navGo(event,'month')">This Month</a>
   <a href="#events" onclick="navGo(event,'events')">Events</a>
   <a href="#partner" onclick="navGo(event,'partner')">Partner</a>
   <a href="#contact" onclick="navGo(event,'contact')">Contact</a>
@@ -172,6 +186,11 @@
     <div class="sec-head"><h2>Happening This Week</h2><span class="hint" id="weekHint"></span></div>
     <div class="grid week" id="weekGrid"></div>
     <div class="empty" id="weekEmpty" style="display:none">No events in the next 7 days yet - check the full calendar below.</div>
+  </section>
+  <section id="month">
+    <div class="sec-head"><h2>This Month</h2><span class="hint" id="monthHint"></span></div>
+    <div class="grid month" id="monthGrid"></div>
+    <div class="empty" id="monthEmpty" style="display:none">No events in the next 30 days yet - check the full calendar below.</div>
   </section>
   <section id="events">
     <div class="sec-head"><h2>Calendar of Events</h2><span class="hint">Tap "+ Calendar" on any event to add it to Google Calendar.</span></div>
@@ -634,6 +653,15 @@ function renderWeek(){
   document.getElementById("weekHint").textContent=list.length?list.length+" event"+(list.length>1?"s":"")+" in the next 7 days":"";
   list.forEach(function(e){g.appendChild(cardHTML(e));});
 }
+function renderMonth(){
+  var now=new Date();now.setHours(0,0,0,0);
+  var mo=new Date(now);mo.setDate(mo.getDate()+30);
+  var list=byDate(EVENTS.filter(function(e){var d=pd(e.date);return d&&d>=now&&d<=mo;}));
+  var g=document.getElementById("monthGrid");g.innerHTML="";
+  document.getElementById("monthEmpty").style.display=list.length?"none":"block";
+  document.getElementById("monthHint").textContent=list.length?list.length+" event"+(list.length>1?"s":"")+" in the next 30 days":"";
+  list.forEach(function(e){g.appendChild(cardHTML(e));});
+}
 var cats=["All","Free"].concat(Array.from(new Set(EVENTS.map(function(e){return e.category;}))));
 var active="All";
 var dateActive="All";
@@ -680,14 +708,14 @@ function openModal(e){
 function closeModal(){document.getElementById("modal").classList.remove("open");document.body.style.overflow="";}
 document.addEventListener("keydown",function(ev){if(ev.key==="Escape")closeModal();});
 document.addEventListener("click",function(ev){var row=ev.target.closest("[data-idx]");if(row&&!ev.target.closest("a")){openModal(EVENTS[+row.dataset.idx]);}});
-function secOffsets(){var arr=[0];["week","events","partner"].forEach(function(id){var el=document.getElementById(id);if(el)arr.push(el.offsetTop-10);});var f=document.querySelector("footer");if(f)arr.push(f.offsetTop-10);return arr;}
+function secOffsets(){var arr=[0];["week","month","events","partner"].forEach(function(id){var el=document.getElementById(id);if(el)arr.push(el.offsetTop-10);});var f=document.querySelector("footer");if(f)arr.push(f.offsetTop-10);return arr;}
 function navSection(dir){var s=secOffsets();var y=window.scrollY;if(dir>0){for(var i=0;i<s.length;i++){if(s[i]>y+30){window.scrollTo({top:s[i],behavior:"smooth"});return;}}window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"});}else{for(var j=s.length-1;j>=0;j--){if(s[j]<y-30){window.scrollTo({top:s[j],behavior:"smooth"});return;}}window.scrollTo({top:0,behavior:"smooth"});}}
 function toggleNav(btn){var m=document.getElementById('navmenu');var open=m.classList.toggle('open');if(btn)btn.setAttribute('aria-expanded',open);}
 function closeNav(){var m=document.getElementById('navmenu');m.classList.remove('open');var h=document.getElementById('hambBtn');if(h)h.setAttribute('aria-expanded','false');}
 function goTop(){closeNav();window.scrollTo({top:0,behavior:'smooth'});}
 function navGo(e,id){if(e)e.preventDefault();closeNav();if(id==='top'){window.scrollTo({top:0,behavior:'smooth'});return;}var el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth'});}
 document.addEventListener('click',function(ev){var m=document.getElementById('navmenu');if(m&&m.classList.contains('open')&&!m.contains(ev.target)&&!ev.target.closest('.hamb')){closeNav();}});
-renderWeek();buildChips();buildDateChips();renderGrid();
+renderWeek();renderMonth();buildChips();buildDateChips();renderGrid();
 </script>
 <div id="modal" class="modal" onclick="if(event.target===this)closeModal()">
   <div class="modal-card">
