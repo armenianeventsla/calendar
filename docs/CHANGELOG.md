@@ -20,6 +20,20 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 
 ---
 
+## 2026-07-14 (cont.) — Automated the poster handoff (Cowork pushes via local git)
+
+- Gohar wants the poster handoff automated; the cloud Code session physically cannot read the
+  local drive, so the push must originate from the machine that has the files (Cowork).
+- Updated `docs/WEEKLY-INGESTION-PROMPTS.md`: Part 1 now saves posters into the **local git
+  clone** and **`git push`es an `ingest/<date>` branch** using the computer's existing git
+  login (a plain push, not the GitHub connector Cowork lacks). Part 2 pulls that branch
+  automatically. Documented the one-time check (confirm local `git push` is authenticated) and
+  the fallback (run Claude Code locally). This removes the manual per-run file upload.
+- For the current batch, the 5 posters are still only on Gohar's local drive (not on any branch),
+  so they still need a one-time push/upload before this session can wire them in.
+
+---
+
 ## 2026-07-14 (cont.) — Assembly re-run: calendar in sync, AUA Gala added (36 → 37)
 
 - Ran the corrected Part 2 (Code) assembly check: fetched the repo (no `ingest` branch, no

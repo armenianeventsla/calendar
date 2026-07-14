@@ -5,33 +5,35 @@ on a twice-weekly rhythm — **Mondays and Fridays at 11:00 AM (America/Los_Ange
 
 ## The one constraint that shapes everything
 
-Verified 2026-07-14: **the Cowork session cannot reach GitHub** (no repo access from that
-environment), and **the cloud Code session cannot reach Instagram** *or* **your local hard
-drive** (it only sees GitHub). So each half can only touch part of the world:
+The **cloud Code session cannot reach Instagram or your local hard drive** — it only sees
+GitHub. The **Cowork session** runs on your computer, so it has Instagram, Google Calendar,
+and your local files. Each half touches only part of the world:
 
-| | Instagram likes | Google Calendar | Your local files | GitHub repo | Website build |
+| | Instagram likes | Google Calendar | Your local files | GitHub (local git push) | Website build |
 |---|:---:|:---:|:---:|:---:|:---:|
-| **Cowork** (your computer) | ✅ | ✅ | ✅ | ❌ | ❌ |
+| **Cowork** (your computer) | ✅ | ✅ | ✅ | ✅ *(via your machine's git login)* | ❌ |
 | **Code** (cloud) | ❌ | ✅ | ❌ | ✅ | ✅ |
 
-The two halves overlap only on **Google Calendar** — that's the automatic bridge. Everything
-else Cowork produces that Code needs (the **poster images**) has to be carried across by you,
-because neither the calendar nor GitHub is reachable from *both* sides for image files. So:
+Two automatic bridges connect them — no manual file-shuffling:
 
-- **Google Calendar is the data bridge** — Cowork writes the events; Code reads them. No manual step.
-- **You are the image bridge** — Cowork saves posters to a local folder; you hand those files to
-  the Code session (drag them into the Code chat, or upload them to the working branch on
-  github.com). This is the only manual step, ~5 files per run.
+- **Google Calendar = the data bridge** — Cowork writes the events; Code reads them.
+- **GitHub = the image bridge** — Cowork saves posters into your local *git clone* and
+  **pushes them to an `ingest/<date>` branch** using the git login already on your computer
+  (Part 1 step 6); Code pulls that branch. Cowork can't use the GitHub *connector/API*, but a
+  plain `git push` from your local clone is a different mechanism and works with your machine's
+  own credentials.
 
-> Want to remove even that step? See "Making it fully automatic" at the bottom.
+> One-time setup: this only works if your local calendar folder is a git clone whose `git push`
+> is authenticated. If Cowork's first push fails, it reports the error and we fix the credentials
+> once. Fallback any run: drag posters into the Code chat, or upload to the branch on github.com.
 
 The `CLAUDE.md` guardrails bind both halves: **nothing touches `main` or Netlify without
 Gohar's explicit green light.**
 
 | Half | Where it runs | What it does |
 |---|---|---|
-| **Part 1 — Collect** (Mon & Fri 11 AM) | Cowork on your computer | Instagram likes → qualify → **add/update Google Calendar events** → save post photos to a local folder → tell you the folder path |
-| **Part 2 — Assemble** (after posters are handed over) | Claude Code (cloud) | Read Calendar + receive posters → website `EVENTS` entries → **dated preview** → wait for green light → deploy |
+| **Part 1 — Collect** (Mon & Fri 11 AM) | Cowork on your computer | Instagram likes → qualify → **update Google Calendar** → save posters into the local git clone → **push an `ingest/<date>` branch** |
+| **Part 2 — Assemble** (after the ingest push) | Claude Code (cloud) | Pull posters + read Calendar → website `EVENTS` entries → **dated preview** → wait for green light → deploy |
 
 ---
 
@@ -83,27 +85,38 @@ Then run the collection:
      resolved ticket/RSVP link and its type (Tickets/RSVP/Details); whether it's FREE;
      the exact poster filename you saved (step 5); and the source post URL.
 
-5. Posters — save each qualifying post's photo at full resolution into a dedicated local
-   folder (e.g. ~/Calendar/ingest-posters/), named <event-slug>.jpg (lowercase, hyphens,
-   e.g. armenian-open-2026.jpg). Use the SAME slug in the calendar description (step 4) so
-   the website step can match photo to event. Include extra carousel slides only if they
-   carry event details. Do NOT overlay or edit the images — save the original flyer as-is.
-   (If a new hero BANNER image is wanted, save it in the same folder as banner.png.)
+5. Posters — save each qualifying post's photo at full resolution INTO the images/ folder
+   of my LOCAL GIT CLONE of the calendar repo (the folder that has index.html and a .git
+   folder), named <event-slug>.jpg (lowercase, hyphens, e.g. armenian-open-2026.jpg). Use
+   the SAME slug in the calendar description (step 4) so the website step can match photo to
+   event. Include extra carousel slides only if they carry event details. Do NOT overlay or
+   edit the images — save the original flyer as-is. (If a new hero BANNER is wanted, save it
+   as images/banner.png in the same clone.)
 
-6. Handoff — you cannot push to GitHub, so DON'T try. Instead, finish by telling me
-   clearly: (a) the local folder path where the posters are saved, (b) the exact filenames,
-   and (c) a short summary: N events added to the calendar, M updated, K skipped (with a
-   one-line reason each). I will carry those image files to the Code session.
+6. Push to GitHub — THIS is what makes it automatic. From inside my local clone, run these
+   in a terminal (they use the git login already configured on this computer):
+       git fetch origin
+       git checkout -B ingest/<YYYY-MM-DD> origin/main
+       git add images/
+       git commit -m "Add posters for <YYYY-MM-DD> ingest"
+       git push -u origin ingest/<YYYY-MM-DD>
+   NEVER push to main. If the push SUCCEEDS, tell me the branch name — the cloud Code
+   session will pull it automatically. If the push FAILS (auth or remote error), do NOT
+   stop: report the exact error message and the local clone's path, so we can fix the git
+   credentials once (after that, every run pushes on its own).
+
+7. Report — a short summary: the ingest branch name (or the push error), N events added to
+   the calendar, M updated, K skipped (with a one-line reason each).
 ```
 
 ---
 
 ## Part 2 — the assembly run on Claude Code (cloud)
 
-Run this after the Cowork collection, **once you've handed the poster files to the Code
-session** — either by dragging them into the Code chat, or by uploading them to the
-`claude/cowork-session-context-t7bjj1` branch on github.com (Add file → Upload files;
-upload to that branch, NOT `main`). Then paste:
+Run this after the Cowork collection **once the posters have reached GitHub** — normally
+that's the `ingest/<date>` branch Cowork pushed (Part 1 step 6). Fallbacks if Cowork's push
+didn't work: drag the posters into the Code chat, or upload them to the working branch on
+github.com. Then paste:
 
 ```
 Run the ASSEMBLY half of the event pipeline (docs/EVENT-INGESTION-RUNBOOK.md,
@@ -111,9 +124,11 @@ docs/WEEKLY-INGESTION-PROMPTS.md). Guardrails from CLAUDE.md apply: build everyt
 a working branch and a dated preview; never push main or deploy without my explicit
 green light.
 
-1. Posters: I will have attached the new poster photos to this chat, or uploaded them to
-   the working branch. Save/confirm each one in images/<slug>.jpg (the slug matches the
-   calendar event's description). If a banner.png was provided, replace images/banner.png.
+1. Posters: git fetch, then look for an ingest/<date> branch pushed by the collection run
+   and copy its images/*.jpg into the working branch's images/ folder. (If instead I
+   attached the posters to the chat or uploaded them to the working branch, use those.)
+   Each poster lands at images/<slug>.jpg, where the slug matches the calendar event's
+   description. If a banner.png was provided, replace images/banner.png.
 
 2. Read the "Armenian Events of LA" Google Calendar (ID:
    c5c323fb0a26dced52e4ce58935b6fb5e7722915a78ba352edab804709efcb39@group.calendar.google.com)
@@ -149,27 +164,22 @@ If the calendar and site already match and no new posters were provided, say so 
 ## How the schedule works (and its limits)
 
 - **Part 1 (Cowork):** runs **Mon & Fri 11:00 AM PT** — self-scheduled inside Cowork if the
-  desktop app supports recurring tasks; otherwise paste it manually on those days.
-- **The handoff (you):** after Cowork reports the folder path, bring the poster files to the
-  Code session (drag into chat, or upload to the working branch). This is the only manual step.
-- **Part 2 (Code):** the cloud session can arm a scheduled check, but it only produces useful
-  work once the posters are handed over — so in practice, kick off Part 2 yourself right after
-  you hand over the files. **Limits, verified 2026-07-14:** in-session cloud schedules are
-  memory-only (lost on container restart/rewind) and expire after 7 days. The Part 2 prompt is
-  fully self-contained, so pasting it into any fresh Code session always works.
+  desktop app supports recurring tasks; otherwise paste it manually on those days. It ends by
+  **pushing the `ingest/<date>` branch** (Part 1 step 6) — no file-shuffling by you.
+- **Part 2 (Code):** kick off the assembly prompt after the ingest push; Code pulls the branch,
+  wires the posters, and builds the preview. **Limits, verified 2026-07-14:** in-session cloud
+  schedules are memory-only (lost on container restart/rewind) and expire after 7 days. The
+  Part 2 prompt is fully self-contained, so pasting it into any fresh Code session always works.
 
-## Making it fully automatic (optional, removes the manual step)
+## The one-time setup that makes the whole thing hands-off
 
-The one manual step exists only because image *files* can't cross from Cowork to cloud-Code on
-their own. Two ways to close that gap, in order of effort:
+The pipeline is automatic **as long as Cowork can `git push` from your local clone.** That needs
+your local calendar folder to be a git clone whose push is authenticated (HTTPS token in the git
+credential manager, or an SSH key). Most likely it already is, since the repo was set up from that
+machine. Confirm it once by running `git push` there yourself; if it works, Cowork's push (Part 1
+step 6) will too, and no manual step ever remains.
 
-1. **Give the Cowork environment GitHub access.** If Cowork could push (the way we just restored
-   write access for the Code session), it would push posters to an `ingest/<date>` branch itself,
-   and Code would pull them — zero manual step. Worth checking whether Cowork's GitHub connection
-   can simply be authorized.
-2. **Run Claude Code locally instead of in the cloud.** A Claude Code session on your own computer
-   sees both your local poster folder AND GitHub, so it can pick up Cowork's local files and push
-   them directly. (This cloud session can't, because it's a remote sandbox.)
-
-Until one of those is set up, the Google-Calendar-plus-hand-off-the-images flow above is the
-reliable path.
+If for some reason local `git push` can't be authenticated on that machine, the alternative is to
+**run Claude Code locally** (in that folder's terminal) instead of in the cloud — a local session
+sees both your files and GitHub, so it can push directly. Either way, the cloud Code session by
+itself can never reach your local files; the push must originate from your computer.
