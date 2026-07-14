@@ -48,8 +48,17 @@ branch was pushed); art-gradient fallbacks render until the JPGs land in `/image
 **Deliberately NOT added:** AUA 35th Anniversary Gala (Nov 7) — on the calendar since February
 with no details; treated as an intentional save-the-date pending Gohar's confirmation.
 
+**Hye Notes #8 poster fixed:** the site was showing a *generated* purple placeholder
+(`images/hye-notes-8.jpg`) instead of a real flyer. Replaced it with the actual Instagram
+flyer already archived at `site-history/source-flyers/ig_hye-notes-8.jpg` (blue karaoke-night
+art). Verified it renders in the preview.
+
+**Banner:** Gohar asked to swap the hero banner for a newer one "saved in the images folder,"
+but the repo contains only the current `images/banner.png` (no alternate) — the new banner is
+presumably on Gohar's local drive and still needs to be provided/pushed before it can be swapped in.
+
 **Deploy:** preview saved to `/deploy-previews/2026/07-July/2026-07-14_001_5-new-events-genatz-update.html`;
-deployed to production? **no — awaiting green light** (and the 5 poster photos).
+deployed to production? **no — awaiting green light** (plus the 5 remaining poster photos and the new banner).
 
 ---
 
