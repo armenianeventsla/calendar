@@ -20,6 +20,39 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 
 ---
 
+## 2026-07-14 — First assembly run: 5 events added, GENÄTZ updated (31 → 36 events)
+
+**Events added** (from the Armenian Events of LA Google Calendar, populated by the 2026-07-14
+Cowork collection run):
+- **Trivia Sunday @ MOMED — Serov Social Club** — Sun Jul 26, 5:30 PM, MOMED Atwater Village
+  (Social; RSVP via SurveyMonkey).
+- **Armenian Vinyl Night — MOMED × DiscoTchari** — Wed Jul 29, 7–10:30 PM, MOMED Atwater Village
+  (Music; $25/$30 bar reservation, $5 dinner cover; tickets at atmomed.com — resolved from link-in-bio).
+- **AGBU LA Choir "Bardez" Karaoke Night** — Fri Jul 31, 7 PM, AGBU Manoukian Cultural Center,
+  Pasadena (Social; $50/person incl. tacos & churros; RSVP by DM → Instagram post link).
+- **Armenian Open 2026 — Golf Tournament** — Sun Aug 16, DeBell Golf Course, Burbank (Sports;
+  divisions $150–$170; registration link). Closes the gap flagged 2026-07-02.
+- **Art After Dark — Armenian American Museum × 301 AD** — Sat Aug 29, 6:30 PM, The Vault,
+  Glendale (Cultural; fundraiser; tickets at armenianamericanmuseum.org, reserve by Aug 22).
+
+**Events updated:**
+- **GENÄTZ Vol. III** — full details replaced the "Lineup TBA" placeholder: 7 PM at Parc 3030
+  (Glassell Park), lineup (Hrag Beko, Zolo, Karagusi), vendors, tickets from $17.49; removed
+  the incorrect FREE badge.
+
+**Posters pending:** the 5 new events reference `images/trivia-sunday-momed.jpg`,
+`armenian-vinyl-night.jpg`, `agbu-choir-karaoke.jpg`, `armenian-open-2026.jpg`,
+`art-after-dark.jpg` — photos are on Gohar's local drive from the collection run (no ingest
+branch was pushed); art-gradient fallbacks render until the JPGs land in `/images`.
+
+**Deliberately NOT added:** AUA 35th Anniversary Gala (Nov 7) — on the calendar since February
+with no details; treated as an intentional save-the-date pending Gohar's confirmation.
+
+**Deploy:** preview saved to `/deploy-previews/2026/07-July/2026-07-14_001_5-new-events-genatz-update.html`;
+deployed to production? **no — awaiting green light** (and the 5 poster photos).
+
+---
+
 ## 2026-07-06 — Twice-weekly ingestion schedule (Cowork collect + Code assemble)
 
 - Added **`docs/WEEKLY-INGESTION-PROMPTS.md`** (supersedes and removes `COWORK-INGEST-PROMPT.md`):
