@@ -20,6 +20,20 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 
 ---
 
+## 2026-07-14 (cont.) — Assembly re-run: calendar in sync, AUA Gala added (36 → 37)
+
+- Ran the corrected Part 2 (Code) assembly check: fetched the repo (no `ingest` branch, no
+  posters uploaded) and re-diffed the Google Calendar (14 upcoming events) against the site.
+  Everything already matched **except** the **AUA 35th Anniversary Gala** (Nov 7), which was on
+  the calendar but not the site.
+- **Added AUA 35th Anniversary Gala** as a save-the-date (Community; no time/venue/link yet —
+  the calendar entry has none; gradient card, no poster). Site now at **37 events**, fully in
+  sync with the calendar. Removable on request if it was intentionally held.
+- Rebuilt the dated preview + the artifact preview link.
+- **Deploy:** none — awaiting green light (and still: 5 event posters + new banner).
+
+---
+
 ## 2026-07-14 (cont.) — Corrected ingestion workflow (Cowork has no GitHub access)
 
 - Discovered from Gohar's Cowork run: **the Cowork environment cannot reach the GitHub repo**
