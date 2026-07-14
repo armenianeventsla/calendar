@@ -20,6 +20,22 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 
 ---
 
+## 2026-07-14 (cont.) — Corrected ingestion workflow (Cowork has no GitHub access)
+
+- Discovered from Gohar's Cowork run: **the Cowork environment cannot reach the GitHub repo**
+  (which is why the poster photos never arrived as an ingest branch). Rewrote
+  `docs/WEEKLY-INGESTION-PROMPTS.md` to match reality:
+  - **Cowork** does Instagram + Google Calendar + saves posters to a **local folder** (no GitHub,
+    no website work). It reports the folder path and filenames.
+  - **Google Calendar is the automatic data bridge**; **Gohar is the image bridge** — carries the
+    poster files into the Code session (drag into chat, or upload to the working branch).
+  - **Code (cloud)** does all repo + website work: reads the calendar, receives the posters,
+    builds the site + dated preview, and waits for the green light.
+  - Documented two ways to remove the one manual step later: authorize Cowork's GitHub access, or
+    run Claude Code locally (a local session sees both local files and GitHub).
+
+---
+
 ## 2026-07-14 (cont.) — Site features: "This Month" section, favicon, compact cards
 
 - **New "This Month" section** on the homepage, between "Happening This Week" and the full
