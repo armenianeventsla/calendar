@@ -20,6 +20,20 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 
 ---
 
+## 2026-07-15 (cont.) — Festival poster retrieved from Instagram & wired (mismatch resolved)
+
+- Pulled the real **Armenian Independence Day Festival** flyer from the source IG post
+  (instagram.com/p/DayKsSyPIx8) and wired it in — resolving the earlier wrong-file mismatch.
+  Overwrote the incorrect Appreciation-Brunch image at `images/armenian-independence-day-festival.jpg`.
+  **All 43 events now have real posters.**
+- **How (note for future runs):** direct Instagram fetches are blocked here (post page login-walled,
+  bare CDN URL 403s), but WebFetch on the post can extract the *fully-signed* scontent CDN URL, which
+  then downloads via curl. Worked for this reel cover frame (640×1136). Not guaranteed for every post
+  (signatures expire; some posts stay walled), but a usable route when it works.
+- Staged on the working branch; **not yet deployed** (small follow-up to the main deploy below).
+
+---
+
 ## 2026-07-15 (cont.) — 🚀 DEPLOYED to production
 
 - On Gohar's green light ("im satisfied please deploy"), deployed the full batch to
