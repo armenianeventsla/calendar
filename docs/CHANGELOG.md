@@ -20,6 +20,14 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 
 ---
 
+## 2026-07-15 (cont.) — Category color tweaks
+
+- Recolored 3 category pills per Gohar: **Sports** green → **teal** (#14b8a6), **Music** violet →
+  **pink** (#ec4899), **Film/TV** cyan → **brown** (#7c4a1e). (Film/TV leaving cyan also removes the
+  earlier teal/cyan proximity with Sports.) Verified rendered colors. Preview only; not deployed.
+
+---
+
 ## 2026-07-15 (cont.) — Wired 5 of 6 new-event posters; 1 flagged as a mismatch
 
 - Gohar uploaded posters for the 6 new events. Verified each; wired the **5 that match**:
