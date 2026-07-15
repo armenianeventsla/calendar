@@ -20,6 +20,22 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 
 ---
 
+## 2026-07-15 (cont.) — Expanded category taxonomy + Winter/Spring season filters
+
+- Added **4 new categories** (with distinct pill colors) and re-sorted events into them:
+  - **Comedy** (yellow) — Mary Basmadjian, Armenian All-Stars
+  - **Film/TV** (cyan) — Armenians in Television panel, Karmir Film Lab
+  - **Festival** (red) — Navasartian Games & Festival, Vartavar, GiniFest, Armenian Independence Day Festival
+  - **Gala** (purple) — TUMO, Navasartian Victory Ball, AUA, ANCA Awards, Art After Dark
+  - Category filter chips now: Social, Cultural, Sports, Music, Community, Festival, Gala, Shopping, Film/TV, Comedy (auto-generated from events in use).
+- Added **Winter** and **Spring** to the season date filters (alongside Summer/Fall); simplified the
+  season logic to month-based so Winter's Dec–Feb wrap works. (No winter events on the calendar yet,
+  so the Winter chip is empty until one is added — it's ready for when they come.)
+- Verified: filters work (Gala → 4 upcoming, Film/TV → 1 upcoming; past events stay hidden). Preview
+  only; not deployed.
+
+---
+
 ## 2026-07-15 (cont.) — 6 new events added from the calendar (37 → 43)
 
 - A Cowork run added 6 new events to the Google Calendar; pulled them onto the site (calendar =
