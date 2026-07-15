@@ -20,6 +20,18 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 
 ---
 
+## 2026-07-15 (cont.) — Scroll-arrows restyled (translucent); banner still pending
+
+- Made the fixed up/down scroll-nav arrows smaller (42→32px) and **translucent** (container idle
+  opacity 0.3, translucent blurred background), brightening to solid only on hover/focus — so they
+  no longer sit heavy over the content or cover text. Preview only; not deployed (Gohar: "deployed
+  enough this week").
+- **Banner:** Gohar shared a redesigned banner (repositioned text, wider layout) in chat, but a
+  chat-pasted image can't be saved into the repo — it must be uploaded as a file. `images/banner.png`
+  is still the original. Pending upload of the new banner as `images/banner.png`.
+
+---
+
 ## 2026-07-15 — Final two posters + AUA gala fully built out (all 37 events now have real posters)
 
 - Gohar uploaded the last two posters. Normalized the browser-mangled filenames

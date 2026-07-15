@@ -136,10 +136,11 @@
   .modal-acts a{flex:1;min-width:150px;text-align:center;font-weight:700;font-size:.9rem;padding:12px;border-radius:10px}
   .discbadge{display:inline-block;background:var(--red);color:#fff;font-size:.6rem;font-weight:800;letter-spacing:.5px;text-transform:uppercase;padding:2px 7px;border-radius:999px;vertical-align:middle}
   .freebadge{display:inline-block;background:#16a34a;color:#fff;font-size:.6rem;font-weight:800;letter-spacing:.5px;text-transform:uppercase;padding:2px 7px;border-radius:999px;vertical-align:middle}
-  .scrollnav{position:fixed;right:18px;top:50%;transform:translateY(-50%);z-index:40;display:flex;flex-direction:column;gap:10px}
-  .scrollnav button{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--ink);font-size:1rem;cursor:pointer;box-shadow:0 6px 16px rgba(0,0,0,.4);transition:.15s}
+  .scrollnav{position:fixed;right:14px;top:50%;transform:translateY(-50%);z-index:40;display:flex;flex-direction:column;gap:8px;opacity:.3;transition:opacity .2s}
+  .scrollnav:hover,.scrollnav:focus-within{opacity:1}
+  .scrollnav button{width:32px;height:32px;border-radius:50%;border:1px solid rgba(255,255,255,.14);background:rgba(24,28,36,.5);color:var(--ink);font-size:.72rem;cursor:pointer;box-shadow:0 3px 10px rgba(0,0,0,.25);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);transition:.15s}
   .scrollnav button:hover{background:var(--apricot);color:#1a1205;border-color:var(--apricot)}
-  @media(max-width:560px){.scrollnav{right:10px}.scrollnav button{width:38px;height:38px}}
+  @media(max-width:560px){.scrollnav{right:8px}.scrollnav button{width:28px;height:28px;font-size:.64rem}}
   .freenote{margin-top:22px;background:rgba(22,163,74,.12);border:1px solid rgba(22,163,74,.5);color:#d7f5e3;border-radius:12px;padding:14px 18px;font-size:.95rem;text-align:center}
   .topbar{position:fixed;top:0;left:0;right:0;z-index:45;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 16px;background:rgba(14,16,20,.85);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
   .topbar .brand{display:flex;align-items:center;gap:10px;cursor:pointer;background:none;border:none;color:var(--ink);padding:0;font-family:inherit}
