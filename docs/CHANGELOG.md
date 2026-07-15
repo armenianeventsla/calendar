@@ -20,6 +20,24 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 
 ---
 
+## 2026-07-15 — Final two posters + AUA gala fully built out (all 37 events now have real posters)
+
+- Gohar uploaded the last two posters. Normalized the browser-mangled filenames
+  (`armenian-open-2026 (1).jpg` → `armenian-open-2026.jpg`; `AUA GALA.jpg` → `aua-gala.jpg`),
+  verified both are the genuine flyers, and wired them in.
+- **Armenian Open 2026** now shows its real flyer (was the gradient placeholder).
+- **AUA 35th Anniversary Gala** built out from a bare save-the-date into a full listing, using the
+  official page (philanthropy.aua.am/aua35) + the IG post Gohar provided: real poster, venue
+  (**The Beverly Hilton, International Ballroom, Beverly Hills**), **5:00 PM** cocktail reception /
+  6:30 PM program, ticket link, and RSVP-by Oct 5 note. **Also synced the Google Calendar** entry
+  (was a bare all-day event) to the timed event with venue, description, and ticket link.
+- Result: **every one of the 37 events now has a real poster** (no gradient fallbacks remaining).
+- **Still outstanding:** the new hero banner (not yet uploaded — `images/banner.png` unchanged).
+- Rebuilt previews. **Deploy:** staged on the working branch; awaiting Gohar's green light for the
+  follow-up production deploy.
+
+---
+
 ## 2026-07-14 (cont.) — Real posters wired for 4 of 5 new events
 
 - Gohar uploaded posters to the working branch. Verified each is the genuine Instagram flyer and
