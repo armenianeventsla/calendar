@@ -20,6 +20,21 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 
 ---
 
+## 2026-07-14 (cont.) — Real posters wired for 4 of 5 new events
+
+- Gohar uploaded posters to the working branch. Verified each is the genuine Instagram flyer and
+  wired them in: **Trivia Sunday** (`trivia-sunday-momed.jpg`), **Armenian Vinyl Night**
+  (`armenian-vinyl-night.jpg`), **AGBU Bardez Karaoke** (`bardez-karaoke-agbu.jpg` — updated the
+  event's poster reference to match the uploaded filename), **Art After Dark** (`art-after-dark.jpg`).
+- **Still on gradient placeholders (not uploaded):** *Armenian Open 2026 — Golf Tournament*
+  (`armenian-open-2026.jpg` missing) and the **new hero banner** (`images/banner.png` unchanged
+  from the original).
+- Note: images/ is now ~14 MB (over the historical 10 MB Netlify-Drop guardrail; not a blocker for
+  git-connected deploys + lazy-loaded images, but worth a compression pass later).
+- Rebuilt previews. **Deploy:** pending Gohar's call on the 2 gaps.
+
+---
+
 ## 2026-07-14 (cont.) — Automated the poster handoff (Cowork pushes via local git)
 
 - Gohar wants the poster handoff automated; the cloud Code session physically cannot read the
