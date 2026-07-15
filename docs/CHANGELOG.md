@@ -20,6 +20,21 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 
 ---
 
+## 2026-07-15 (cont.) — 6 new events added from the calendar (37 → 43)
+
+- A Cowork run added 6 new events to the Google Calendar; pulled them onto the site (calendar =
+  source of truth). **No posters were uploaded for these**, so they use gradient fallback cards for
+  now — real posters can be dropped into `images/` later, same flow as before.
+  - **Karmir Film Lab LA — Opening** — Jul 18, Frogtown (Cultural)
+  - **World Cup 2026 Final — Watch Party (Burbank)** — Jul 19, Burbank Youth Center, $50 (Sports)
+  - **Armenian All-Stars — Comedy at UCB Franklin** — Aug 7 (Social); ticket link resolved from bio (linktr.ee/artoun)
+  - **Summer Pickleball Fundraiser — Homenetmen Massis** — Aug 15, Calabasas, $75 (Sports)
+  - **27th Annual Armenian Independence Day Festival** — Sep 20, Verdugo Park Glendale, FREE (Cultural)
+  - **ANCA Western Region Annual Awards Gala 2026** — Oct 11, Taglyan Complex, save-the-date (Community)
+- **Posters still pending for all 6** (gradient placeholders until uploaded). Preview only; not deployed.
+
+---
+
 ## 2026-07-15 (cont.) — New hero banner + scroll-arrows restyled
 
 - **New hero banner** installed: Gohar uploaded the redesigned banner (repositioned text, wider
