@@ -31,7 +31,12 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
   from the original).
 - Note: images/ is now ~14 MB (over the historical 10 MB Netlify-Drop guardrail; not a blocker for
   git-connected deploys + lazy-loaded images, but worth a compression pass later).
-- Rebuilt previews. **Deploy:** pending Gohar's call on the 2 gaps.
+- Rebuilt previews.
+- **DEPLOYED to production 2026-07-14** on Gohar's green light (Option A: ship now, add the 2
+  remaining images later). Fast-forwarded `main` e3d2f3c → e303725; Netlify auto-published.
+  Verified live at armenianeventsla.com: 37 events, "This Month" section, and all 4 new posters +
+  logo favicon return HTTP 200. Armenian Open shows its gradient (poster 404 as expected).
+- **Still to add in a follow-up deploy:** `armenian-open-2026.jpg` and the new hero banner.
 
 ---
 
