@@ -20,6 +20,22 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 
 ---
 
+## 2026-07-15 (cont.) — 🚀 DEPLOYED to production
+
+- On Gohar's green light ("im satisfied please deploy"), deployed the full batch to
+  armenianeventsla.com. Fast-forwarded `main` b4de650 → 6b983f3; Netlify auto-published.
+- **Verified live:** 43 events; new hero banner (837 KB, the redesign); Music=pink / Sports=teal
+  category colors; This Month section; Winter/Spring + Comedy/Film-TV/Festival/Gala filters; all
+  new posters + AUA + golf + logo favicon return HTTP 200.
+- Shipped in this deploy: new banner, translucent/opaque-glyph scroll arrows, AUA gala full listing,
+  golf poster, 6 new events (Karmir, WC Final, All-Stars, Pickleball, Independence Day Festival, ANCA)
+  with 5 real posters, expanded category taxonomy + season filters, and the category recolors.
+- **Known follow-up (not blocking):** the 27th Independence Day Festival still shows a gradient card —
+  its uploaded poster was the wrong flyer (a Jan 11 Appreciation Brunch). Awaiting the correct festival
+  flyer. The mismatched `images/armenian-independence-day-festival.jpg` is currently an unused file.
+
+---
+
 ## 2026-07-15 (cont.) — Category color tweaks
 
 - Recolored 3 category pills per Gohar: **Sports** green → **teal** (#14b8a6), **Music** violet →
