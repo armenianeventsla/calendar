@@ -20,6 +20,21 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 
 ---
 
+## 2026-07-15 (cont.) — Wired 5 of 6 new-event posters; 1 flagged as a mismatch
+
+- Gohar uploaded posters for the 6 new events. Verified each; wired the **5 that match**:
+  Karmir Film Lab, World Cup 2026 Final Watch Party, Armenian All-Stars, Summer Pickleball, ANCA
+  WR Gala. Also enriched two venue addresses read off the flyers (World Cup Final → 75 E Santa
+  Anita Ave; Pickleball → 5155 Old Scandia Ln).
+- ⚠️ **Mismatch flagged:** `images/armenian-independence-day-festival.jpg` is actually a flyer for a
+  **volunteer Appreciation Brunch** (Nor Serount Cultural Association) — Sunday **Jan 11, 2026**,
+  11 AM, AEBU Center, 1060 Allen Ave, Pasadena — **not** the Sept 20 Independence Day Festival at
+  Verdugo Park. Left the festival on its gradient card, pending Gohar's decision (wrong file? a
+  separate event? note Jan 11 2026 is already past unless the year is 2027).
+- Preview only; not deployed.
+
+---
+
 ## 2026-07-15 (cont.) — Expanded category taxonomy + Winter/Spring season filters
 
 - Added **4 new categories** (with distinct pill colors) and re-sorted events into them:
