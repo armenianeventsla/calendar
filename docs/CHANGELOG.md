@@ -20,15 +20,14 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 
 ---
 
-## 2026-07-15 (cont.) — Scroll-arrows restyled (translucent); banner still pending
+## 2026-07-15 (cont.) — New hero banner + scroll-arrows restyled
 
-- Made the fixed up/down scroll-nav arrows smaller (42→32px) and **translucent** (container idle
-  opacity 0.3, translucent blurred background), brightening to solid only on hover/focus — so they
-  no longer sit heavy over the content or cover text. Preview only; not deployed (Gohar: "deployed
-  enough this week").
-- **Banner:** Gohar shared a redesigned banner (repositioned text, wider layout) in chat, but a
-  chat-pasted image can't be saved into the repo — it must be uploaded as a file. `images/banner.png`
-  is still the original. Pending upload of the new banner as `images/banner.png`.
+- **New hero banner** installed: Gohar uploaded the redesigned banner (repositioned text, wider
+  layout) as `images/banner.png`, replacing the original. Confirmed it renders in the hero.
+- **Scroll-nav arrows** restyled per Gohar: smaller (42→32px), circle background kept **translucent
+  + blurred** so it doesn't cover text, but the **white arrow glyph is now fully opaque** (dropped
+  the earlier container-wide dimming) so the control stays legible. Hover still fills to apricot.
+- Preview only; **not deployed** (Gohar: "deployed enough this week").
 
 ---
 
