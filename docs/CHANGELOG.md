@@ -20,6 +20,19 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 
 ---
 
+## 2026-07-21 — First automated Cowork ingest processed (+1 event, +1 update)
+
+- 🎉 The **automated Cowork→GitHub pipeline worked end to end** for the first time: Cowork pushed
+  `ingest/2026-07-15` (poster + manifest.json) on its own. Processed it:
+  - **Added new event: "Armenian Wine Tasting — Karas Wines @ Gini"** — Fri Jul 31, 6–9 PM, Gini
+    (Burbank), FREE, featuring Karas Wines; real poster from the ingest branch. Site now 44 events.
+  - **Updated Echoes of Our Ancestors II** — added celebrated ballet dancer **Ludvig Ispiryan** to
+    the lineup (per the calendar update in the manifest).
+  - Manifest also re-listed the 6 earlier events (already live) and 12 correctly-skipped posts.
+- Staged on the working branch; awaiting green light to deploy.
+
+---
+
 ## 2026-07-15 (cont.) — Festival poster retrieved from Instagram & wired (mismatch resolved)
 
 - Pulled the real **Armenian Independence Day Festival** flyer from the source IG post
