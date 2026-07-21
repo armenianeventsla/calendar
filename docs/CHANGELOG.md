@@ -20,6 +20,16 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 
 ---
 
+## 2026-07-21 (cont.) — Modal close (X) moved outside the card
+
+- Per Gohar: the event-detail modal's close **✕** was too opaque and sat on top of the poster. Moved
+  it **outside the card** — now a lighter, translucent/blurred circle fixed at the top-right of the
+  viewport, off the poster. Bumped the modal's top padding (30→62px) so the button clears the card on
+  mobile too (where the card is near full-width). Verified on desktop and a 390px mobile viewport.
+- Preview only; not deployed.
+
+---
+
 ## 2026-07-21 — First automated Cowork ingest processed (+1 event, +1 update)
 
 - 🎉 The **automated Cowork→GitHub pipeline worked end to end** for the first time: Cowork pushed
