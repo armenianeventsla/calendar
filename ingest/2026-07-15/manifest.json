@@ -1,0 +1,31 @@
+{
+  "ingest_date": "2026-07-15",
+  "calendar_id": "c5c323fb0a26dced52e4ce58935b6fb5e7722915a78ba352edab804709efcb39@group.calendar.google.com",
+  "note": "Collection run. Events created/updated on the 'Armenian Events of LA' Google Calendar. Poster JPEGs live in images/ (uploaded via GitHub web upload — the MCP file API cannot store binary). Never edits index.html, never pushes main.",
+  "events_added": [
+    {"slug": "world-cup-final-watch-party", "title": "World Cup 2026 Final Watch Party — Homenetmen Burbank", "calendar_event_id": "7v0fogc325c6degnu4ogtt2kko", "date": "2026-07-19", "post_url": "https://www.instagram.com/p/DaO7HNgx8MC", "account": "burbank_sipan", "link": null, "link_label": "Tickets via QR on flyer", "free": false, "price": "$50", "multi_day": false, "images": ["images/world-cup-final-watch-party.jpg"]},
+    {"slug": "karmir-film-lab-la", "title": "Karmir Film Lab LA — Opening", "calendar_event_id": "nmr8ac9np3t7ou79vvprgtbrdc", "date": "2026-07-18", "post_url": "https://www.instagram.com/p/Dax-3mAyTjQ", "account": "karmir.la", "link": null, "link_label": null, "free": true, "multi_day": false, "images": ["images/karmir-film-lab-la.jpg"]},
+    {"slug": "anca-wr-gala-2026", "title": "ANCA Western Region Annual Awards Gala 2026", "calendar_event_id": "csk10jhhjihnd9njborte1gvb4", "date": "2026-10-11", "post_url": "https://www.instagram.com/p/DagYC4oyHal", "account": "anca_wr", "link": null, "link_label": "Save the Date (tickets TBA)", "free": false, "multi_day": false, "images": ["images/anca-wr-gala-2026.jpg"]},
+    {"slug": "armenian-all-stars", "title": "Armenian All-Stars — Comedy at UCB Franklin", "calendar_event_id": "qsn5pk07akhbps6ttahoq8ikg0", "date": "2026-08-07", "post_url": "https://www.instagram.com/p/DayeseLornt", "account": "artounnazareth", "link": "https://ucbcomedy.com", "link_label": "Tickets", "free": false, "multi_day": false, "images": ["images/armenian-all-stars.jpg"]},
+    {"slug": "summer-pickleball-massis", "title": "Summer Pickleball Fundraiser — Homenetmen Massis", "calendar_event_id": "0ds54pp5pslst6et0v6sdd1ooc", "date": "2026-08-15", "post_url": "https://www.instagram.com/p/DaycWLYgGJw", "account": "homenetmenmassis", "link": "https://massis.org/pickleball", "link_label": "Register", "free": false, "price": "$75", "multi_day": false, "images": ["images/summer-pickleball-massis.jpg"]},
+    {"slug": "armenian-independence-day-festival", "title": "27th Annual Armenian Independence Day Festival", "calendar_event_id": "udoke43gfjfo6djf9dnqkprt74", "date": "2026-09-20", "post_url": "https://www.instagram.com/p/DayKsSyPIx8", "account": "armenianindependenceday", "link": null, "link_label": "Instagram", "free": true, "multi_day": false, "images": ["images/armenian-independence-day-festival.jpg"]},
+    {"slug": "gini-wine-tasting-karas", "title": "Armenian Wine Tasting — Karas Wines @ Gini", "calendar_event_id": "nlbrlvtauhaqrfpcvmfalb8c58", "date": "2026-07-31", "post_url": "https://www.instagram.com/p/Da9ZuQ8FK9B", "account": "drinkginiusa", "link": null, "link_label": "Instagram", "free": true, "multi_day": false, "images": ["images/gini-wine-tasting-karas.jpg"]}
+  ],
+  "events_updated": [
+    {"slug": "echoes-of-our-ancestors-2", "title": "Echoes of Our Ancestors II — Heroes & Saints (Greek Theatre)", "calendar_event_id": "fhtp8ear9072hmnnbfs55gqiv8", "date": "2026-09-03", "change": "Added ballet dancer Ludvig Ispiryan to lineup", "post_url": "https://www.instagram.com/p/Da8Ti7utQTp", "account": "peopleofarfoundation"}
+  ],
+  "skipped": [
+    {"reason": "Music/news, not an event", "post_url": "https://www.instagram.com/p/DaTW0DTmWi3", "note": "Ladaniva single"},
+    {"reason": "Singles mixer (excluded)", "post_url": "https://www.instagram.com/p/Daej8O6iMvp", "note": "Sip Spark Connect"},
+    {"reason": "Not Armenian community", "post_url": "https://www.instagram.com/p/DaTtBvfkgH6", "note": "LALÒ / Missa Solemnis concert"},
+    {"reason": "Not an Armenian-community event", "post_url": "https://www.instagram.com/p/DbCY8rhlBuj", "note": "Thrift & Upcycling Workshop"},
+    {"reason": "Personal/entertainment reel", "post_url": "https://www.instagram.com/p/DZ0jPS4BGUr", "note": "Euphoria reel"},
+    {"reason": "Personal/political reel", "post_url": "https://www.instagram.com/p/DbB-X3Lh1bS", "note": "marybasmadjian commentary"},
+    {"reason": "Personal post (own)", "post_url": "https://www.instagram.com/p/DbAKGaTC7wF", "note": "goharg Alex Theatre film"},
+    {"reason": "Weekly events-roundup reel, not a single event", "post_url": "https://www.instagram.com/p/Da5nxFTIseZ", "note": "In the Know with Nona"},
+    {"reason": "Same event already on calendar; performer already listed", "post_url": "https://www.instagram.com/p/DayeseLornt", "note": "Echoes R-Mean promo"},
+    {"reason": "Reel/vlog, could not fully open; not a dated event", "note": "Day with Hye Jams reel"},
+    {"reason": "Older like at last-run boundary; non-event", "note": "Blue cartoon tile"},
+    {"reason": "Food reel, no event details", "note": "goharg food reel"}
+  ]
+}
