@@ -20,6 +20,26 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 
 ---
 
+## 2026-07-30 — 6 new August events added (44 → 50)
+
+- Gohar uploaded 5 posters (to the ingest branch) + added events to the calendar. Pulled the posters,
+  matched them to the calendar events, and added to the site:
+  - **Acoustic Sundaze — Aren Emirsian @ Kavat Coffee** — Aug 2, Eagle Rock (Music, free)
+  - **Vahe Berberian × Anahid Oshagan — Book Signing** — Aug 6, Armenian Arts Center Glendale (Cultural)
+  - **Armenian Paint & Chill — Masis & Sis (ACA LA)** — Aug 7 5PM **and** Aug 16 12PM (two sessions,
+    both added; Cultural, $20, Alzheimer's Care for Armenia fundraiser)
+  - **Coffee Cup Readings with Melineh @ Urartu Café** — Aug 9, Glendale (Cultural, $45 tasseography)
+  - **Converge — Armenian Professionals Social** — Aug 13, The Room Santa Monica (Social)
+- **Created the Converge calendar event** — its poster was uploaded but no calendar entry existed;
+  built it from the flyer (Aug 13, 7 PM, The Room SM, hosted by AAMS/ABA/AESA) so the calendar (and
+  "Subscribe" feed) stays complete.
+- ⚠️ **Poster flag:** `vahe-berberian-book-signing.jpg` is a **podcast episode thumbnail (#65)**
+  featuring Vahe Berberian, not the actual book-signing flyer. Wired it (it does feature the host)
+  but it may be worth swapping for the real event graphic.
+- Preview only; not deployed. Site now 50 events.
+
+---
+
 ## 2026-07-21 (cont.) — Modal close (X) moved outside the card
 
 - Per Gohar: the event-detail modal's close **✕** was too opaque and sat on top of the poster. Moved
