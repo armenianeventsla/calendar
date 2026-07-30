@@ -33,9 +33,11 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 - **Created the Converge calendar event** — its poster was uploaded but no calendar entry existed;
   built it from the flyer (Aug 13, 7 PM, The Room SM, hosted by AAMS/ABA/AESA) so the calendar (and
   "Subscribe" feed) stays complete.
-- ⚠️ **Poster flag:** `vahe-berberian-book-signing.jpg` is a **podcast episode thumbnail (#65)**
-  featuring Vahe Berberian, not the actual book-signing flyer. Wired it (it does feature the host)
-  but it may be worth swapping for the real event graphic.
+- **Poster fixed (2026-07-30):** the first `vahe-berberian-book-signing.jpg` was a podcast thumbnail;
+  Gohar re-uploaded the real flyer (`vahe-flyer-slide2.jpg`). Swapped it into the canonical filename,
+  removed the redundant slide file, and corrected the event details it clarified — book **"Letters
+  from Zaatar"** by Vahé Berberian, venue **Center for Armenian Arts, 250 N Orange St, Glendale, CA
+  91203** (was 91209). Synced the Google Calendar entry to match.
 - Preview only; not deployed. Site now 50 events.
 
 ---
