@@ -20,8 +20,17 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 
 ---
 
-## 2026-07-31 — Bardez SOLD OUT, rectangular buttons/badges, new "Art" category
+## 2026-07-31 — 2 new events, Bardez SOLD OUT, rectangular UI, Art & Books categories (50 → 52)
 
+- **Added 2 events created on the Google Calendar today** (posters pulled from the
+  `ingest/2026-07-15` branch):
+  - **Hye Notes #9 — Karaoke Social Mixer** — Aug 14, The Good Nite Karaoke Bar,
+    North Hollywood (Social, FREE, 21+).
+  - **APS Sunset Social — Networking & Scholarship Fundraiser** — Aug 21, The
+    Valorian (White Rabbit Pool Deck), West Hollywood (Social, $45 members / $55
+    non-members, 21+).
+- **Collective Noise — Art Exhibit end date extended to Aug 21** (was Jul 31), to
+  match the calendar update.
 - **Marked "AGBU LA Choir 'Bardez' Karaoke Night" (Fri Jul 31) as SOLD OUT** —
   added `discount:"SOLD OUT"`, so it shows the red SOLD OUT badge like the
   Navasartian Victory Ball.
@@ -42,8 +51,8 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 - **Moved the FREE / SOLD OUT badges next to the category tag** (instead of beside
   the title) on the cards, list rows, and modal — grouped via a small `.ctags`
   flex wrapper. Titles are now clean.
-- Preview only; not deployed. Snapshot: `deploy-previews/2026-07-31/preview.html`.
-  Site still 50 events. Google Calendar not modified.
+- Snapshot: `deploy-previews/2026-07-31/preview.html`. Site now **52 events**.
+  Google Calendar already had these events (they're the source); not modified here.
 
 ---
 

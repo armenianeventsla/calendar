@@ -1,10 +1,17 @@
 # Preview — 2026-07-31
 
-Open **`preview.html`** — a self-contained snapshot (images embedded) to review
-all three changes below. **Preview only — not deployed.** Awaiting Gohar's green
-light before touching production `index.html` on `main` / Netlify.
+Open **`preview.html`** — a self-contained snapshot (images embedded). Site is now
+**52 events** (was 50).
 
 ## What changed this round
+
+### 0. Two new events added (from today's calendar) + Collective Noise date fix
+- **Hye Notes #9 — Karaoke Social Mixer** — Aug 14, The Good Nite, North Hollywood
+  (Social, FREE). Real poster.
+- **APS Sunset Social — Networking & Scholarship Fundraiser** — Aug 21, The Valorian
+  (White Rabbit Pool Deck), West Hollywood (Social, $45/$55). Real poster.
+- **Collective Noise — Art Exhibit** end date extended **Jul 31 → Aug 21** to match
+  the calendar.
 
 ### 1. Bardez Karaoke Night marked SOLD OUT
 - Added `discount:"SOLD OUT"` to **AGBU LA Choir "Bardez" Karaoke Night** (Fri Jul 31),
