@@ -20,6 +20,27 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 
 ---
 
+## 2026-07-31 — Bardez SOLD OUT, rectangular buttons/badges, new "Art" category
+
+- **Marked "AGBU LA Choir 'Bardez' Karaoke Night" (Fri Jul 31) as SOLD OUT** —
+  added `discount:"SOLD OUT"`, so it shows the red SOLD OUT badge like the
+  Navasartian Victory Ball.
+- **De-pilled the UI:** changed every pill-shaped element (`border-radius:999px`)
+  to a rectangular `4px` — the top badge, filter chips, all category tags, and the
+  SOLD OUT / FREE / date-range badges. Also squared the action buttons and poster
+  date-chip (`.btn`, `.mini`, `.submit`, modal actions, `.datechip`: 10–12px → 4px).
+  Left the round icon buttons (social links, modal ✕, carousel arrows, logo) and the
+  card/container corners as-is.
+- **Added an "Art" category** (indigo `#4f46e5`); the filter bar picks it up
+  automatically since chips are derived from the events. Recategorized 4 events:
+  **Art After Dark** (was Gala — it's an art fundraiser, not a gala), **Collective
+  Noise — Art Exhibit** (was Cultural), and both **Armenian Paint & Chill** sessions
+  (Aug 7 & Aug 16, were Cultural).
+- Preview only; not deployed. Snapshot: `deploy-previews/2026-07-31/preview.html`.
+  Site still 50 events. Google Calendar not modified.
+
+---
+
 ## 2026-07-30 — 6 new August events added (44 → 50)
 
 - Gohar uploaded 5 posters (to the ingest branch) + added events to the calendar. Pulled the posters,

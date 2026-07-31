@@ -14,12 +14,12 @@
   a{color:inherit;text-decoration:none}
   .wrap{max-width:1180px;margin:0 auto;padding:0 18px}
   .hero{position:relative;overflow:hidden;text-align:center;background:radial-gradient(1200px 400px at 50% -10%,rgba(245,166,35,.18),transparent 60%),linear-gradient(180deg,#11141a,#0e1014);border-bottom:1px solid var(--line);padding:56px 18px 46px}
-  .badge-top{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#0e1014;background:var(--apricot);padding:6px 14px;border-radius:999px;margin-bottom:20px}
+  .badge-top{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#0e1014;background:var(--apricot);padding:6px 14px;border-radius:4px;margin-bottom:20px}
   .hero h1{font-size:clamp(2.4rem,6vw,4.2rem);font-weight:900;line-height:.95;letter-spacing:-1px}
   .hero h1 .loc{display:inline-block;font-size:.42em;font-style:italic;font-weight:600;letter-spacing:.5px;opacity:.82}
   .hero p{max-width:600px;margin:18px auto 0;color:var(--muted);font-size:1.05rem}
   .cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:26px}
-  .btn{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.92rem;padding:12px 20px;border-radius:12px;cursor:pointer;border:none;transition:.15s}
+  .btn{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.92rem;padding:12px 20px;border-radius:4px;cursor:pointer;border:none;transition:.15s}
   .btn-primary{background:var(--apricot);color:#1a1205}
   .btn-primary:hover{background:#ffba3d;transform:translateY(-1px)}
   .btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
@@ -29,7 +29,7 @@
   .sec-head h2{font-size:1.7rem;font-weight:800;letter-spacing:-.4px}
   .sec-head .hint{color:var(--muted);font-size:.9rem}
   .chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}
-  .chip{border:1px solid var(--line);background:var(--bg2);color:var(--ink);padding:8px 16px;border-radius:999px;font-size:.86rem;font-weight:600;cursor:pointer;transition:.15s}
+  .chip{border:1px solid var(--line);background:var(--bg2);color:var(--ink);padding:8px 16px;border-radius:4px;font-size:.86rem;font-weight:600;cursor:pointer;transition:.15s}
   .chip:hover{border-color:var(--apricot)}
   .chip.active{background:var(--ink);color:#0e1014;border-color:var(--ink)}
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:22px}
@@ -52,8 +52,8 @@
   .poster .art{position:absolute;inset:0;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px;gap:8px}
   .poster .art .t{font-weight:900;line-height:1.04;letter-spacing:-.5px}
   .poster .art .s{font-size:.74rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;opacity:.92}
-  .poster .cat{position:absolute;top:12px;left:12px;z-index:3;color:#fff;font-size:.66rem;font-weight:800;letter-spacing:.6px;text-transform:uppercase;padding:5px 10px;border-radius:999px}
-  .poster .datechip{position:absolute;top:12px;right:12px;z-index:3;background:#fff;color:#11141a;border-radius:12px;text-align:center;line-height:1;padding:8px 10px;min-width:48px;box-shadow:0 4px 12px rgba(0,0,0,.3)}
+  .poster .cat{position:absolute;top:12px;left:12px;z-index:3;color:#fff;font-size:.66rem;font-weight:800;letter-spacing:.6px;text-transform:uppercase;padding:5px 10px;border-radius:4px}
+  .poster .datechip{position:absolute;top:12px;right:12px;z-index:3;background:#fff;color:#11141a;border-radius:4px;text-align:center;line-height:1;padding:8px 10px;min-width:48px;box-shadow:0 4px 12px rgba(0,0,0,.3)}
   .poster .datechip .d{font-size:1.25rem;font-weight:900;display:block}
   .poster .datechip .m{font-size:.6rem;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:#e23b3b}
   .cbody{padding:16px 16px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
@@ -62,11 +62,11 @@
   .meta .l{display:flex;gap:7px;align-items:flex-start}
   .desc{color:#c6ccd6;font-size:.88rem}
   .ctop{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
-  .cattag{display:inline-block;color:#fff;font-size:.64rem;font-weight:800;letter-spacing:.6px;text-transform:uppercase;padding:5px 11px;border-radius:999px}
+  .cattag{display:inline-block;color:#fff;font-size:.64rem;font-weight:800;letter-spacing:.6px;text-transform:uppercase;padding:5px 11px;border-radius:4px}
   .cdate{font-size:.82rem;font-weight:800;color:var(--apricot);white-space:nowrap}
-  .rangebadge{display:inline-block;background:var(--violet);color:#fff;font-size:.6rem;font-weight:800;letter-spacing:.3px;text-transform:uppercase;padding:2px 8px;border-radius:999px;vertical-align:middle;white-space:nowrap}
+  .rangebadge{display:inline-block;background:var(--violet);color:#fff;font-size:.6rem;font-weight:800;letter-spacing:.3px;text-transform:uppercase;padding:2px 8px;border-radius:4px;vertical-align:middle;white-space:nowrap}
   .acts{display:flex;gap:8px;margin-top:auto;padding-top:8px}
-  .mini{flex:1;text-align:center;font-weight:700;font-size:.82rem;padding:10px;border-radius:10px;transition:.15s}
+  .mini{flex:1;text-align:center;font-weight:700;font-size:.82rem;padding:10px;border-radius:4px;transition:.15s}
   .mini-cal{background:var(--apricot);color:#1a1205}
   .mini-cal:hover{background:#ffba3d}
   .mini-ig{background:var(--blue);border:1px solid var(--blue);color:#fff}
@@ -90,7 +90,7 @@
   .flinks svg{width:20px;height:20px;fill:currentColor}
   .femail{margin:6px 0 2px;font-size:.9rem}
   .femail a{color:var(--muted)} .femail a:hover{color:var(--apricot)}
-  .submit{display:inline-block;margin-top:8px;background:var(--red);color:#fff;font-weight:800;padding:12px 22px;border-radius:12px}
+  .submit{display:inline-block;margin-top:8px;background:var(--red);color:#fff;font-weight:800;padding:12px 22px;border-radius:4px}
   .submit:hover{background:#ef5b5b}
   @media(max-width:560px){.grid,.grid.week{grid-template-columns:1fr}.grid.month{grid-template-columns:1fr 1fr}}
   .banner-img{display:block;width:100%;height:250px;object-fit:cover;object-position:center}
@@ -111,7 +111,7 @@
   .lmain{flex:1;min-width:0}
   .lmain h3{font-size:1.05rem;font-weight:800;margin-bottom:2px}
   .lmain .lm{color:var(--muted);font-size:.84rem}
-  .lcat{flex:0 0 auto;color:#fff;font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:.4px;padding:4px 9px;border-radius:999px}
+  .lcat{flex:0 0 auto;color:#fff;font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:.4px;padding:4px 9px;border-radius:4px}
   .lacts{flex:0 0 auto;display:flex;gap:8px}
   .lacts .mini{flex:0 0 auto;min-width:92px}
   @media(max-width:600px){.litem{flex-wrap:wrap}.lthumb{display:none}.lmain{flex:1 1 60%}.lacts{width:100%}.lacts .mini{flex:1}}
@@ -128,14 +128,14 @@
   .modal-poster{width:100%;background:#0b0d11}
   .modal-poster img{display:block;width:100%;height:auto}
   .modal-body{padding:20px 22px 24px}
-  .modal-body .mcat{display:inline-block;color:#fff;font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:.4px;padding:4px 10px;border-radius:999px;margin-bottom:10px}
+  .modal-body .mcat{display:inline-block;color:#fff;font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:.4px;padding:4px 10px;border-radius:4px;margin-bottom:10px}
   .modal-body h3{font-size:1.4rem;font-weight:800;margin-bottom:10px;line-height:1.2}
   .modal-body .mmeta{color:var(--muted);font-size:.9rem;margin-bottom:4px}
   .modal-body .mdesc{color:#c6ccd6;font-size:.92rem;margin:14px 0 18px}
   .modal-acts{display:flex;gap:10px;flex-wrap:wrap}
-  .modal-acts a{flex:1;min-width:150px;text-align:center;font-weight:700;font-size:.9rem;padding:12px;border-radius:10px}
-  .discbadge{display:inline-block;background:var(--red);color:#fff;font-size:.6rem;font-weight:800;letter-spacing:.5px;text-transform:uppercase;padding:2px 7px;border-radius:999px;vertical-align:middle}
-  .freebadge{display:inline-block;background:#16a34a;color:#fff;font-size:.6rem;font-weight:800;letter-spacing:.5px;text-transform:uppercase;padding:2px 7px;border-radius:999px;vertical-align:middle}
+  .modal-acts a{flex:1;min-width:150px;text-align:center;font-weight:700;font-size:.9rem;padding:12px;border-radius:4px}
+  .discbadge{display:inline-block;background:var(--red);color:#fff;font-size:.6rem;font-weight:800;letter-spacing:.5px;text-transform:uppercase;padding:2px 7px;border-radius:4px;vertical-align:middle}
+  .freebadge{display:inline-block;background:#16a34a;color:#fff;font-size:.6rem;font-weight:800;letter-spacing:.5px;text-transform:uppercase;padding:2px 7px;border-radius:4px;vertical-align:middle}
   .scrollnav{position:fixed;right:14px;top:50%;transform:translateY(-50%);z-index:40;display:flex;flex-direction:column;gap:8px}
   .scrollnav button{width:32px;height:32px;border-radius:50%;border:1px solid rgba(255,255,255,.16);background:rgba(24,28,36,.34);color:#fff;font-size:.72rem;cursor:pointer;box-shadow:0 3px 10px rgba(0,0,0,.25);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);transition:.15s}
   .scrollnav button:hover{background:var(--apricot);color:#1a1205;border-color:var(--apricot)}
@@ -448,7 +448,7 @@ const EVENTS = [
     title:"Collective Noise — Art Exhibit",
     date:"2026-06-12", start:"", end:"", endDate:"2026-07-31",
     location:"Eye For Sound at Kavat Coffee, Los Angeles, CA",
-    category:"Cultural", free:true,
+    category:"Art", free:true,
     description:`Check out my upcoming exhibit titled "Collective Noise" at @eyeforsound @kavatcoffee from June 12th thru July 31st. Art will be available to view and purchase. Stop by and grab yourself a cup of coffee and hang out. ❤️`,
     link:"https://www.eyeforsound.com/exhibitions/krikor-tchay-collective-noise", linkLabel:"Details",
     poster:"images/collective-noise.jpg",
@@ -548,7 +548,7 @@ const EVENTS = [
     title:"Armenian Paint & Chill — Masis & Sis (ACA LA)",
     date:"2026-08-07", start:"17:00", end:"19:00", endDate:"",
     location:"Colors Art Studio, 7654 Wilkinson Ave, North Hollywood, CA 91605",
-    category:"Cultural",
+    category:"Art",
     description:`🎨 Paint &amp; Chill with Alzheimer's Care for Armenia (ACA LA) — a guided session on how to paint Armenia's beautiful Masis &amp; Sis mountains. No experience needed; supplies provided!<br><br>📅 Friday, August 7 &middot; 🕔 5:00 PM &middot; 📍 Colors Art Studio, 7654 Wilkinson Ave, North Hollywood<br>💲 $20 (Venmo @aca_losangeles) + RSVP via SignUpGenius. Also offered Sun, Aug 16 at 12 PM.`,
     link:"https://www.instagram.com/p/DbZtVmASjk-", linkLabel:"Instagram",
     poster:"images/paint-chill-masis-sis.jpg",
@@ -578,7 +578,7 @@ const EVENTS = [
     title:"Armenian Paint & Chill — Masis & Sis (ACA LA) · Aug 16",
     date:"2026-08-16", start:"12:00", end:"14:00", endDate:"",
     location:"Colors Art Studio, 7654 Wilkinson Ave, North Hollywood, CA 91605",
-    category:"Cultural",
+    category:"Art",
     description:`🎨 Paint &amp; Chill with Alzheimer's Care for Armenia (ACA LA) — a guided session on how to paint Armenia's beautiful Masis &amp; Sis mountains. No experience needed; supplies provided!<br><br>📅 Sunday, August 16 &middot; 🕛 12:00 PM &middot; 📍 Colors Art Studio, 7654 Wilkinson Ave, North Hollywood<br>💲 $20 (Venmo @aca_losangeles) + RSVP via SignUpGenius. Also offered Fri, Aug 7 at 5 PM.`,
     link:"https://www.instagram.com/p/DbZtVmASjk-", linkLabel:"Instagram",
     poster:"images/paint-chill-masis-sis.jpg",
@@ -638,7 +638,7 @@ const EVENTS = [
     title:"AGBU LA Choir “Bardez” Karaoke Night",
     date:"2026-07-31", start:"19:00", end:"22:00", endDate:"",
     location:"AGBU Vatche and Tamar Manoukian Cultural Center, 2495 E Mountain St, Pasadena, CA 91104",
-    category:"Social",
+    category:"Social", discount:"SOLD OUT",
     description:`Join us for our 2nd annual Karaoke Night! Sing your favorite songs, enjoy delicious tacos by @viennalunacatering and churros by @jrschurros and make lasting memories with the AGBU LA Choir family. 🎤🎶✨<br><br>📅 Friday, July 31 &middot; 🕐 7:00 PM<br>🎫 $50 per person (includes tacos &amp; churros)<br>📩 DM @agbulachoir on Instagram to reserve your spot!`,
     link:"https://www.instagram.com/p/DaghZZzBwag", linkLabel:"Instagram",
     poster:"images/bardez-karaoke-agbu.jpg",
@@ -658,7 +658,7 @@ const EVENTS = [
     title:"Art After Dark — Armenian American Museum × 301 AD",
     date:"2026-08-29", start:"18:30", end:"22:00", endDate:"",
     location:"The Vault, 1411 Railroad Street, Glendale, CA 91204",
-    category:"Gala",
+    category:"Art",
     description:`Art, Impact, &amp; Connection.<br><br>Join us on Saturday, August 29, at The Vault for Art After Dark, an exclusive fundraiser experience organized in partnership with the Armenian American Museum and 301 AD. Step inside a private members' club, where curated art, exotic cars, handcrafted cocktails, and an unforgettable atmosphere come together for one extraordinary evening — all in support of two nonprofit organizations dedicated to preserving, celebrating, and advancing Armenian art, culture, and community.<br><br>Sounds by John Tecker &middot; Auction &middot; Cocktails &amp; cigars.<br><br>Reserve your ticket by August 22.`,
     link:"https://armenianamericanmuseum.org/event/art-after-dark", linkLabel:"Tickets",
     poster:"images/art-after-dark.jpg",
@@ -736,7 +736,7 @@ const EVENTS = [
   }
 ];
 
-const CAT_COLORS={Cultural:"#c2410c",Social:"#3b6fe2",Music:"#ec4899",Sports:"#14b8a6",Community:"#d97706",Shopping:"#db2777",Comedy:"#eab308","Film/TV":"#7c4a1e",Festival:"#e11d48",Gala:"#7e22ce",Other:"#475569"};
+const CAT_COLORS={Cultural:"#c2410c",Social:"#3b6fe2",Music:"#ec4899",Sports:"#14b8a6",Community:"#d97706",Shopping:"#db2777",Comedy:"#eab308","Film/TV":"#7c4a1e",Festival:"#e11d48",Gala:"#7e22ce",Art:"#4f46e5",Other:"#475569"};
 const MON=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 const MONF=["January","February","March","April","May","June","July","August","September","October","November","December"];
 const DAYF=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
