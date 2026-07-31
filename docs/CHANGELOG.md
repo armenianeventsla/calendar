@@ -31,11 +31,14 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
   date-chip (`.btn`, `.mini`, `.submit`, modal actions, `.datechip`: 10–12px → 4px).
   Left the round icon buttons (social links, modal ✕, carousel arrows, logo) and the
   card/container corners as-is.
-- **Added an "Art" category** (indigo `#4f46e5`); the filter bar picks it up
+- **Added an "Art" category** (indigo `#4338ca`); the filter bar picks it up
   automatically since chips are derived from the events. Recategorized 4 events:
   **Art After Dark** (was Gala — it's an art fundraiser, not a gala), **Collective
   Noise — Art Exhibit** (was Cultural), and both **Armenian Paint & Chill** sessions
   (Aug 7 & Aug 16, were Cultural).
+- **Added a "Books" category** (forest green `#15803d`) for book signings / author
+  talks; moved **Vahe Berberian × Anahid Oshagan — Book Signing** (Aug 6) into it
+  (was Cultural). One event for now, ready for future book events.
 - Preview only; not deployed. Snapshot: `deploy-previews/2026-07-31/preview.html`.
   Site still 50 events. Google Calendar not modified.
 
