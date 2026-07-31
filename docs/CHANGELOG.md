@@ -39,6 +39,9 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 - **Added a "Books" category** (forest green `#15803d`) for book signings / author
   talks; moved **Vahe Berberian × Anahid Oshagan — Book Signing** (Aug 6) into it
   (was Cultural). One event for now, ready for future book events.
+- **Moved the FREE / SOLD OUT badges next to the category tag** (instead of beside
+  the title) on the cards, list rows, and modal — grouped via a small `.ctags`
+  flex wrapper. Titles are now clean.
 - Preview only; not deployed. Snapshot: `deploy-previews/2026-07-31/preview.html`.
   Site still 50 events. Google Calendar not modified.
 

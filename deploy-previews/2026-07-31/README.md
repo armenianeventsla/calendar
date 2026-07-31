@@ -38,6 +38,11 @@ light before touching production `index.html` on `main` / Netlify.
 - Moved **Vahe Berberian × Anahid Oshagan — Book Signing** (Aug 6) from *Cultural*
   → **Books**. Just the one book event for now; set up for future ones.
 
+### 5. FREE / SOLD OUT badges moved next to the category
+- The **FREE** and **SOLD OUT** badges now sit right beside the category tag at the
+  top of each card (and in the list rows and the detail modal), instead of next to
+  the title. Titles read clean now.
+
 ## Note
 Event count unchanged (50). The 6 August events from 2026-07-30 are untouched.
 The Google Calendar entries were **not** modified — tell me if you'd like the
