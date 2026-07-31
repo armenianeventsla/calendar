@@ -53,6 +53,8 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
   flex wrapper. Titles are now clean.
 - Snapshot: `deploy-previews/2026-07-31/preview.html`. Site now **52 events**.
   Google Calendar already had these events (they're the source); not modified here.
+- ✅ **DEPLOYED to production 2026-07-31** — Netlify deploy `6a6d03b38673a307de2a2906`,
+  live at https://armenianeventsla.com (Gohar green-lit "deploy it").
 
 ---
 
