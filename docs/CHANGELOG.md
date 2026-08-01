@@ -20,6 +20,27 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 
 ---
 
+## 2026-08-01 — 5 new events + posters (52 → 57)
+
+- **Added 5 events created on the Google Calendar today**, with posters uploaded on the
+  Cowork branch and pulled into `/images`:
+  - **"The Animal People" — Documentary Screening** (Armenian Vegans of LA × Center for
+    Armenian Arts) — Tue Aug 4, 7 PM, Center for Armenian Arts, Glendale (Film/TV, FREE).
+  - **Armenian Frame Drum Circle** (Ververi Coffee Collective × Center for Armenian Arts)
+    — Sun Aug 9, 10 AM, Center for Armenian Arts, Glendale (Music; RSVP by Aug 2).
+  - **AGBU YP LA — Industry Spotlight: Katherine Sarafian** — Wed Aug 26, 6:30–8:30 PM,
+    Pasadena (Community; application-based).
+  - **Ethno Colors — Live in Concert (Komitas 157th)** (Armenian Arts) — Sat Sep 26,
+    7:30 PM, Alex Theatre, Glendale (Music; links to real ticket page tickets.armenianarts.com).
+  - **Armenian Food Fest** (Armenian Arts) — Sun Oct 11, 12–9 PM, 222 N Orange St,
+    Glendale (Festival, FREE).
+- **Food Fest address** taken from the poster (**222** N Orange St), which differs from
+  the calendar entry (211 N Orange St) — flagged in the preview README for confirmation.
+- Events **appended** to the `EVENTS` array (the site sorts by date at render time).
+- The parallel Cowork branch's `index.html` edits (Jul-30 batch) were **not** merged —
+  production already had those events; only the 5 new posters were taken from that branch.
+- Preview: `deploy-previews/2026-08-01/`. Not deployed — awaiting green light.
+
 ## 2026-07-31 — 2 new events, Bardez SOLD OUT, rectangular UI, Art & Books categories (50 → 52)
 
 - **Added 2 events created on the Google Calendar today** (posters pulled from the
