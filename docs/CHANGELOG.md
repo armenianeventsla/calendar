@@ -44,6 +44,12 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 - **Upgraded "Echoes of Our Ancestors II" (Sep 3) from an Instagram post to its official
   Ticketmaster page** (`.../event/0900644DC8232D23`, verified — Greek Theatre, Sep 3 2026),
   labeled **Tickets**. The poster itself says "Tickets at Ticketmaster.com."
+- **Armenian Paint & Chill — Masis & Sis (both Aug 7 & Aug 16 sessions)** → decoded the
+  RSVP QR on the flyer to its ACA LA SignUpGenius page
+  (`signupgenius.com/go/...-acalaart`, HTTP 200 verified), labeled **RSVP**.
+- **APS Sunset Social (Aug 21)** → replaced the Instagram post with the official Eventbrite
+  ticket page (`.../sunset-social-with-aps-tickets-1995703141820`, verified), labeled
+  **Tickets** (tracking params stripped).
 - The parallel Cowork branch's `index.html` edits (Jul-30 batch) were **not** merged —
   production already had those events; only the 5 new posters were taken from that branch.
 - Preview: `deploy-previews/2026-08-01/`. Not deployed — awaiting green light.
