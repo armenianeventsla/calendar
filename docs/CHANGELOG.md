@@ -50,6 +50,9 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 - **APS Sunset Social (Aug 21)** → replaced the Instagram post with the official Eventbrite
   ticket page (`.../sunset-social-with-aps-tickets-1995703141820`, verified), labeled
   **Tickets** (tracking params stripped).
+- **Hye Notes #9 (Aug 14)** → replaced the Instagram post with its Partiful RSVP page
+  (`partiful.com/e/EZgGxxpHCdwCOMimA3ZQ`, from the post caption, HTTP 200 verified),
+  labeled **RSVP**. Description already matched the caption; no change needed.
 - The parallel Cowork branch's `index.html` edits (Jul-30 batch) were **not** merged —
   production already had those events; only the 5 new posters were taken from that branch.
 - Preview: `deploy-previews/2026-08-01/`. Not deployed — awaiting green light.
