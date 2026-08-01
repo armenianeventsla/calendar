@@ -20,6 +20,13 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 
 ---
 
+## 2026-08-01 (follow-up) — Frame Drum Circle marked SOLD OUT
+
+- **Armenian Frame Drum Circle (Aug 9)** is full — added `discount:"SOLD OUT"` so it shows
+  the red SOLD OUT badge (same treatment as Bardez / Victory Ball). Kept the Instagram
+  info link. This replaces the earlier plan to add an RSVP link (event is now full).
+- **Status: prepared on the branch, NOT yet deployed** — awaiting green light.
+
 ## 2026-08-01 — 5 new events + posters (52 → 57)
 
 - **Added 5 events created on the Google Calendar today**, with posters uploaded on the
