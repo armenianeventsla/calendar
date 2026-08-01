@@ -41,6 +41,9 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
   Its flyer only had a QR code; decoded it to the event's Luma page
   (`https://luma.com/nihr0c0s`, verified), added as an **RSVP** button, and updated the
   description ("RSVP via the QR code on the flyer" → "RSVP via the link below").
+- **Upgraded "Echoes of Our Ancestors II" (Sep 3) from an Instagram post to its official
+  Ticketmaster page** (`.../event/0900644DC8232D23`, verified — Greek Theatre, Sep 3 2026),
+  labeled **Tickets**. The poster itself says "Tickets at Ticketmaster.com."
 - The parallel Cowork branch's `index.html` edits (Jul-30 batch) were **not** merged —
   production already had those events; only the 5 new posters were taken from that branch.
 - Preview: `deploy-previews/2026-08-01/`. Not deployed — awaiting green light.
