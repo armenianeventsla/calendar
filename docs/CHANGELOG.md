@@ -53,6 +53,8 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 - **Hye Notes #9 (Aug 14)** → replaced the Instagram post with its Partiful RSVP page
   (`partiful.com/e/EZgGxxpHCdwCOMimA3ZQ`, from the post caption, HTTP 200 verified),
   labeled **RSVP**. Description already matched the caption; no change needed.
+- **GiniFest 2026 (Oct 11)** → swapped the Instagram post for the official festival site
+  (`ginifest.com`, HTTP 200), relabeled **Details** (was mislabeled "Tickets" on an IG link).
 - The parallel Cowork branch's `index.html` edits (Jul-30 batch) were **not** merged —
   production already had those events; only the 5 new posters were taken from that branch.
 - Preview: `deploy-previews/2026-08-01/`. Not deployed — awaiting green light.
