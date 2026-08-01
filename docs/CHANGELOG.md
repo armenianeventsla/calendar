@@ -37,6 +37,10 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 - **Food Fest address** taken from the poster (**222** N Orange St), which differs from
   the calendar entry (211 N Orange St) — flagged in the preview README for confirmation.
 - Events **appended** to the `EVENTS` array (the site sorts by date at render time).
+- **Added the missing RSVP link to "Converge — Armenian Professionals Social" (Aug 13).**
+  Its flyer only had a QR code; decoded it to the event's Luma page
+  (`https://luma.com/nihr0c0s`, verified), added as an **RSVP** button, and updated the
+  description ("RSVP via the QR code on the flyer" → "RSVP via the link below").
 - The parallel Cowork branch's `index.html` edits (Jul-30 batch) were **not** merged —
   production already had those events; only the 5 new posters were taken from that branch.
 - Preview: `deploy-previews/2026-08-01/`. Not deployed — awaiting green light.

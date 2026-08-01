@@ -22,6 +22,14 @@ touched.
 Links: Instagram for four of them; **Ethno Colors links to the real ticket page**
 (`tickets.armenianarts.com`, labeled "Tickets").
 
+### Also: added the missing RSVP link to Converge (Aug 13)
+
+**Converge — Armenian Professionals Social** had no link (its flyer only carried a QR
+code). I decoded the QR: it points to the event's **Luma page**
+(`https://luma.com/nihr0c0s` — verified as "CONVERGE: Where Medicine, Law & Science
+Meet," hosted by AAMS/ABA/AESA, The Room Santa Monica). Added it as an **RSVP** button and
+changed the description line "RSVP via the QR code on the flyer" → "RSVP via the link below."
+
 ## Things to confirm before green-light
 
 1. **Food Fest address — I used the poster, not the calendar.** The poster clearly reads
