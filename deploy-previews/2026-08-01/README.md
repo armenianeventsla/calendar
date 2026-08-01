@@ -53,4 +53,4 @@ changed the description line "RSVP via the QR code on the flyer" → "RSVP via t
   Vahe Berberian, Paint & Chill, Coffee Cup, Converge) were **not** merged — production
   already has all of those, so merging would have duplicated them. Only the 5 new posters
   were taken from that branch.
-- Nothing deployed. This is a preview only, awaiting your green light.
+- **DEPLOYED to production on 2026-08-01** (Netlify deploy `6a6e5e21`), verified live.

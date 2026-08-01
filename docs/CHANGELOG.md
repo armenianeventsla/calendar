@@ -57,7 +57,8 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
   (`ginifest.com`, HTTP 200), relabeled **Details** (was mislabeled "Tickets" on an IG link).
 - The parallel Cowork branch's `index.html` edits (Jul-30 batch) were **not** merged —
   production already had those events; only the 5 new posters were taken from that branch.
-- Preview: `deploy-previews/2026-08-01/`. Not deployed — awaiting green light.
+- Preview: `deploy-previews/2026-08-01/`. **DEPLOYED to production (armenianeventsla.com) on
+  2026-08-01** after Gohar's green light (Netlify deploy `6a6e5e21`, verified live).
 
 ## 2026-07-31 — 2 new events, Bardez SOLD OUT, rectangular UI, Art & Books categories (50 → 52)
 
