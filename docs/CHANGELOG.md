@@ -20,6 +20,33 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 
 ---
 
+## 2026-08-07 — 3 new events + 2 posters (57 → 60)
+
+- **Added 3 events that were on the "Armenian Events of LA" Google Calendar but not yet on
+  the site:**
+  - **Glendale Cultural Night Market** — Sat Aug 8, 5–10 PM, Artsakh Paseo, Downtown
+    Glendale (Shopping, FREE). Newly-launching weekly Saturday market; modeled as a single
+    card like the Downtown Burbank market. Link → Instagram (@glendaleculturalnightmarket).
+  - **San Gabriel Valley Phoenix Poets — Fundraising Celebration** — Sat Aug 15, 7–9 PM,
+    La Cañada (address shared on RSVP) (Community; fundraiser for the 2025–26 Anthology &
+    Eaton Fire relief). Link → Instagram (@raffijoe; RSVP/donate via bio link).
+  - **AGBU Gala Night — featuring Harout Pamboukjian** — Fri Sep 18 (evening), Deluxe
+    Banquet Hall, Burbank (Gala; $150; proceeds benefit AGBU Camp Nairi). Link → real
+    ticket page `agbu.org/gala-night-reserve` (Tickets).
+- **Posters:** pulled the Glendale and AGBU Gala flyers from their Instagram posts into
+  `/images` (`glendale-cultural-night-market.jpg`, `agbu-gala-night-harout.jpg`). The
+  Phoenix Poets flyer is landscape and Instagram only serves a title-cropping square crop,
+  so that event uses the in-style gradient fallback; it already points at
+  `images/sgv-phoenix-poets.jpg`, so dropping the real flyer there will override it.
+- Events **appended** to the `EVENTS` array (the site sorts by date at render time). Total
+  now **60 events**.
+- **To confirm before deploy:** Glendale market launch date (flyer/calendar say "coming
+  soon"); AGBU Gala exact start time (not on flyer). See preview README.
+- **Deploy:** preview saved to `/deploy-previews/2026-08-07/`. **Not deployed** — awaiting
+  Gohar's green light.
+
+---
+
 ## 2026-08-01 — 5 new events + posters (52 → 57)
 
 - **Added 5 events created on the Google Calendar today**, with posters uploaded on the
