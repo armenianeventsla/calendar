@@ -54,4 +54,5 @@ event (`discount:"SOLD OUT"`), same treatment as the Navasartian Victory Ball.
 ## Notes
 
 - Total after this round: **60 events**.
-- No deploy performed. Awaiting green light before updating production / publishing to Netlify.
+- **DEPLOYED to production on 2026-08-07** (Netlify deploy `6a7648d7`), verified live at
+  armenianeventsla.com.

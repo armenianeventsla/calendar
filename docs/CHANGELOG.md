@@ -45,8 +45,9 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
   now **60 events**.
 - **To confirm before deploy:** Glendale market launch date (flyer/calendar say "coming
   soon"); AGBU Gala exact start time (not on flyer). See preview README.
-- **Deploy:** preview saved to `/deploy-previews/2026-08-07/`. **Not deployed** — awaiting
-  Gohar's green light.
+- **Deploy:** preview saved to `/deploy-previews/2026-08-07/`. **DEPLOYED to production on
+  2026-08-07** (Netlify deploy `6a7648d7`) after Gohar's green light — verified live at
+  armenianeventsla.com (60 events, 3 SOLD OUT, all three posters serving 200).
 
 ---
 
