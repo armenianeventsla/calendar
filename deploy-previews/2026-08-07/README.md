@@ -14,7 +14,7 @@ the site sorts by date at render time, so they land in the right chronological p
 | Event | Date | Category | Free? | Poster |
 |---|---|---|---|---|
 | **Glendale Cultural Night Market** | Sat Aug 8, 5–10 PM · Artsakh Paseo, Downtown Glendale | Shopping | FREE | `glendale-cultural-night-market.jpg` ✅ (real flyer) |
-| **San Gabriel Valley Phoenix Poets — Fundraising Celebration** | Sat Aug 15, 7–9 PM · La Cañada (address on RSVP) | Community | — (fundraiser) | gradient fallback ⚠️ (see below) |
+| **San Gabriel Valley Phoenix Poets — Fundraising Celebration** | Sat Aug 15, 7–9 PM · La Cañada (address on RSVP) | Community | — (fundraiser) | `sgv-phoenix-poets.jpg` 🎨 (generated in-style — see below) |
 | **AGBU Gala Night — featuring Harout Pamboukjian** | Fri Sep 18 (evening) · Deluxe Banquet Hall, Burbank | Gala | — ($150) | `agbu-gala-night-harout.jpg` ✅ (real flyer) |
 
 Links: **Glendale** and **Phoenix Poets** → Instagram (no public ticket/RSVP URL — Phoenix
@@ -26,11 +26,17 @@ directs to the link in @raffijoe's bio). **AGBU Gala** → real ticket page
 The flyers for **Glendale** and **AGBU Gala** were pulled from their Instagram posts and
 saved into `/images` — both read cleanly as square poster art.
 
-The **Phoenix Poets** flyer is a wide (landscape) graphic; the only version Instagram serves
-publicly is a square crop that cuts the title off on both sides, so it's **not** included.
-That event uses the site's in-style gradient fallback for now. To use the real flyer, drop a
-JPG at **`images/sgv-phoenix-poets.jpg`** and it will override the gradient automatically —
-the event already points at that filename.
+The **Phoenix Poets** flyer is a wide (landscape) graphic and Instagram only serves a square
+crop publicly that cuts the title off both sides. So this poster is a clean **in-style
+recreation** (`sgv-phoenix-poets.jpg`) built to match the real flyer's look — blue field,
+white angled banners, yellow "Fundraising Celebration" bar — with the event's real details.
+It reads as a proper poster now. To swap in the organizers' original flyer later, just drop a
+JPG at **`images/sgv-phoenix-poets.jpg`** (same filename) and it overrides this one.
+
+### Also: marked the Armenian Frame Drum Circle (Aug 9) as SOLD OUT
+
+Per Gohar — added the red **SOLD OUT** badge to the existing **Armenian Frame Drum Circle**
+event (`discount:"SOLD OUT"`), same treatment as the Navasartian Victory Ball.
 
 ## Things to confirm before green-light
 

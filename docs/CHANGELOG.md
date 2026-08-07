@@ -36,8 +36,11 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 - **Posters:** pulled the Glendale and AGBU Gala flyers from their Instagram posts into
   `/images` (`glendale-cultural-night-market.jpg`, `agbu-gala-night-harout.jpg`). The
   Phoenix Poets flyer is landscape and Instagram only serves a title-cropping square crop,
-  so that event uses the in-style gradient fallback; it already points at
-  `images/sgv-phoenix-poets.jpg`, so dropping the real flyer there will override it.
+  so `images/sgv-phoenix-poets.jpg` is a clean **in-style recreation** (blue field, white
+  angled banners, yellow "Fundraising Celebration" bar) built from the event's real
+  details; dropping the organizers' real flyer at that same path will override it.
+- **Marked "Armenian Frame Drum Circle" (Aug 9) as SOLD OUT** (`discount:"SOLD OUT"`),
+  same red badge as the Navasartian Victory Ball.
 - Events **appended** to the `EVENTS` array (the site sorts by date at render time). Total
   now **60 events**.
 - **To confirm before deploy:** Glendale market launch date (flyer/calendar say "coming
