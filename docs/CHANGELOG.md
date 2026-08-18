@@ -35,10 +35,13 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
     Chatsworth (Social).
   - **Laughing Lavash — Armenian Comedy Night (Jack Jr @ CSUN)** — Thu Oct 22, time TBA,
     CSUN Northridge (Comedy).
-- **Posters:** real flyers pulled from Instagram for Speed Dating, LuysHike #4, and
-  Laughing Lavash. Vartoush, WanderCrust, and Stoddard Falls only had title-cropped square
-  crops / a Reel thumbnail with a ▶ overlay, so those three use clean **in-style generated
-  posters** themed to each event; dropping a real flyer at the same filename overrides them.
+- **Posters:** Gohar uploaded the real full flyers to GitHub (branch
+  `claude/cowork-session-context-t7bjj1`), so the site now uses the **real posters** for
+  Armenian Speed Dating, LuysHike #4, Laughing Lavash, Vartoush, and WanderCrust Tea
+  (replacing the earlier IG crops / in-style stand-ins). **Stoddard Falls** keeps its
+  in-style generated poster — no flyer was uploaded and its IG post is a Reel (▶ overlay).
+- **Speed Dating posters:** the two uploaded files (`…-sep2`, `…-sep16`) are the same Sep 2
+  flyer; kept as a single card dated Sep 2 noting Sep 16 — pending Gohar's call on splitting.
 - **Skipped:** *Jazz Night — Trio Brio* (Homenetmen Burbank, Aug 15) — already past.
 - **Poster fix:** replaced the **AGBU Gala Night** poster — Instagram only served a square
   center-crop of the portrait flyer (title/photo/date cut off, looked zoomed) — with a clean

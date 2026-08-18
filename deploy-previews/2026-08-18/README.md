@@ -13,27 +13,27 @@ land chronologically).
 
 | Event | Date | Category | Poster |
 |---|---|---|---|
-| **Armenian Speed Dating — Ages 26–40** (Urartu Coffee) | Wed Sep 2 (also Sep 16), 7–9 PM · Glendale · $35 | Social ⚠️ | `armenian-speed-dating.jpg` ✅ (real flyer) |
-| **End of Summer Hike & Waterfall Swim — Stoddard Falls** | Sun Sep 6, 8:45 AM carpool · Angeles Forest | Community | `end-summer-hike-stoddard.jpg` 🎨 (generated) |
-| **Vartoush Loves You! — Mary Basmadjian at Flappers** | Thu Sep 10, 7:30 PM · Flappers, Burbank | Comedy | `vartoush-loves-you.jpg` 🎨 (generated) |
-| **LuysHike #4 — Community Hike** | Sat Sep 12, 7 AM · LA area (TBA) | Community | `luyshike-4.jpg` ✅ (real flyer) |
-| **WanderCrust Tea — A Magical Tea Party** | Sun Sep 13, 11:30 AM · The Valley Hive, Chatsworth | Social | `wandercrust-tea.jpg` 🎨 (generated) |
-| **Laughing Lavash — Armenian Comedy Night** (Jack Jr @ CSUN) | Thu Oct 22 (time TBA) · CSUN, Northridge | Comedy | `laughing-lavash-csun.jpg` ✅ (real flyer) |
+| **Armenian Speed Dating — Ages 26–40** (Urartu Coffee) | Wed Sep 2 (also Sep 16), 7–9 PM · Glendale · $35 | Social ⚠️ | ✅ real flyer (your upload) |
+| **End of Summer Hike & Waterfall Swim — Stoddard Falls** | Sun Sep 6, 8:45 AM carpool · Angeles Forest | Community | 🎨 in-style (no flyer uploaded) |
+| **Vartoush Loves You! — Mary Basmadjian at Flappers** | Thu Sep 10, Doors 6:30 / Show 7:30 · Flappers, Burbank | Comedy | ✅ real flyer (your upload) |
+| **LuysHike #4 — Community Hike** | Sat Sep 12, 7 AM · LA area (TBA) | Community | ✅ real flyer (your upload) |
+| **WanderCrust Tea — A Magical Tea Party** | Sun Sep 13, 11:30 AM · The Valley Hive, Chatsworth | Social | ✅ real flyer (your upload) |
+| **Laughing Lavash — Armenian Comedy Night** (Jack Jr @ CSUN) | Thu Oct 22 (time TBA) · CSUN, Northridge | Comedy | ✅ real flyer (your upload) |
 
 All six link to their Instagram source (none had a public ticket/RSVP URL).
 
-### Posters — real vs generated
+### Posters — now using your uploaded flyers
 
-Instagram was gating the full flyers to the proxy this round, but I pulled the public
-poster crops via the flyer's own bot preview. Three came through clean and are the **real
-flyers**: Speed Dating, LuysHike #4, Laughing Lavash.
+You uploaded the real full flyers to GitHub (branch `claude/cowork-session-context-t7bjj1`).
+I pulled them onto this branch and swapped them in, so **five of the six now use your real
+posters** — full-frame, no cropping/zoom. Only **Stoddard Falls** keeps an in-style poster
+(no flyer was uploaded for it, and its Instagram post is a Reel with a ▶ overlay); drop a
+JPG at `images/end-summer-hike-stoddard.jpg` anytime to override it.
 
-The other three couldn't be used as-is — **Vartoush** and **WanderCrust** are wide flyers
-that Instagram only serves as a square crop with the title sliced off, and the **Stoddard
-Falls** post is a Reel whose thumbnail carries a ▶ play-button overlay. For those I built
-clean **in-style posters** (`🎨` above) from each event's real details, themed to match
-(teal water, warm comedy orange, dusty-blue tea party). Drop the organizers' real flyer at
-the same `images/…jpg` filename anytime to override the generated one.
+**Speed Dating posters:** the two files you uploaded (`…-sep2` and `…-sep16`) are the same
+image — the **Sep 2** flyer. So for now it's one card dated Sep 2 (noting Sep 16). Want two
+separate dated cards? If so, is there a Sep 16 version of the flyer, or should the Sep 16
+card reuse this one / use an in-style Sep 16 poster? (See question 1 below.)
 
 ## Things to confirm before green-light
 
