@@ -40,6 +40,10 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
   crops / a Reel thumbnail with a ▶ overlay, so those three use clean **in-style generated
   posters** themed to each event; dropping a real flyer at the same filename overrides them.
 - **Skipped:** *Jazz Night — Trio Brio* (Homenetmen Burbank, Aug 15) — already past.
+- **Poster fix:** replaced the **AGBU Gala Night** poster — Instagram only served a square
+  center-crop of the portrait flyer (title/photo/date cut off, looked zoomed) — with a clean
+  full-frame in-style gold-on-black poster. (Root cause of "zoomed" posters: IG only exposes
+  a 640×640 center crop publicly; the full flyer needs their private API.)
 - Events **appended** to the `EVENTS` array (the site sorts by date at render time). Total
   now **66 events**.
 - **Deploy:** preview saved to `/deploy-previews/2026-08-18/`. **Not deployed** — awaiting
