@@ -20,6 +20,33 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 
 ---
 
+## 2026-08-18 — 6 new events + posters (60 → 66)
+
+- **Added 6 events created on the Google Calendar today (2026-08-18):**
+  - **Armenian Speed Dating — Ages 26–40** (Urartu Coffee) — Wed Sep 2 (also Sep 16),
+    7–9 PM, Glendale, $35 (Social). *Previously a skipped category; included because it
+    was added to the calendar — flagged in the preview for confirmation.*
+  - **End of Summer Hike & Waterfall Swim — Stoddard Falls** — Sun Sep 6, 8:45 AM carpool,
+    Angeles Nat'l Forest (Community).
+  - **Vartoush Loves You! — Mary Basmadjian at Flappers** — Thu Sep 10, 7:30 PM, Burbank
+    (Comedy).
+  - **LuysHike #4 — Community Hike** — Sat Sep 12, 7 AM, LA area TBA (Community, FREE).
+  - **WanderCrust Tea — A Magical Tea Party** — Sun Sep 13, 11:30 AM, The Valley Hive,
+    Chatsworth (Social).
+  - **Laughing Lavash — Armenian Comedy Night (Jack Jr @ CSUN)** — Thu Oct 22, time TBA,
+    CSUN Northridge (Comedy).
+- **Posters:** real flyers pulled from Instagram for Speed Dating, LuysHike #4, and
+  Laughing Lavash. Vartoush, WanderCrust, and Stoddard Falls only had title-cropped square
+  crops / a Reel thumbnail with a ▶ overlay, so those three use clean **in-style generated
+  posters** themed to each event; dropping a real flyer at the same filename overrides them.
+- **Skipped:** *Jazz Night — Trio Brio* (Homenetmen Burbank, Aug 15) — already past.
+- Events **appended** to the `EVENTS` array (the site sorts by date at render time). Total
+  now **66 events**.
+- **Deploy:** preview saved to `/deploy-previews/2026-08-18/`. **Not deployed** — awaiting
+  Gohar's green light.
+
+---
+
 ## 2026-08-07 — 3 new events + 2 posters (57 → 60)
 
 - **Added 3 events that were on the "Armenian Events of LA" Google Calendar but not yet on
