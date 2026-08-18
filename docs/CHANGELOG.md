@@ -42,6 +42,11 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
   in-style generated poster — no flyer was uploaded and its IG post is a Reel (▶ overlay).
 - **Speed Dating posters:** the two uploaded files (`…-sep2`, `…-sep16`) are the same Sep 2
   flyer; kept as a single card dated Sep 2 noting Sep 16 — pending Gohar's call on splitting.
+- **Real ticket links (from Gohar):** upgraded two events from their Instagram link to the
+  real ticket page — **Vartoush** → Flappers Comedy (`flapperscomedy.com/site/shows.php?event_id=77352`,
+  "Tickets"); **WanderCrust Tea** → the event's Canva site (`wandercrust.my.canva.site`,
+  "Tickets"); **Armenian Speed Dating** → the sign-up site
+  (`armenianspeeddating.com/armenian-sd-sign-up`, "Sign Up").
 - **Skipped:** *Jazz Night — Trio Brio* (Homenetmen Burbank, Aug 15) — already past.
 - **Poster fix:** replaced the **AGBU Gala Night** poster — Instagram only served a square
   center-crop of the portrait flyer (title/photo/date cut off, looked zoomed) — with a clean
