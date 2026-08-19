@@ -54,8 +54,10 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
   a 640×640 center crop publicly; the full flyer needs their private API.)
 - Events **appended** to the `EVENTS` array (the site sorts by date at render time). Total
   now **66 events**.
-- **Deploy:** preview saved to `/deploy-previews/2026-08-18/`. **Not deployed** — awaiting
-  Gohar's green light.
+- **Deploy:** preview saved to `/deploy-previews/2026-08-18/`. **DEPLOYED to production on
+  2026-08-18** (Netlify deploy `6a862347`) after Gohar's green light — verified live at
+  armenianeventsla.com (66 events; real posters + real ticket links for Vartoush, WanderCrust,
+  Speed Dating).
 
 ---
 

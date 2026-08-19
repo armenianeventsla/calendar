@@ -50,4 +50,5 @@ card reuse this one / use an in-style Sep 16 poster? (See question 1 below.)
 ## Notes
 
 - Total after this round: **66 events**.
-- No deploy performed. Awaiting green light before updating production / publishing to Netlify.
+- **DEPLOYED to production on 2026-08-18** (Netlify deploy `6a862347`), verified live at
+  armenianeventsla.com.
