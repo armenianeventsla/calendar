@@ -20,6 +20,35 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 
 ---
 
+## 2026-08-25 — Removed past events + 7 new events (66 → 24)
+
+- **Removed all 49 past events** (date before 2026-08-25) from the `EVENTS` array — June/July,
+  the World Cup watch-party series, and everything through Aug 21. The site already auto-hides
+  past events at render, so this is source cleanup; history remains in `deploy-previews/`,
+  `site-history/`, and the Google Calendar.
+  - ⚠️ Two recurring markets were removed with the past batch (their listed date had passed):
+    **Downtown Burbank Cultural Market** and **Glendale Cultural Night Market** — re-add rolled
+    forward if still running.
+- **Added 7 new events** with Gohar's uploaded flyers (branch `claude/cowork-session-context-t7bjj1`):
+  - **Armenian Wine Tasting — Khachen Estate @ Gini** — Fri Aug 28, 6–9 PM, Gini Burbank (Cultural).
+  - **Mesrobian Car Show (Montebello AYF)** — Sat Sep 12, 9 AM–1 PM, Pico Rivera, $20/$5 (Community).
+  - **Armenian Bar Association — Judges' Night & Awards Dinner** — Thu Sep 17, Los Feliz,
+    $75–$350 (Gala); tickets armenianbar.org/JN2026.
+  - **AGBU Global Run — Team Greater LA** — Sun Sep 20, Griffith Park, 10K/5K (Sports);
+    register agbu.org/global-run-2026.
+  - **Armenian Speed Dating (Sep 16)** and **(Sep 23 "For All")** — Urartu Coffee, Glendale,
+    $35 (Social) — Speed Dating now three dated cards (Sep 2 / 16 / 23). NOTE: the uploaded
+    Sep 16 flyer is the same image as Sep 2 (reads "September 2") — pending a corrected poster.
+  - **Backgammon Tournament — Holy Cross Armenian Food Fest** — Sat Oct 24, 3 PM, Montebello,
+    $25 (Community).
+- **Skipped:** *Armenian Folk Dance Workshop* (Maple Park, Aug 23) — poster uploaded but date
+  already past.
+- Total now **24 events**.
+- **Deploy:** preview saved to `/deploy-previews/2026-08-25/`. **Not deployed** — awaiting
+  Gohar's green light.
+
+---
+
 ## 2026-08-18 — 6 new events + posters (60 → 66)
 
 - **Added 6 events created on the Google Calendar today (2026-08-18):**
