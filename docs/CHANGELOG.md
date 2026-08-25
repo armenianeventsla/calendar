@@ -45,8 +45,9 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 - **Skipped:** *Armenian Folk Dance Workshop* (Maple Park, Aug 23) — poster uploaded but date
   already past.
 - Total now **24 events**.
-- **Deploy:** preview saved to `/deploy-previews/2026-08-25/`. **Not deployed** — awaiting
-  Gohar's green light.
+- **Deploy:** preview saved to `/deploy-previews/2026-08-25/`. **DEPLOYED to production on
+  2026-08-25** (Netlify deploy `6a8de4ab`) after Gohar's green light — verified live at
+  armenianeventsla.com (24 upcoming events; past events removed; 7 new events with posters).
 
 ---
 

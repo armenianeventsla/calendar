@@ -49,4 +49,5 @@ Sep 16 flyer if you have one?
 
 ## Notes
 - Total after this round: **24 events**.
-- No deploy performed. Awaiting green light before updating production / publishing to Netlify.
+- **DEPLOYED to production on 2026-08-25** (Netlify deploy `6a8de4ab`), verified live at
+  armenianeventsla.com.
