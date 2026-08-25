@@ -37,8 +37,9 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
   - **AGBU Global Run — Team Greater LA** — Sun Sep 20, Griffith Park, 10K/5K (Sports);
     register agbu.org/global-run-2026.
   - **Armenian Speed Dating (Sep 16)** and **(Sep 23 "For All")** — Urartu Coffee, Glendale,
-    $35 (Social) — Speed Dating now three dated cards (Sep 2 / 16 / 23). NOTE: the uploaded
-    Sep 16 flyer is the same image as Sep 2 (reads "September 2") — pending a corrected poster.
+    $35 (Social) — Speed Dating kept as three separate dated cards (Sep 2 / 16 / 23) per
+    Gohar. The uploaded Sep 16 file was actually the Sep 2 flyer, so the Sep 16 card now uses
+    a **date-correct in-style poster** (yellow/pink, matching the real Sep 2 & Sep 23 flyers).
   - **Backgammon Tournament — Holy Cross Armenian Food Fest** — Sat Oct 24, 3 PM, Montebello,
     $25 (Community).
 - **Skipped:** *Armenian Folk Dance Workshop* (Maple Park, Aug 23) — poster uploaded but date
