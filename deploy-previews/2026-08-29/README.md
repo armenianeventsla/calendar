@@ -37,4 +37,7 @@ Khachen @ Gini** (Aug 28).
 
 ## Notes
 - Total after this round: **29 events**.
-- No deploy performed. Awaiting green light before updating production / publishing to Netlify.
+- Also this round: FREE badge on the Stoddard Falls hike; banner crop nudged so "IN LOS
+  ANGELES" shows; new TUMO gala poster; reworded hike poster (no dot separators).
+- **DEPLOYED to production on 2026-08-29** (Netlify deploy `6a934178`), verified live at
+  armenianeventsla.com.

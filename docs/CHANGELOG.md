@@ -34,8 +34,14 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 - **Removed 2 newly-past events:** AGBU YP Industry Spotlight (Aug 26) and Armenian Wine
   Tasting — Khachen @ Gini (Aug 28).
 - Total now **29 events**.
-- **Deploy:** preview saved to `/deploy-previews/2026-08-29/`. **Not deployed** — awaiting
-  Gohar's green light.
+- **Follow-up tweaks (same round):** marked the **End of Summer Hike & Waterfall Swim** as
+  **FREE**; nudged the hero **banner** crop (`object-position: center 60%`) so the "IN LOS
+  ANGELES" line isn't clipped on wide screens; swapped in Gohar's new **TUMO 15th Anniversary
+  Gala** green/gold poster; and reworded the generated **Stoddard Falls hike poster** into
+  full sentences (its IG source is a video), removing middot separators that read like dots.
+- **Deploy:** preview saved to `/deploy-previews/2026-08-29/`. **DEPLOYED to production on
+  2026-08-29** (Netlify deploy `6a934178`) after Gohar's green light — verified live at
+  armenianeventsla.com (29 events).
 
 ---
 
