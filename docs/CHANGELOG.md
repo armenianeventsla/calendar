@@ -20,6 +20,25 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 
 ---
 
+## 2026-08-29 — 7 new events + posters (24 → 29)
+
+- **Added 7 new events** with Gohar's uploaded flyers (branch `ingest/2026-07-15`):
+  - **Galas Film Night, Vol. III** — Sat Aug 29, Akbar, Silver Lake (Film/TV).
+  - **Yoga and Coffee** (Screaming Yoga × Kavat) — Sat Sep 26, Eagle Rock, $35 (Community).
+  - **Armenian Experience** (Hillside Events) — Sat Sep 26, RSVP loc., $120 (Cultural).
+  - **Group Dances Masterclass with Tom Bozigian** — Sat Oct 3, Burbank, $50 (Cultural).
+  - **Armenian Cultural Night** (Mesrobian School) — Fri Oct 16, Pico Rivera (Cultural).
+  - **The Diary of an Armenian Comedian** (Antic) — Fri Nov 6, Pasadena, time TBA (Comedy).
+  - **AECP Annual Gala** (Honoring Dr. Roger V. Ohanesian) — Fri Nov 14, Balboa Bay Resort,
+    Newport Beach (Gala) — note: Orange County, outside greater LA.
+- **Removed 2 newly-past events:** AGBU YP Industry Spotlight (Aug 26) and Armenian Wine
+  Tasting — Khachen @ Gini (Aug 28).
+- Total now **29 events**.
+- **Deploy:** preview saved to `/deploy-previews/2026-08-29/`. **Not deployed** — awaiting
+  Gohar's green light.
+
+---
+
 ## 2026-08-25 — Removed past events + 7 new events (66 → 24)
 
 - **Removed all 49 past events** (date before 2026-08-25) from the `EVENTS` array — June/July,
