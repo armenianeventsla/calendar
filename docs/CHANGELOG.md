@@ -38,8 +38,9 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 - Notes: two Gini posters uploaded for the same Sep 4 event (used the elegant one); Hye Notes
   #10 flyer says "Thursday" but Sep 25 is a Friday — went with the calendar date.
 - Total now **34 events**.
-- **Deploy:** preview saved to `/deploy-previews/2026-09-04/`. **Not deployed** — awaiting
-  Gohar's green light.
+- **Deploy:** preview saved to `/deploy-previews/2026-09-04/`. **DEPLOYED to production on
+  2026-09-04** (Netlify deploy `6a9a1279`) after Gohar's green light — verified live at
+  armenianeventsla.com (34 events).
 
 ---
 

@@ -40,4 +40,5 @@ Ancestors (Sep 3).
 
 ## Notes
 - Total after this round: **34 events**.
-- No deploy performed. Awaiting green light before updating production / publishing to Netlify.
+- **DEPLOYED to production on 2026-09-04** (Netlify deploy `6a9a1279`), verified live at
+  armenianeventsla.com.
