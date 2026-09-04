@@ -20,6 +20,29 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 
 ---
 
+## 2026-09-04 — 9 new events + posters (29 → 34)
+
+- **Added 9 new events** with Gohar's uploaded flyers (branch `claude/cowork-session-context-t7bjj1`):
+  - **Gini Armenian Indigenous-Grape Wine Tasting** — Fri Sep 4, Burbank, FREE (Cultural).
+  - **Surj & Chat** (NAMI Glendale) — two sessions: Thu Sep 10 (Pacific Park Library) and Sat
+    Sep 12 (Central Library), FREE (Community).
+  - **Game Night — ACA × Urartu Cafe** — Sat Sep 12, Glendale (Social).
+  - **Armenian Film Festival 2026** — Sep 16–20, Glendale (Film/TV), plus its featured events:
+  - **Opening Night — AFF Rooftop Party** — Wed Sep 16, The Glenmark (Film/TV).
+  - **Karren Karagulian: Guest of Honor** — Fri Sep 18, The Americana (Film/TV).
+  - **Governance & Shared Responsibility Symposium (AAMS × MLARI)** — Sat Sep 19, Alhambra,
+    FREE (Community); register mlari26.eventbrite.com.
+  - **Hye Notes #10 — Armenian Karaoke Night** — Fri Sep 25, North Hollywood, FREE (Social).
+- **Removed 4 newly-past events:** Galas Film Night (Aug 29), Art After Dark (Aug 29), Speed
+  Dating Sep 2, Echoes of Our Ancestors (Sep 3).
+- Notes: two Gini posters uploaded for the same Sep 4 event (used the elegant one); Hye Notes
+  #10 flyer says "Thursday" but Sep 25 is a Friday — went with the calendar date.
+- Total now **34 events**.
+- **Deploy:** preview saved to `/deploy-previews/2026-09-04/`. **Not deployed** — awaiting
+  Gohar's green light.
+
+---
+
 ## 2026-08-29 — 7 new events + posters (24 → 29)
 
 - **Added 7 new events** with Gohar's uploaded flyers (branch `ingest/2026-07-15`):
