@@ -34,4 +34,5 @@ WanderCrust Tea.
   site and the Google Calendar, from the flyer Gohar shared (in-style poster; the IG image
   cropped the title).
 - Total after this round: **31 events**.
-- No deploy performed. Awaiting green light before updating production / publishing to Netlify.
+- **DEPLOYED to production on 2026-09-15** (Netlify deploy `6aa9c401`), verified live at
+  armenianeventsla.com.

@@ -40,8 +40,9 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
   in-style recreation (the IG post only served a title-cropped square). The Backgammon
   Tournament is part of this same fest.
 - Total now **31 events**.
-- **Deploy:** preview saved to `/deploy-previews/2026-09-15/`. **Not deployed** — awaiting
-  Gohar's green light.
+- **Deploy:** preview saved to `/deploy-previews/2026-09-15/`. **DEPLOYED to production on
+  2026-09-15** (Netlify deploy `6aa9c401`) after Gohar's green light — verified live at
+  armenianeventsla.com (31 events).
 
 ---
 
