@@ -35,7 +35,11 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
   connection not yet confirmed.
 - **Removed "Opening Night — Armenian Film Festival (Rooftop Party)"** from the site and the
   Google Calendar (per Gohar — it's part of the same Armenian Film Festival entry, Sep 16–20).
-- Total now **30 events**.
+- **Added "Holy Cross Armenian Food Fair & Fest"** (Sat Oct 24, Noon–10 PM, Montebello, FREE,
+  Festival) to the site and the Google Calendar (from the flyer Gohar shared). Poster is an
+  in-style recreation (the IG post only served a title-cropped square). The Backgammon
+  Tournament is part of this same fest.
+- Total now **31 events**.
 - **Deploy:** preview saved to `/deploy-previews/2026-09-15/`. **Not deployed** — awaiting
   Gohar's green light.
 

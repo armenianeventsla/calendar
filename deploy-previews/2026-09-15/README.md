@@ -1,7 +1,7 @@
 # Preview — 2026-09-15
 
 Open **`preview.html`** — a self-contained snapshot (images embedded). Site is now
-**30 events** (was 34).
+**31 events** (was 34).
 
 ## What changed this round
 
@@ -30,5 +30,8 @@ WanderCrust Tea.
 ## Notes
 - Also removed **Opening Night — Armenian Film Festival** from the site and the Google
   Calendar (same event as the Armenian Film Festival, per Gohar).
-- Total after this round: **30 events**.
+- Also added **Holy Cross Armenian Food Fair & Fest** (Sat Oct 24, Montebello, FREE) to the
+  site and the Google Calendar, from the flyer Gohar shared (in-style poster; the IG image
+  cropped the title).
+- Total after this round: **31 events**.
 - No deploy performed. Awaiting green light before updating production / publishing to Netlify.
