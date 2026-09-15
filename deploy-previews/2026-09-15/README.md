@@ -1,7 +1,7 @@
 # Preview — 2026-09-15
 
 Open **`preview.html`** — a self-contained snapshot (images embedded). Site is now
-**31 events** (was 34).
+**30 events** (was 34).
 
 ## What changed this round
 
@@ -28,5 +28,7 @@ WanderCrust Tea.
   connection not yet confirmed*, so I left it off until it's finalized.
 
 ## Notes
-- Total after this round: **31 events**.
+- Also removed **Opening Night — Armenian Film Festival** from the site and the Google
+  Calendar (same event as the Armenian Film Festival, per Gohar).
+- Total after this round: **30 events**.
 - No deploy performed. Awaiting green light before updating production / publishing to Netlify.

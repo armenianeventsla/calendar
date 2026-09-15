@@ -33,7 +33,9 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
   Surj & Chat sessions, LuysHike #4, Mesrobian Car Show, ACA Game Night, WanderCrust Tea.
 - **Skipped:** *Early Birdz "Family Rave"* (Oct 4) — calendar marks it a placeholder, Armenian
   connection not yet confirmed.
-- Total now **31 events**.
+- **Removed "Opening Night — Armenian Film Festival (Rooftop Party)"** from the site and the
+  Google Calendar (per Gohar — it's part of the same Armenian Film Festival entry, Sep 16–20).
+- Total now **30 events**.
 - **Deploy:** preview saved to `/deploy-previews/2026-09-15/`. **Not deployed** — awaiting
   Gohar's green light.
 
