@@ -20,6 +20,25 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 
 ---
 
+## 2026-09-15 — 6 new events + posters (34 → 31)
+
+- **Added 6 new events** with Gohar's uploaded flyers (branch `claude/cowork-session-context-t7bjj1`):
+  - **Mexican & Armenian Comedy — Jack Jr & Friends** — Fri Sep 18, HaHa Club, NoHo (Comedy).
+  - **CSUN ASA × AEO — Back to School Party** — Sat Sep 19, Porter Ranch, $10 (Social).
+  - **The Sixth Glass — Immersive Tasting** (L'Avenue Glendale) — Thu Sep 24, 21+ (Social).
+  - **Coffee & Conversation — Meet Arin & Midya** (Urartu Coffee) — Sat Sep 26, FREE (Community).
+  - **Soorj Session — GALAS** (LGBTQ+ Armenian Society) — Sat Oct 3, Glendale, FREE (Community).
+  - **Trivia Night — Scholarships for Armenia** — Thu Oct 15, Hero House Glendale (Community).
+- **Removed 9 newly-past events** (Sep 4–13): Gini tasting, End of Summer Hike, Vartoush, both
+  Surj & Chat sessions, LuysHike #4, Mesrobian Car Show, ACA Game Night, WanderCrust Tea.
+- **Skipped:** *Early Birdz "Family Rave"* (Oct 4) — calendar marks it a placeholder, Armenian
+  connection not yet confirmed.
+- Total now **31 events**.
+- **Deploy:** preview saved to `/deploy-previews/2026-09-15/`. **Not deployed** — awaiting
+  Gohar's green light.
+
+---
+
 ## 2026-09-04 — 9 new events + posters (29 → 34)
 
 - **Added 9 new events** with Gohar's uploaded flyers (branch `claude/cowork-session-context-t7bjj1`):
