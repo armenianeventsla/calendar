@@ -20,6 +20,34 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 
 ---
 
+## 2026-09-26 — 11 new events + posters (31 → 30)
+
+- **Added 11 new events** from Gohar's Sep 25 poster upload and calendar entries (branch
+  `claude/cowork-session-context-t7bjj1`):
+  - **Brothers Coffee Grand Opening — RTUN Coffee Rave**: Sun Sep 27, Burbank, free latte (Social).
+  - **Dice House — Backgammon Tournament (Genätz × Reserve)**: Sun Sep 27, Glendale (Social).
+  - **Surj & Stories — Coffee, Stories & Hope (NAMI Glendale)**: Sat Oct 3 / 10 / 17, FREE
+    (Community). One card per session.
+  - **Orran Annual Gala — Honoring Haig Bagerdjian**: Sat Oct 3, Petersen Museum (Gala). Tickets
+    link goes to orran.org/events-list.
+  - **Open Mic Night — Hamazkayin Artee Society**: Sun Oct 4, Glendale (Art).
+  - **Armenian Coffee Ritual Experience — Kavat Cafe**: Sat Oct 10, Eagle Rock (Cultural).
+  - **System of a Down: 25 Years of Toxicity — Exhibition**: Oct 13–18, Beyond the Streets, FREE (Music).
+  - **Cascad Halloween Party**: Sat Oct 31, Glendale (Social).
+  - **GHOSTED Halloween Party (Genätz × Kyank × Ascenseur House)**: Sat Oct 31, PARC Glendale (Music).
+  - **Golden Autumn Festival (Voske Ashun)**: Fri Nov 6, North Hollywood, FREE (Festival).
+  - **Après Ararat — Yeraz Blend Fundraiser for Orran**: Thu Nov 19, La Cañada (Gala).
+- **Updated Holy Cross Armenian Food Fair & Fest**: added that international performer Suro
+  is featured, matching the calendar edit.
+- **Removed 14 newly-past events** (Sep 16–25).
+- **Skipped:** AESA Leadership Panel (Sep 25, already past) and the Early Birdz "Family Rave"
+  (Oct 4), which is still a placeholder.
+- The site now has **30 event cards**.
+- **Deploy:** preview saved to `/deploy-previews/2026-09-26/`. **Not deployed**; waiting for
+  Gohar's green light.
+
+---
+
 ## 2026-09-15 — 6 new events + posters (34 → 31)
 
 - **Added 6 new events** with Gohar's uploaded flyers (branch `claude/cowork-session-context-t7bjj1`):
