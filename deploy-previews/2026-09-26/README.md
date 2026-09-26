@@ -42,4 +42,5 @@ Symposium, Hye Notes #10, Jack Jr comedy, CSUN Back to School Party, The Sixth G
 ## Notes
 - Posters were resized to a maximum width of 1080 px for the site. The RTUN file was renamed to
   drop the ` (1)` from its name.
-- **Not deployed.** Production (`main` / Netlify) is unchanged and waiting for Gohar's green light.
+- **DEPLOYED to production on 2026-09-26** (Netlify deploy `6ab711d4`) after Gohar's green
+  light. Checked live at armenianeventsla.com; `main` was updated to match.

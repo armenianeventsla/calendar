@@ -43,8 +43,10 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 - **Skipped:** AESA Leadership Panel (Sep 25, already past) and the Early Birdz "Family Rave"
   (Oct 4), which is still a placeholder.
 - The site now has **30 event cards**.
-- **Deploy:** preview saved to `/deploy-previews/2026-09-26/`. **Not deployed**; waiting for
-  Gohar's green light.
+- **Deploy:** preview saved to `/deploy-previews/2026-09-26/`. **DEPLOYED to production on
+  2026-09-26** (Netlify deploy `6ab711d4`) after Gohar's green light. The live index.html was
+  checked against the repo and matches it byte-for-byte (30 event cards). `main` was
+  fast-forwarded to match.
 
 ---
 
