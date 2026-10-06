@@ -33,8 +33,10 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 - **Updated Golden Autumn Festival**: the end time is now 7 PM, matching the calendar edit.
 - **Removed 11 newly-past events** (Sep 26 – Oct 4).
 - The site now has **34 event cards**.
-- **Deploy:** preview saved to `/deploy-previews/2026-10-06/`. **Not deployed**; waiting for
-  Gohar's green light.
+- **Deploy:** preview saved to `/deploy-previews/2026-10-06/`. **DEPLOYED to production on
+  2026-10-06** (Netlify deploy `6ac554ab`) after Gohar's green light. The live index.html was
+  checked against the repo and matches it byte-for-byte (34 event cards). `main` was
+  fast-forwarded to match.
 
 ---
 

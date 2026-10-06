@@ -40,4 +40,5 @@ session 1, Orran Gala, Hamazkayin Open Mic.
   Gala in Newport Beach.
 - **Early Birdz "Family Rave"** has already passed and was never added.
 - Posters were resized to a maximum width of 1080 px for the site.
-- **Not deployed.** Production (`main` / Netlify) is unchanged and waiting for Gohar's green light.
+- **DEPLOYED to production on 2026-10-06** (Netlify deploy `6ac554ab`) after Gohar's green
+  light. Checked live at armenianeventsla.com; `main` was updated to match.
