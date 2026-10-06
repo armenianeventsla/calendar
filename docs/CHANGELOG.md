@@ -20,6 +20,24 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 
 ---
 
+## 2026-10-06 — 15 new events + posters (30 → 34)
+
+- **Added 15 new events** from Gohar's Oct 6 poster upload and calendar entries (branch
+  `claude/cowork-session-context-t7bjj1`): UCLA Trivia Night (Oct 6), Vigen Hovsepyan concert
+  (Oct 9), NAMI Glendale Summer Party (Oct 11), Armenian Speed Dating at Urartu (Oct 15),
+  LuysHike #5 (Oct 17), Armenian Vinyl Night at MOMED (Oct 21), Yerevan's 90's Night at
+  L'Avenue (Oct 21), APS "Perform Without Burning Out" (Oct 22), Peto Poghosyan solo show
+  (Oct 23–25), AGBU LA Choir "Love & Homeland" (Oct 24, Costa Mesa), Serov × TRU8 (Oct 24),
+  Arbat Fall Fest (Nov 8, FREE), Homenetmen Day (Nov 13), AGBU Scouts Cars & Coffee (Nov 14),
+  and Queernissage (Nov 28).
+- **Updated Golden Autumn Festival**: the end time is now 7 PM, matching the calendar edit.
+- **Removed 11 newly-past events** (Sep 26 – Oct 4).
+- The site now has **34 event cards**.
+- **Deploy:** preview saved to `/deploy-previews/2026-10-06/`. **Not deployed**; waiting for
+  Gohar's green light.
+
+---
+
 ## 2026-09-26 — 11 new events + posters (31 → 30)
 
 - **Added 11 new events** from Gohar's Sep 25 poster upload and calendar entries (branch
