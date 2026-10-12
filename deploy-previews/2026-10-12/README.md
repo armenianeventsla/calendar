@@ -45,4 +45,5 @@ Gala, Armenian Food Fest, NAMI Summer Party.
   your calendar.
 - The GiniFest poster still shows the old Oct 11 date, because no new poster was uploaded.
 - Posters were resized to a maximum width of 1080 px for the site.
-- **Not deployed.** Production (`main` / Netlify) is unchanged and waiting for Gohar's green light.
+- **DEPLOYED to production on 2026-10-12** (Netlify deploy `6acd60af`) after Gohar's green
+  light. Checked live at armenianeventsla.com; `main` was updated to match.

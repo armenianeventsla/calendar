@@ -33,8 +33,10 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 - **Skipped:** AREVAHIKE Sturtevant Falls (Oct 10) and Cascad Craft'd (Oct 11), which have
   already passed.
 - The site now has **35 event cards**.
-- **Deploy:** preview saved to `/deploy-previews/2026-10-12/`. **Not deployed**; waiting for
-  Gohar's green light.
+- **Deploy:** preview saved to `/deploy-previews/2026-10-12/`. **DEPLOYED to production on
+  2026-10-12** (Netlify deploy `6acd60af`) after Gohar's green light. The live index.html was
+  checked against the repo and matches it byte-for-byte (35 event cards). `main` was
+  fast-forwarded to match.
 
 ---
 
