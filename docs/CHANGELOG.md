@@ -20,6 +20,24 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 
 ---
 
+## 2026-10-12 — 8 new events + posters (34 → 35)
+
+- **Added 8 new events** from Gohar's Oct 12 poster upload and calendar entries (branch
+  `claude/cowork-session-context-t7bjj1`): Sip N' Carve (UCLA ASA, Oct 14), Gata Making
+  (USC ASA, Oct 14), ACA Craft & Chat (Oct 15), Kataro Wine Tasting at Gini (Oct 16), Homenetmen
+  Sipan "Let's Take a Hike" (Oct 24), AAMS Brand Park Hike (Oct 24), Hye Notes #11 (Nov 6,
+  FREE), and Vartoush Loves You! (Nov 12).
+- **Updated GiniFest 2026**: moved to Sun Nov 1 (rain postponement).
+- **Updated The Diary of an Armenian Comedian**: 7:30 PM showtime, new poster, and a Tickets link.
+- **Removed 7 newly-past events** (Oct 6–11).
+- **Skipped:** AREVAHIKE Sturtevant Falls (Oct 10) and Cascad Craft'd (Oct 11), which have
+  already passed.
+- The site now has **35 event cards**.
+- **Deploy:** preview saved to `/deploy-previews/2026-10-12/`. **Not deployed**; waiting for
+  Gohar's green light.
+
+---
+
 ## 2026-10-06 — 15 new events + posters (30 → 34)
 
 - **Added 15 new events** from Gohar's Oct 6 poster upload and calendar entries (branch
