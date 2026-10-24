@@ -20,6 +20,32 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 
 ---
 
+## 2026-10-24 — 7 new events + posters (35 → 28)
+
+> Production had advanced to 35 events (deployed 2026-10-12 by another session). This branch
+> was restarted from the latest `main` and builds on that state.
+
+- **Added 7 new events** with Gohar's uploaded flyers (branch `claude/cowork-session-context-t7bjj1`):
+  - **ArevaHike — Griffith Park Hike** — Sat Oct 24, FREE (Community).
+  - **Surj & Paint — NAMI Glendale** — Sat Oct 24, Verdugo Park, FREE (Community).
+  - **Spooky Afternoon Tea — WanderCrust** — Sat Oct 24, Chatsworth (Social).
+  - **Harvest Festival — UACC** — Fri Oct 30, FREE (Festival) — in-style poster (upload was a
+    Reel screenshot with a ▶ overlay).
+  - **Walk to End Alzheimer's — ACA L.A.** — Sun Nov 1, Santa Monica, FREE (Community).
+  - **Spooky Halloween Hike — Beaudry Loop** — Sun Nov 1, Glendale, FREE (Community) — in-style
+    poster (upload was a dark Reel screenshot).
+  - **Armenian Frame Drum Workshop** — Sun Dec 13, Glendale, FREE (Music).
+- **Removed 14 newly-past events** (Oct 13–23): SOAD exhibition, Sip N' Carve, Gata Making,
+  Trivia Night, Speed Dating (Oct 15), ACA Craft & Chat, Mesrobian Cultural Night, Kataro Wine
+  Tasting, Surj & Stories, LuysHike #5, Vinyl Night, Yerevan 90's Night, Laughing Lavash, APS
+  "Perform Without Burning Out".
+- **Skipped:** *Gini Aratashen Wine Tasting* and *Poker Night — SFV* (both Oct 23, already past).
+- Total now **28 events**.
+- **Deploy:** preview saved to `/deploy-previews/2026-10-24/`. **Not deployed** — awaiting
+  Gohar's green light.
+
+---
+
 ## 2026-10-12 — 8 new events + posters (34 → 35)
 
 - **Added 8 new events** from Gohar's Oct 12 poster upload and calendar entries (branch
