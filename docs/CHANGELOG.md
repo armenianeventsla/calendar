@@ -41,8 +41,9 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
   "Perform Without Burning Out".
 - **Skipped:** *Gini Aratashen Wine Tasting* and *Poker Night — SFV* (both Oct 23, already past).
 - Total now **28 events**.
-- **Deploy:** preview saved to `/deploy-previews/2026-10-24/`. **Not deployed** — awaiting
-  Gohar's green light.
+- **Deploy:** preview saved to `/deploy-previews/2026-10-24/`. **DEPLOYED to production on
+  2026-10-24** (Netlify deploy `6adbfffd`) after Gohar's green light — verified live at
+  armenianeventsla.com (28 events).
 
 ---
 

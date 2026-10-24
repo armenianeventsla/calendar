@@ -39,4 +39,5 @@ Vinyl Night, Yerevan 90's Night, Laughing Lavash, APS "Perform Without Burning O
 - Links point to each host's Instagram (these calendar entries didn't carry a specific post/
   ticket URL).
 - Total after this round: **28 events**.
-- No deploy performed. Awaiting green light before updating production / publishing to Netlify.
+- **DEPLOYED to production on 2026-10-24** (Netlify deploy `6adbfffd`), verified live at
+  armenianeventsla.com.
