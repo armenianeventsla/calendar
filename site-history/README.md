@@ -16,6 +16,8 @@ full paper trail. Each file is a complete, standalone `index.html` you can open 
 | v3 | `v3_2026-06-24_21-events_site-new.html` | Jun 24, 2026 | 21 | Alternate Jun 24 cut (from `site-new.zip`). |
 | v4 | `v4_2026-06-24_28-events_E-drive-LIVE.html` | Jun 24, 2026 (latest that day) | 28 | **The E:\Calendar copy — the version that matches the live site.** Full World Cup watch-party series (5 match days), Arevahike 10K Walk, real ticket links (Eventbrite/Posh/Partiful), "SOLD OUT" badge, nav-bar logo. |
 | v5 | `v5_2026-06-27_26-events_3-new-events.html` | Jun 27, 2026 | 26 | The C:\…\Downloads\Calendar copy edited this session. Adds 3 new events — **Ejanish Summer Series**, **Mary Basmadjian @ Flappers**, **Hye Notes #8** — but was built on an older base, so it does **not** yet include v4's World Cup series, Arevahike walk, link upgrades, or SOLD OUT badge. |
+| v7 | `v7_2026-10-24_28-events_last-dark-theme.html` | Oct 24, 2026 | 28 | The last production version with the original **dark** design (Netlify deploy `6adbfffd`). |
+| v8 | `v8_2026-10-30_23-events_cream-theme.html` | Oct 30, 2026 | 23 | First production version with the **cream** design: red/blue/orange flag stripes around the window, thin burgundy borders on event cards, fixed after-midnight times, and the new 📍 area filter (Netlify deploy `6ae4ecee`). |
 
 ## What this tells us
 

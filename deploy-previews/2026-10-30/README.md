@@ -62,4 +62,6 @@ design. It is **not** in `index.html` yet. Choose either option:
 - The **Oct 23 upload** was already handled in the Oct 24 deploy.
 - **Hye Notes #11**: Gohar confirmed **North Hollywood**. The site already uses that address.
 - Posters were resized to a maximum width of 1080 px for the site.
-- **Not deployed.** Production (`main` / Netlify) is unchanged and waiting for Gohar's green light.
+- **DEPLOYED to production on 2026-10-30** (Netlify deploy `6ae4ecee`) as **events + cream**,
+  after Gohar's green light. `preview-cream.html` is the approved version; `preview.html` (the dark
+  design) was not used. Checked live at armenianeventsla.com; `main` was updated to match.

@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Armenian Events of LA</title>
+<link rel="icon" type="image/png" href="images/logo.png">
+<link rel="apple-touch-icon" href="images/logo.png">
+<style>
+  :root{--bg:#0e1014;--bg2:#15181f;--card:#181c24;--line:#262b35;--ink:#f3f4f6;--muted:#9aa3b2;--apricot:#F5A623;--red:#e23b3b;--blue:#3b6fe2;--violet:#9b6bff;}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 18px}
+  .hero{position:relative;overflow:hidden;text-align:center;background:radial-gradient(1200px 400px at 50% -10%,rgba(245,166,35,.18),transparent 60%),linear-gradient(180deg,#11141a,#0e1014);border-bottom:1px solid var(--line);padding:56px 18px 46px}
+  .badge-top{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#0e1014;background:var(--apricot);padding:6px 14px;border-radius:4px;margin-bottom:20px}
+  .hero h1{font-size:clamp(2.4rem,6vw,4.2rem);font-weight:900;line-height:.95;letter-spacing:-1px}
+  .hero h1 .loc{display:inline-block;font-size:.42em;font-style:italic;font-weight:600;letter-spacing:.5px;opacity:.82}
+  .hero p{max-width:600px;margin:18px auto 0;color:var(--muted);font-size:1.05rem}
+  .cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+  .btn{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.92rem;padding:12px 20px;border-radius:4px;cursor:pointer;border:none;transition:.15s}
+  .btn-primary{background:var(--apricot);color:#1a1205}
+  .btn-primary:hover{background:#ffba3d;transform:translateY(-1px)}
+  .btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+  .btn-ghost:hover{border-color:var(--apricot)}
+  section{padding:46px 0}
+  .sec-head{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+  .sec-head h2{font-size:1.7rem;font-weight:800;letter-spacing:-.4px}
+  .sec-head .hint{color:var(--muted);font-size:.9rem}
+  .chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}
+  .chip{border:1px solid var(--line);background:var(--bg2);color:var(--ink);padding:8px 16px;border-radius:4px;font-size:.86rem;font-weight:600;cursor:pointer;transition:.15s}
+  .chip:hover{border-color:var(--apricot)}
+  .chip.active{background:var(--ink);color:#0e1014;border-color:var(--ink)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:22px}
+  .grid.week{grid-template-columns:repeat(auto-fill,minmax(320px,1fr))}
+  .grid.month{grid-template-columns:repeat(auto-fill,minmax(185px,1fr));gap:14px}
+  .grid.month .cbody{padding:10px 11px 12px;gap:5px}
+  .grid.month .cbody h3{font-size:.9rem;line-height:1.2}
+  .grid.month .meta{font-size:.74rem}
+  .grid.month .desc{display:none}
+  .grid.month .ctop{gap:6px}
+  .grid.month .cattag{font-size:.55rem;padding:4px 8px}
+  .grid.month .cdate{font-size:.72rem}
+  .grid.month .acts{padding-top:6px;gap:6px}
+  .grid.month .mini{font-size:.71rem;padding:7px 6px}
+  .grid.month .freebadge,.grid.month .discbadge{font-size:.52rem;padding:2px 6px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:transform .16s,box-shadow .16s,border-color .16s}
+  .card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(0,0,0,.45);border-color:#39414f}
+  .poster{position:relative;width:100%;overflow:hidden;background:#0b0d11;min-height:40px}
+  .poster img{display:block;width:100%;height:auto;position:relative;z-index:2}
+  .poster .art{position:absolute;inset:0;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px;gap:8px}
+  .poster .art .t{font-weight:900;line-height:1.04;letter-spacing:-.5px}
+  .poster .art .s{font-size:.74rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;opacity:.92}
+  .poster .cat{position:absolute;top:12px;left:12px;z-index:3;color:#fff;font-size:.66rem;font-weight:800;letter-spacing:.6px;text-transform:uppercase;padding:5px 10px;border-radius:4px}
+  .poster .datechip{position:absolute;top:12px;right:12px;z-index:3;background:#fff;color:#11141a;border-radius:4px;text-align:center;line-height:1;padding:8px 10px;min-width:48px;box-shadow:0 4px 12px rgba(0,0,0,.3)}
+  .poster .datechip .d{font-size:1.25rem;font-weight:900;display:block}
+  .poster .datechip .m{font-size:.6rem;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:#e23b3b}
+  .cbody{padding:16px 16px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
+  .cbody h3{font-size:1.12rem;line-height:1.22;font-weight:800}
+  .meta{color:var(--muted);font-size:.85rem;display:flex;flex-direction:column;gap:3px}
+  .meta .l{display:flex;gap:7px;align-items:flex-start}
+  .desc{color:#c6ccd6;font-size:.88rem}
+  .ctop{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
+  .ctags{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+  .cattag{display:inline-block;color:#fff;font-size:.64rem;font-weight:800;letter-spacing:.6px;text-transform:uppercase;padding:5px 11px;border-radius:4px}
+  .cdate{font-size:.82rem;font-weight:800;color:var(--apricot);white-space:nowrap}
+  .rangebadge{display:inline-block;background:var(--violet);color:#fff;font-size:.6rem;font-weight:800;letter-spacing:.3px;text-transform:uppercase;padding:2px 8px;border-radius:4px;vertical-align:middle;white-space:nowrap}
+  .acts{display:flex;gap:8px;margin-top:auto;padding-top:8px}
+  .mini{flex:1;text-align:center;font-weight:700;font-size:.82rem;padding:10px;border-radius:4px;transition:.15s}
+  .mini-cal{background:var(--apricot);color:#1a1205}
+  .mini-cal:hover{background:#ffba3d}
+  .mini-ig{background:var(--blue);border:1px solid var(--blue);color:#fff}
+  .mini-ig:hover{background:#5a86ef;border-color:#5a86ef}
+  .empty{color:var(--muted);text-align:center;padding:40px 0}
+  .partner{background:linear-gradient(180deg,#12151c,#0e1014);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .partner .lead{max-width:640px;color:var(--muted);margin-bottom:8px}
+  .reach{font-size:1.05rem;color:var(--ink)} .reach b{color:var(--apricot)}
+  .tiers{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px;margin-top:24px}
+  .tier{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
+  .tier h4{font-size:1.08rem;font-weight:800;margin-bottom:6px}
+  .tier .price{color:var(--apricot);font-weight:800;font-size:.85rem;letter-spacing:.5px;text-transform:uppercase;margin-bottom:10px}
+  .tier ul{list-style:none;display:flex;flex-direction:column;gap:7px}
+  .tier li{color:#c6ccd6;font-size:.86rem;padding-left:20px;position:relative}
+  .tier li::before{content:"*";position:absolute;left:0;color:var(--apricot)}
+  .tier.feat{border-color:var(--apricot);box-shadow:0 0 0 1px var(--apricot) inset}
+  footer{padding:40px 18px 60px;text-align:center;color:var(--muted)}
+  .flinks{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin:14px 0}
+  .flinks a{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid var(--line);border-radius:50%;color:var(--ink);transition:.15s}
+  .flinks a:hover{background:var(--apricot);color:#1a1205;border-color:var(--apricot);transform:translateY(-2px)}
+  .flinks svg{width:20px;height:20px;fill:currentColor}
+  .femail{margin:6px 0 2px;font-size:.9rem}
+  .femail a{color:var(--muted)} .femail a:hover{color:var(--apricot)}
+  .submit{display:inline-block;margin-top:8px;background:var(--red);color:#fff;font-weight:800;padding:12px 22px;border-radius:4px}
+  .submit:hover{background:#ef5b5b}
+  @media(max-width:560px){.grid,.grid.week{grid-template-columns:1fr}.grid.month{grid-template-columns:1fr 1fr}}
+  .banner-img{display:block;width:100%;height:250px;object-fit:cover;object-position:center 60%}
+  .list{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--card)}
+  .litem{display:flex;align-items:center;gap:14px;padding:14px 16px;border-bottom:1px solid var(--line);transition:background .15s}
+  .litem:last-child{border-bottom:none}
+  .litem:hover{background:var(--bg2)}
+  .lthumb{width:54px;height:68px;flex:0 0 auto;border-radius:8px;overflow:hidden;background:#0b0d11}
+  .lthumb img{width:100%;height:100%;object-fit:cover;display:block}
+  .ldate{flex:0 0 56px;text-align:center}
+  .ldate .dow{font-size:.62rem;color:var(--muted);text-transform:uppercase;display:block}
+  .ldate .d{font-size:1.3rem;font-weight:900;line-height:1;display:block}
+  .ldate .m{font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:.5px;color:var(--red);display:block}
+  .ldate.multi{flex:0 0 56px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0}
+  .ldate.multi .d{font-size:1.05rem;line-height:1.12}
+  .ldate.multi .arr{font-size:.6rem;line-height:.9;color:var(--muted);margin:1px 0}
+  .ldate.multi .mdtag{font-size:.5rem;font-weight:800;letter-spacing:.4px;text-transform:uppercase;color:var(--muted);margin-top:3px}
+  .lmain{flex:1;min-width:0}
+  .lmain h3{font-size:1.05rem;font-weight:800;margin-bottom:2px}
+  .lmain .lm{color:var(--muted);font-size:.84rem}
+  .lcat{flex:0 0 auto;color:#fff;font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:.4px;padding:4px 9px;border-radius:4px}
+  .lacts{flex:0 0 auto;display:flex;gap:8px}
+  .lacts .mini{flex:0 0 auto;min-width:92px}
+  @media(max-width:600px){.litem{flex-wrap:wrap}.lthumb{display:none}.lmain{flex:1 1 60%}.lacts{width:100%}.lacts .mini{flex:1}}
+  .btn-red{background:var(--red);color:#fff}
+  .btn-red:hover{background:#ef5b5b;transform:translateY(-1px)}
+  .btn-sub{background:var(--blue);color:#fff}
+  .btn-sub:hover{background:#5a86ef;transform:translateY(-1px)}
+  .litem,.card{cursor:pointer}
+  .modal{display:none;position:fixed;inset:0;z-index:50;background:rgba(0,0,0,.72);overflow-y:auto;padding:62px 14px 34px}
+  .modal.open{display:flex;align-items:flex-start;justify-content:center}
+  .modal-card{position:relative;background:var(--card);border:1px solid var(--line);border-radius:18px;max-width:560px;width:100%;margin:auto;overflow:hidden}
+  .modal-x{position:fixed;top:14px;right:16px;z-index:60;background:rgba(20,22,28,.4);color:#fff;border:1px solid rgba(255,255,255,.3);width:38px;height:38px;border-radius:50%;font-size:1.5rem;cursor:pointer;line-height:1;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);transition:background .15s,transform .15s}
+  .modal-x:hover{background:rgba(0,0,0,.8);transform:scale(1.06)}
+  .modal-poster{width:100%;background:#0b0d11}
+  .modal-poster img{display:block;width:100%;height:auto}
+  .modal-body{padding:20px 22px 24px}
+  .modal-body .mcat{display:inline-block;color:#fff;font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:.4px;padding:4px 10px;border-radius:4px;margin-bottom:10px}
+  .modal-body h3{font-size:1.4rem;font-weight:800;margin-bottom:10px;line-height:1.2}
+  .modal-body .mmeta{color:var(--muted);font-size:.9rem;margin-bottom:4px}
+  .modal-body .mdesc{color:#c6ccd6;font-size:.92rem;margin:14px 0 18px}
+  .modal-acts{display:flex;gap:10px;flex-wrap:wrap}
+  .modal-acts a{flex:1;min-width:150px;text-align:center;font-weight:700;font-size:.9rem;padding:12px;border-radius:4px}
+  .discbadge{display:inline-block;background:var(--red);color:#fff;font-size:.6rem;font-weight:800;letter-spacing:.5px;text-transform:uppercase;padding:2px 7px;border-radius:4px;vertical-align:middle}
+  .freebadge{display:inline-block;background:#16a34a;color:#fff;font-size:.6rem;font-weight:800;letter-spacing:.5px;text-transform:uppercase;padding:2px 7px;border-radius:4px;vertical-align:middle}
+  .scrollnav{position:fixed;right:14px;top:50%;transform:translateY(-50%);z-index:40;display:flex;flex-direction:column;gap:8px}
+  .scrollnav button{width:32px;height:32px;border-radius:50%;border:1px solid rgba(255,255,255,.16);background:rgba(24,28,36,.34);color:#fff;font-size:.72rem;cursor:pointer;box-shadow:0 3px 10px rgba(0,0,0,.25);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);transition:.15s}
+  .scrollnav button:hover{background:var(--apricot);color:#1a1205;border-color:var(--apricot)}
+  @media(max-width:560px){.scrollnav{right:8px}.scrollnav button{width:28px;height:28px;font-size:.64rem}}
+  .freenote{margin-top:22px;background:rgba(22,163,74,.12);border:1px solid rgba(22,163,74,.5);color:#d7f5e3;border-radius:12px;padding:14px 18px;font-size:.95rem;text-align:center}
+  .topbar{position:fixed;top:0;left:0;right:0;z-index:45;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 16px;background:rgba(14,16,20,.85);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .topbar .brand{display:flex;align-items:center;gap:10px;cursor:pointer;background:none;border:none;color:var(--ink);padding:0;font-family:inherit}
+  .topbar .brand img{width:38px;height:38px;border-radius:50%;display:block;object-fit:cover}
+  .topbar .brand b{font-weight:800;font-size:.98rem;letter-spacing:.2px}
+  .hamb{display:flex;flex-direction:column;justify-content:center;gap:5px;width:46px;height:40px;background:transparent;border:1px solid var(--line);border-radius:10px;cursor:pointer;transition:.15s}
+  .hamb:hover{border-color:var(--apricot)}
+  .hamb span{display:block;width:20px;height:2px;margin:0 auto;background:var(--ink);border-radius:2px}
+  .navmenu{position:fixed;top:56px;right:12px;z-index:46;min-width:190px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:8px;display:none;flex-direction:column;box-shadow:0 18px 44px rgba(0,0,0,.55)}
+  .navmenu.open{display:flex}
+  .navmenu a{padding:11px 14px;border-radius:10px;font-weight:600;font-size:.92rem;color:var(--ink)}
+  .navmenu a:hover{background:var(--bg2);color:var(--apricot)}
+  body{padding-top:55px}
+  #week,#events,#partner,#contact{scroll-margin-top:66px}
+  @media(max-width:560px){.topbar .brand b{font-size:.84rem}.topbar .brand img{width:34px;height:34px}}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <button class="brand" onclick="goTop()" aria-label="Home - back to top"><img src="images/logo.png" alt="Armenian Events LA" onerror="this.style.display='none'"><b>Armenian Events LA</b></button>
+  <button class="hamb" id="hambBtn" aria-label="Open menu" aria-expanded="false" aria-controls="navmenu" onclick="toggleNav(this)"><span></span><span></span><span></span></button>
+</div>
+<nav class="navmenu" id="navmenu" aria-label="Site navigation">
+  <a href="#" onclick="navGo(event,'top')">Home</a>
+  <a href="#week" onclick="navGo(event,'week')">This Week</a>
+  <a href="#month" onclick="navGo(event,'month')">This Month</a>
+  <a href="#events" onclick="navGo(event,'events')">Events</a>
+  <a href="#partner" onclick="navGo(event,'partner')">Partner</a>
+  <a href="#contact" onclick="navGo(event,'contact')">Contact</a>
+</nav>
+<img class="banner-img" src="images/banner.png" alt="Armenian Calendar in Los Angeles - new events added weekly">
+<header class="hero">
+  <span class="badge-top">New events added weekly - In Los Angeles</span>
+  <h1>ARMENIAN EVENTS<br><span class="loc">of Los Angeles</span></h1>
+  <p>Sharing online to intentionally meet in person - offering vibrant third spaces for our Armenian community across Los Angeles.</p>
+  <div class="cta-row">
+    <a class="btn btn-red" href="#events">Browse the calendar</a>
+    <a class="btn btn-sub" href="https://calendar.google.com/calendar/u/0/r?cid=YzVjMzIzZmIwYTI2ZGNlZDUyZTRjZTU4OTM1YjZmYjVlNzcyMjkxNWE3OGJhMzUyZWRhYjgwNDcwOWVmY2IzOUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t" target="_blank" rel="noopener">Subscribe to calendar</a>
+    <a class="btn btn-primary" href="#partner">Partner with us</a>
+  </div>
+</header>
+<main class="wrap">
+  <section id="week">
+    <div class="sec-head"><h2>Happening This Week</h2><span class="hint" id="weekHint"></span></div>
+    <div class="grid week" id="weekGrid"></div>
+    <div class="empty" id="weekEmpty" style="display:none">No events in the next 7 days yet - check the full calendar below.</div>
+  </section>
+  <section id="month">
+    <div class="sec-head"><h2>This Month</h2><span class="hint" id="monthHint"></span></div>
+    <div class="grid month" id="monthGrid"></div>
+    <div class="empty" id="monthEmpty" style="display:none">No events in the next 30 days yet - check the full calendar below.</div>
+  </section>
+  <section id="events">
+    <div class="sec-head"><h2>Calendar of Events</h2><span class="hint">Tap "+ Calendar" on any event to add it to Google Calendar.</span></div>
+    <div class="chips" id="datechips"></div>
+    <div class="chips" id="chips"></div>
+    <div class="list" id="grid"></div>
+    <div class="empty" id="empty" style="display:none">No events in this category yet.</div>
+  </section>
+</main>
+<section id="partner" class="partner">
+  <div class="wrap">
+    <div class="sec-head"><h2>Partner with Armenian Events LA</h2></div>
+    <p class="reach">Reach <b>24,000+</b> engaged Armenians - by blood and by choice - across the Los Angeles area.</p>
+    <p class="lead">Flexible options to put your business in front of thousands of SFV locals. Fill out the quick form and I'll follow up within 24 hours.</p>
+    <div class="tiers">
+      <div class="tier"><h4>Social Spotlight</h4><div class="price">&#9733; Most popular</div><ul><li>Two lengths: up to 1 minute or up to 3 minutes</li><li>Showcases your event with your talking points</li><li>Shared on TikTok, Instagram &amp; YouTube</li></ul></div>
+      <div class="tier feat"><h4>Featured Partner</h4><div class="price">Premium</div><ul><li>Prime placement atop the weekly round-up videos</li><li>Up to 50-word sponsored message + logo &amp; CTA</li><li>One social video (TikTok + Instagram)</li><li>Continuous story posts</li></ul></div>
+      <div class="tier"><h4>Always-On Directory</h4><div class="price">Monthly</div><ul><li>Local Favorite badge on your listing</li><li>Automatic story shares on all your events</li><li>Featured on our Instagram Highlights</li><li>Social Spotlight on request</li></ul></div>
+      <div class="tier"><h4>Website Ad</h4><div class="price">Per ad</div><ul><li>Photo ad of your event on this site</li><li>Placed on the calendar sidebar</li><li>Clickable straight to your event page</li></ul></div>
+    </div>
+    <p class="freenote">Every submitted event is posted to our Instagram Stories and added to the calendar &mdash; <b>regardless of budget</b>.</p>
+    <div style="margin-top:24px"><a class="btn btn-primary" href="https://forms.gle/Uqok2yWX7R9vaKXk8" target="_blank" rel="noopener">Let's talk - start the form</a></div>
+  </div>
+</section>
+<footer id="contact">
+  <div class="flinks">
+    <a href="mailto:armenianeventsla@gmail.com" aria-label="Email" title="Email"><svg viewBox="0 0 24 24"><path d="M3 5h18a1 1 0 011 1v12a1 1 0 01-1 1H3a1 1 0 01-1-1V6a1 1 0 011-1zm1.2 1.2L12 11l7.8-4.8H4.2zM20 8.1l-8 4.9-8-4.9V17h16V8.1z"/></svg></a>
+    <a href="https://www.instagram.com/armenianeventsla/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.43.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.43.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.43-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.43-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zm0 2.7A7.14 7.14 0 1019.14 12 7.14 7.14 0 0012 4.86zm0 11.78A4.64 4.64 0 1116.64 12 4.64 4.64 0 0112 16.64zm7.43-12.1a1.67 1.67 0 11-1.67-1.66 1.67 1.67 0 011.67 1.66z"/></svg></a>
+    <a href="https://www.tiktok.com/@armenianeventsla" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok"><svg viewBox="0 0 24 24"><path d="M16.6 5.82a4.28 4.28 0 01-1.06-2.82h-2.9v11.67a2.45 2.45 0 11-1.74-2.35V9.41a5.35 5.35 0 103.48 5V9.02a7.13 7.13 0 004.16 1.33V7.44a4.28 4.28 0 01-1.94-1.62z"/></svg></a>
+    <a href="https://www.youtube.com/channel/UCAAs2D-i7knevC0FswrZuoA" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24"><path d="M23 7.5a3 3 0 00-2.1-2.12C19.1 4.9 12 4.9 12 4.9s-7.1 0-8.9.48A3 3 0 001 7.5 31 31 0 00.5 12 31 31 0 001 16.5a3 3 0 002.1 2.12C4.9 19.1 12 19.1 12 19.1s7.1 0 8.9-.48A3 3 0 0023 16.5 31 31 0 0023.5 12 31 31 0 0023 7.5zM9.75 15.02V8.98L15.5 12z"/></svg></a>
+  </div>
+  <p class="femail"><a href="mailto:armenianeventsla@gmail.com">armenianeventsla@gmail.com</a></p>
+  <a class="submit" href="https://forms.gle/Uqok2yWX7R9vaKXk8" target="_blank" rel="noopener">+ Submit an Event</a>
+  <p style="margin-top:22px;font-size:.82rem">(c) 2026 Armenian Events of LA - Built as a free, self-hosted site.</p>
+</footer>
+<script>
+/* ===========================================================
+   EVENTS pulled from the "Armenian Events of LA" Google Calendar.
+   To add a poster: save the image into the "images" folder next
+   to this file, then set that event's poster: field, e.g.
+   poster:"images/coffee-ritual.jpg".
+   =========================================================== */
+const EVENTS = [
+  {
+    title:"GiniFest 2026 — Armenian Wine & Spirits Festival",
+    date:"2026-11-01", start:"15:00", end:"21:00", endDate:"",
+    location:"Glendale, CA",
+    category:"Festival",
+    description:`⚠️ <strong>NEW DATE: Sunday, November 1</strong>, postponed from Oct 11 due to rain. Previously purchased tickets remain valid.<br><br>🍷 Save the Date for GiniFest 2026! 🍇<br>The 9th Annual GiniFest Armenian Wine & Spirits Festival returns to Glendale on Sunday, November 1, 2026, from 3 PM to 9 PM for an unforgettable celebration of Armenian wine, spirits, culture, food, music, and community.<br>Stroll through the festival, discover exceptional wineries and distilleries, meet producers, enjoy live entertainment, and raise a glass with friends old and new. Whether you're a longtime wine enthusiast or simply looking for a fun day out, GiniFest offers something for everyone.<br>This year's festival is bigger than ever, bringing together the best of Armenian hospitality and craftsmanship in one exciting event.<br>🎟️ Tickets are available now — secure yours early and join us for one of Glendale's most anticipated cultural celebrations of the year.<br>Get your tickets today. Link in bio.`,
+    link:"https://www.ginifest.com", linkLabel:"Details",
+    poster:"images/ginifest.jpg",
+    art:{bg:"linear-gradient(160deg,#7f1d1d,#b91c1c)",fg:"#fff",t:"GiniFest<br>2026",ts:"2rem",s:"Sun &middot; Nov 1 &middot; 3-9PM",serif:true}
+  },
+  {
+    title:"AUA 35th Anniversary Gala",
+    date:"2026-11-07", start:"17:00", end:"", endDate:"",
+    location:"The Beverly Hilton, International Ballroom, 9876 Wilshire Blvd, Beverly Hills, CA 90210",
+    category:"Gala",
+    description:`The American University of Armenia celebrates its 35th Anniversary with a gala benefiting AUA — <em>Paving the Way for Future Leaders</em>. 🎓<br><br>Join alumni, supporters, and friends from across the Armenian diaspora to celebrate AUA's achievements since it opened on Armenia's independence day, and to honor those instrumental in establishing the university.<br><br>🕔 5:00 PM cocktail reception &middot; 6:30 PM dinner &amp; program<br>🎟️ Tickets &amp; sponsorships available &middot; RSVP by October 5, 2026`,
+    link:"https://philanthropy.aua.am/aua35/", linkLabel:"Tickets",
+    poster:"images/aua-gala.jpg",
+    art:{bg:"linear-gradient(160deg,#0b1b3a,#1e3a8a 55%,#3b6fe2)",fg:"#e8efff",t:"AUA 35th<br>ANNIVERSARY GALA",ts:"1.4rem",s:"Sat &middot; Nov 7",serif:true}
+  },
+  {
+    title:"Backgammon Tournament — Holy Cross Armenian Food Fest",
+    date:"2026-10-24", start:"15:00", end:"18:00", endDate:"",
+    location:"Holy Cross Armenian Food Fair & Fest, 900 W Lincoln Ave, Montebello, CA",
+    category:"Community",
+    description:`🎲 Backgammon Tournament — part of the Holy Cross Armenian Food Fair & Fest! Test your skills (and your luck) over a board.<br><br>📅 Saturday, October 24, 2026 &middot; 🕒 Starts 3:00 PM &middot; 📍 Holy Cross Armenian Food Fair & Fest, 900 W Lincoln Ave, Montebello &middot; 🎟️ $25 (Venmo or Zelle).<br><br>Sign up: text Armond (818) 419-8161 or the link in @holycrossfoodfest bio.`,
+    link:"https://www.instagram.com/p/DcPRBz7h1-q", linkLabel:"Instagram",
+    poster:"images/holy-cross-backgammon.jpg",
+    art:{bg:"linear-gradient(160deg,#3a1e0a,#6b3a12 55%,#c8922e)",fg:"#f7ead2",t:"BACKGAMMON<br>TOURNAMENT",ts:"1.4rem",s:"Sat &middot; Oct 24 &middot; Montebello",serif:false}
+  },
+  {
+    title:"The Diary of an Armenian Comedian — Stand-Up Special (Antic)",
+    date:"2026-11-06", start:"19:30", end:"21:30", endDate:"",
+    location:"AGBU Vatche & Tamar Manoukian Performing Arts Center, 2495 E Mountain St, Pasadena, CA 91104",
+    category:"Comedy",
+    description:`🎤 C Sharp Entertainment presents "The Diary of an Armenian Comedian" — a new stand-up comedy special from <strong>Antic</strong> (@its_antic).<br><br>📅 Friday, November 6, 2026 &middot; 🕢 7:30 PM &middot; 📍 AGBU Vatche & Tamar Manoukian Performing Arts Center, Pasadena.<br><br>Hosted by @its_antic & @c_sharp_entertainment.`,
+    link:"https://agbupac.ticketspice.com/antic", linkLabel:"Tickets",
+    poster:"images/antic-diary-armenian-comedian-nov6.jpg",
+    art:{bg:"linear-gradient(160deg,#0e0e0e,#2a2a2a 55%,#a11d2b)",fg:"#f7e3e5",t:"DIARY OF AN<br>ARMENIAN<br>COMEDIAN",ts:"1.3rem",s:"Fri &middot; Nov 6 &middot; Pasadena",serif:false}
+  },
+  {
+    title:"AECP Annual Gala — Honoring Dr. Roger V. Ohanesian",
+    date:"2026-11-14", start:"", end:"", endDate:"",
+    location:"Balboa Bay Resort, 1221 W Coast Hwy, Newport Beach, CA (Orange County)",
+    category:"Gala",
+    description:`👁️ The Armenian EyeCare Project's 2026 Annual Gala — an evening celebrating AECP's decades of sight-saving work in Armenia and honoring Founder & President <strong>Dr. Roger V. Ohanesian</strong> with a Lifetime Achievement Award.<br><br>📅 Friday, November 14, 2026 (time TBA) &middot; 📍 Balboa Bay Resort, Newport Beach (Orange County). Hosted by @armenianeyecare.`,
+    link:"https://www.instagram.com/p/DcRQOBJMcIm", linkLabel:"Instagram",
+    poster:"images/aecp-annual-gala-nov14.jpg",
+    art:{bg:"linear-gradient(160deg,#0e0e0e,#2a2a2a 55%,#c79a3e)",fg:"#f7ecd2",t:"AECP<br>ANNUAL GALA",ts:"1.6rem",s:"Fri &middot; Nov 14 &middot; Newport Beach",serif:true}
+  },
+  {
+    title:"Holy Cross Armenian Food Fair & Fest",
+    date:"2026-10-24", start:"12:00", end:"22:00", endDate:"",
+    location:"Holy Cross Cathedral, 900 W Lincoln Ave, Montebello, CA 90640",
+    category:"Festival", free:true,
+    description:`🇦🇲 Holy Cross Armenian Food Fair & Fest — a celebration of Armenian food, culture, and community, featuring international performer <strong>Suro</strong>. Enjoy Armenian cuisine, music, dancing, vendors, and family fun.<br><br>📅 Saturday, October 24, 2026 &middot; 🕛 Noon to 10:00 PM &middot; 📍 Holy Cross Cathedral, 900 W Lincoln Ave, Montebello &middot; 🎟️ FREE admission.<br><br>The Backgammon Tournament (3 PM) is part of this same fest. Hosted by @holycrossfoodfest.`,
+    link:"https://www.instagram.com/p/DboMfGjRfeL/", linkLabel:"Instagram",
+    poster:"images/holy-cross-food-fair-oct24.jpg",
+    art:{bg:"linear-gradient(160deg,#1f2f52,#b23a2e 60%,#d97b28)",fg:"#f4ead2",t:"HOLY CROSS<br>FOOD FAIR",ts:"1.5rem",s:"Sat &middot; Oct 24 &middot; Montebello",serif:false}
+  },
+  {
+    title:"Cascad Halloween Party",
+    date:"2026-10-31", start:"19:00", end:"23:00", endDate:"",
+    location:"Glendale, CA — RSVP for location",
+    category:"Social",
+    description:`🎃 Come celebrate Halloween with <strong>Cascad</strong> (Cascadians)! Costumes are mandatory and good vibes are highly encouraged.<br><br>📅 Saturday, October 31, 2026 &middot; 🕖 7:00 – 11:00 PM &middot; 📍 Glendale &middot; 🎟️ $15/person (paid to @oliviaohanian) &middot; Spaces limited — RSVP through Partiful (link in @cascad.co bio). Hosted by @cascad.co.`,
+    link:"https://www.instagram.com/p/DdcbSXRoMa5", linkLabel:"Instagram",
+    poster:"images/cascad-halloween-party-oct31.jpg",
+    art:{bg:"linear-gradient(160deg,#120a1e,#3a1a4a 55%,#e8702a)",fg:"#fff1e0",t:"CASCAD<br>HALLOWEEN",ts:"1.7rem",s:"Sat &middot; Oct 31 &middot; Glendale",serif:false}
+  },
+  {
+    title:"GHOSTED Halloween Party (Genätz × Kyank × Ascenseur House)",
+    date:"2026-10-31", start:"20:00", end:"25:00", endDate:"",
+    location:"PARC, 3030 Dolores St, Glendale, CA",
+    category:"Music",
+    description:`👻 <strong>GHOSTED</strong> — a Halloween party by Genätz × Kyank × Ascenseur House. Rock your costume and enjoy a night with the community's hottest DJs, artists, vendors, and caterers.<br><br>🎧 DJs: Bendi, Ara32, Karagusi + special guests &middot; 🍢 Vendors: Smosh Town, Dr. Kebab, Element Hookah, Poppy Tattoo & more.<br><br>📅 Saturday, October 31, 2026 &middot; 🕗 8:00 PM – Late &middot; 📍 PARC, 3030 Dolores St, Glendale &middot; 🔞 21+ &middot; 🎟️ Tickets on posh.vip. Hosted by @genatz.la, Kyank & Ascenseur House.`,
+    link:"https://www.instagram.com/p/Ddc3sLPlDD6", linkLabel:"Instagram",
+    poster:"images/genatz-ghosted-halloween-oct31.jpg",
+    art:{bg:"linear-gradient(160deg,#050505,#1e1e2e 55%,#8a8aa8)",fg:"#f0f0ff",t:"GHOSTED",ts:"2rem",s:"Sat &middot; Oct 31 &middot; PARC Glendale",serif:false}
+  },
+  {
+    title:"Golden Autumn Festival (Voske Ashun)",
+    date:"2026-11-06", start:"15:00", end:"19:00", endDate:"",
+    location:"Saticoy Elementary School, 7850 Ethel Ave, North Hollywood, CA 91605",
+    category:"Festival", free:true,
+    description:`🍂 <strong>Golden Autumn Festival</strong> (Ոսկե Աշուն / Voske Ashun) — celebrate the beauty of the harvest season. In Armenian culture, Golden Autumn is a time to honor abundance, sustenance, and stability, and to come together in gratitude. Folk dancing, delicious food, local vendors, and family-friendly activities inspired by Armenian traditions.<br><br>📅 Friday, November 6, 2026 &middot; 🕒 3:00 – 7:00 PM &middot; 📍 Saticoy Elementary School, 7850 Ethel Ave, North Hollywood &middot; 🎟️ FREE (RSVP). Hosted by @cd2losangeles (Councilmember Adrin Nazarian, LA Council District 2).`,
+    link:"https://www.instagram.com/p/Ddr0bk6CDiY", linkLabel:"Instagram",
+    poster:"images/golden-autumn-festival-nov6.jpg",
+    art:{bg:"linear-gradient(160deg,#3a1a06,#8a4a12 55%,#f0b43a)",fg:"#fff4de",t:"GOLDEN<br>AUTUMN",ts:"1.8rem",s:"Fri &middot; Nov 6 &middot; North Hollywood",serif:true}
+  },
+  {
+    title:"Après Ararat — Yeraz Blend Fundraiser for Orran",
+    date:"2026-11-19", start:"19:00", end:"22:00", endDate:"",
+    location:"La Cañada Flintridge, CA",
+    category:"Gala",
+    description:`🏔️ Yeraz Blend presents <strong>Après Ararat</strong> — an evening in La Cañada in support of Orran, the Armenian nonprofit that feeds, tutors, and counsels at-risk children, elderly, and families in crisis, including refugees from Artsakh. One night out, with proceeds going straight to the people who need it most back home.<br><br>📅 Thursday, November 19, 2026 &middot; 🕖 7:00 PM &middot; 📍 La Cañada Flintridge &middot; 🎟️ $175 minimum donation. Hosted by @yerazblend in support of Orran.`,
+    link:"https://www.instagram.com/p/DdmXcwxvt3G", linkLabel:"Instagram",
+    poster:"images/apres-ararat-orran-nov19.jpg",
+    art:{bg:"linear-gradient(160deg,#0e1a2a,#2a4a6a 55%,#e8e0d0)",fg:"#f6f2ea",t:"APRÈS<br>ARARAT",ts:"1.8rem",s:"Thu &middot; Nov 19 &middot; La Cañada",serif:true}
+  },
+  {
+    title:"Peto Poghosyan — “Սպասում” Solo Show (Armenian Arts)",
+    date:"2026-10-23", start:"19:00", end:"", endDate:"2026-10-25",
+    location:"Armenian Arts, 250 North Orange St, Glendale, CA 91203",
+    category:"Art",
+    description:`🎨 <strong>Peto Poghosyan — "Սպասում" (Spasum / Waiting)</strong>, a solo show at Armenian Arts. The Armenian artist is back in LA with a solo exhibition.<br><br>📅 Opening reception Friday, October 23, 2026 at 🕖 7:00 PM &middot; show runs October 23–25 &middot; 📍 Armenian Arts, 250 North Orange St, Glendale. Hosted by @petopoghosyan.`,
+    link:"https://www.instagram.com/p/DeCz6w4qqKh", linkLabel:"Instagram",
+    poster:"images/peto-poghosyan-solo-show-oct23.jpg",
+    art:{bg:"linear-gradient(160deg,#1a1a1a,#4a3a2a 55%,#d8c8a8)",fg:"#f8f4ec",t:"PETO<br>POGHOSYAN",ts:"1.7rem",s:"Oct 23&ndash;25 &middot; Armenian Arts",serif:true}
+  },
+  {
+    title:"Love & Homeland — AGBU LA Choir",
+    date:"2026-10-24", start:"19:00", end:"21:00", endDate:"",
+    location:"Stambolian Hall, 148 E 22nd St, Costa Mesa, CA 92626",
+    category:"Music",
+    description:`🎼 Join the <strong>AGBU LA Choir</strong> for <strong>"Love & Homeland"</strong>, featuring the OC Saturday School Children's Choir: a special evening celebrating Armenian music, heritage, and community. Choir conductor Nektar Mirakyan; musical ensemble led by Shushan Hakobyan.<br><br>📅 Saturday, October 24, 2026 &middot; 🕖 7:00 PM &middot; 📍 Stambolian Hall, 148 E 22nd St, Costa Mesa (Orange County) &middot; 🎟️ $60 (link in @agbulachoir bio). Proceeds benefit the Armenian Genocide Memorial at Orange County Great Park.`,
+    link:"https://www.instagram.com/p/DeAbKQGyGaU", linkLabel:"Instagram",
+    poster:"images/agbu-la-choir-love-homeland-oct24.jpg",
+    art:{bg:"linear-gradient(160deg,#1a0e1a,#5a1f3a 55%,#e8b86a)",fg:"#fff3e8",t:"LOVE &amp;<br>HOMELAND",ts:"1.7rem",s:"Sat &middot; Oct 24 &middot; Costa Mesa",serif:true}
+  },
+  {
+    title:"Serov × TRU8 at Herohouse",
+    date:"2026-10-24", start:"20:00", end:"23:00", endDate:"",
+    location:"Herohouse, Glendale, CA",
+    category:"Social",
+    description:`🎧 <strong>Serov (Armenian Social Club) × TRU8</strong> at Herohouse: an evening of great music with DJ Ojene and a chance to make new connections. Bring your friends, single or taken; everyone is welcome. Sponsored by Loop8.<br><br>📅 Saturday, October 24, 2026 &middot; 🕗 8:00 PM &middot; 📍 Herohouse, Glendale &middot; 🔞 24+. Details and registration link to follow. Hosted by @serov_socialclub × TRU8.`,
+    link:"https://www.instagram.com/p/DeDSh4NOO-L", linkLabel:"Instagram",
+    poster:"images/serov-tru8-herohouse-oct24.jpg",
+    art:{bg:"linear-gradient(160deg,#0a0a0a,#2a2a3a 55%,#c8a85a)",fg:"#f5f0e0",t:"SEROV<br>× TRU8",ts:"1.8rem",s:"Sat &middot; Oct 24 &middot; Herohouse",serif:false}
+  },
+  {
+    title:"Arbat Fall Fest",
+    date:"2026-11-08", start:"12:00", end:"20:00", endDate:"",
+    location:"Arbat Banquet Hall, 711 S San Fernando Blvd, Burbank, CA 91502",
+    category:"Festival", free:true,
+    description:`🍁 <strong>Arbat Fall Fest</strong> at Arbat Banquet Hall: a day of community, delicious food and drinks, live music, and fun for all ages. Fall is even better when we celebrate together.<br><br>📅 Sunday, November 8, 2026 &middot; 🕛 12:00 – 8:00 PM &middot; 📍 Arbat Banquet Hall, 711 S San Fernando Blvd, Burbank &middot; 🎟️ FREE admission, all ages welcome. Hosted by @lajolieevents.`,
+    link:"https://www.instagram.com/p/DeGPloUqUBx", linkLabel:"Instagram",
+    poster:"images/arbat-fall-fest-nov8.jpg",
+    art:{bg:"linear-gradient(160deg,#3a1a06,#8a3a12 55%,#f2a03a)",fg:"#fff4e6",t:"ARBAT<br>FALL FEST",ts:"1.7rem",s:"Sun &middot; Nov 8 &middot; Burbank",serif:false}
+  },
+  {
+    title:"Homenetmen Day (Western USA)",
+    date:"2026-11-13", start:"19:00", end:"22:00", endDate:"",
+    location:"De Luxe Banquet Hall, Glendale, CA",
+    category:"Community",
+    description:`🏅 <strong>Homenetmen Day</strong>: an evening honoring the region's exemplary members and celebrating Homenetmen (the Armenian General Athletic Union & Scouts).<br><br>📅 Friday, November 13, 2026 &middot; 🕖 7:00 PM &middot; 📍 De Luxe Banquet Hall, Glendale. Save the date; more details to come. Hosted by @homenetmen_western_usa.`,
+    link:"https://www.instagram.com/p/Dd-fu0klAXQ", linkLabel:"Instagram",
+    poster:"images/homenetmen-day-nov13.jpg",
+    art:{bg:"linear-gradient(160deg,#0e1a3a,#1f3a7a 55%,#e8c84a)",fg:"#f0f4ff",t:"HOMENETMEN<br>DAY",ts:"1.6rem",s:"Fri &middot; Nov 13 &middot; De Luxe",serif:false}
+  },
+  {
+    title:"Cars & Coffee — AGBU AYA Pasadena-Glendale Scouts",
+    date:"2026-11-14", start:"09:30", end:"12:00", endDate:"",
+    location:"AGBU Vatche & Tamar Manoukian PAC, 2495 E Mountain St, Pasadena, CA 91104",
+    category:"Community",
+    description:`🚗 AGBU AYA Pasadena-Glendale Scouts present <strong>Cars & Coffee</strong>: a morning of great cars, coffee, and community. Rev your morning where cars bring us together!<br><br>📅 Saturday, November 14, 2026 &middot; 🕤 9:30 AM – 12:00 PM &middot; 📍 2495 E Mountain St, Pasadena (AGBU Vatche & Tamar Manoukian PAC). Car registration details coming soon. Hosted by @agbuscouts & @agbuwr.`,
+    link:"https://www.instagram.com/p/Dd-jf5hTlmO", linkLabel:"Instagram",
+    poster:"images/agbu-scouts-cars-coffee-nov14.jpg",
+    art:{bg:"linear-gradient(160deg,#0a0a0a,#3a1a0e 55%,#e86a2a)",fg:"#fff0e6",t:"CARS &amp;<br>COFFEE",ts:"1.8rem",s:"Sat &middot; Nov 14 &middot; Pasadena",serif:false}
+  },
+  {
+    title:"Queernissage — LGBTQ+ SWANA Holiday Market (GALAS)",
+    date:"2026-11-28", start:"11:00", end:"17:00", endDate:"",
+    location:"Sooki Studio, 2974 Allesandro St, Los Angeles, CA 90039",
+    category:"Shopping",
+    description:`🛍️ The sixth annual <strong>Queernissage</strong>, the vibrant open-air pop-up from GALAS (Gay & Lesbian Armenian Society), returns as an LGBTQ+ SWANA Holiday Market showcasing local queer craftspeople: unique artwork, handcrafted goods, culinary delights, and innovative designs. More than a market, it's a celebration of community, creativity, and culture.<br><br>📅 Saturday, November 28, 2026 &middot; 🕚 11:00 AM – 5:00 PM &middot; 📍 Sooki Studio, 2974 Allesandro St, Los Angeles. Hosted by @galasorg with @sooki__studio.`,
+    link:"https://www.instagram.com/p/Dd-L23zGMhS", linkLabel:"Instagram",
+    poster:"images/galas-queernissage-nov28.jpg",
+    art:{bg:"linear-gradient(160deg,#3a1030,#7a1f6a 45%,#e0a53a)",fg:"#fbe9f5",t:"QUEER-<br>NISSAGE",ts:"1.8rem",s:"Sat &middot; Nov 28 &middot; Sooki Studio",serif:false}
+  },
+  {
+    title:"Let's Take a Hike! — Homenetmen Sipan Youth",
+    date:"2026-10-24", start:"08:00", end:"12:00", endDate:"",
+    location:"Trail Canyon Trail, 19400 N Trail Canyon Rd, Tujunga, CA 91042",
+    category:"Sports",
+    description:`🥾🌿 Let's hit the trails! The Homenetmen Burbank Sipan Chapter Youth Division presents a fun day of hiking, fresh air, and good company.<br><br>📅 Saturday, October 24, 2026 &middot; 🕗 8:00 AM meet-up &middot; 8:30 AM hike start &middot; 📍 Trail Canyon Trail, 19400 N Trail Canyon Rd, Tujunga. Bring your favorite water bottle and wear comfortable hiking shoes. National Park parking permits will be provided. DM @sipanyouthdivision with questions.`,
+    link:"https://www.instagram.com/sipanyouthdivision/", linkLabel:"Instagram",
+    poster:"images/homenetmen-sipan-lets-take-a-hike-oct24.jpg",
+    art:{bg:"linear-gradient(160deg,#0e2a1a,#2a5a2a 55%,#e8c86a)",fg:"#f2fbef",t:"LET'S TAKE<br>A HIKE",ts:"1.7rem",s:"Sat &middot; Oct 24 &middot; Tujunga",serif:false}
+  },
+  {
+    title:"AAMS Brand Park Hike",
+    date:"2026-10-24", start:"08:30", end:"12:00", endDate:"",
+    location:"Brand Park (by the Doctor's House), 1601 W Mountain St, Glendale, CA 91201",
+    category:"Sports",
+    description:`🥾 Lace up, AAMS family! The Armenian American Medical Society's Membership Committee invites you to the <strong>Brand Park Hike</strong>, a scenic 2.2-mile trail with beautiful views of Glendale and great company. Smoothies afterwards!<br><br>📅 Saturday, October 24, 2026 &middot; 🕣 Check-in 8:30 AM &middot; hike starts 9:00 AM sharp &middot; 📍 Brand Park, by the Doctor's House, 1601 W Mountain St, Glendale. RSVP by October 18 at aamsc.org/events.`,
+    link:"https://aamsc.org/events", linkLabel:"RSVP",
+    poster:"images/aams-brand-park-hike-oct24.jpg",
+    art:{bg:"linear-gradient(160deg,#0e2a2a,#1f5a5a 55%,#f2d27a)",fg:"#effbfb",t:"BRAND PARK<br>HIKE",ts:"1.7rem",s:"Sat &middot; Oct 24 &middot; Glendale",serif:false}
+  },
+  {
+    title:"Hye Notes #11 — Armenian Karaoke Night (1 Year!)",
+    date:"2026-11-06", start:"19:00", end:"23:30", endDate:"",
+    location:"The Good Nite, 10721 Burbank Blvd, North Hollywood, CA 91601",
+    category:"Social", free:true,
+    description:`🎤 <strong>Hye Notes #11</strong>, an Armenian social mixer karaoke night, celebrating its 1-year anniversary! Come from 7 PM to the end of the night (come early for a higher chance to sing, the bar fills up quick). Free to enter and open to all: Armenians, non-Armenians, friends and family.<br><br>Browse the song catalog at karafun.com, or share a YouTube karaoke link with the KJ the day of.<br><br>📅 Friday, November 6, 2026 &middot; 🕖 7 PM – Late &middot; 📍 The Good Nite &middot; 🎟️ FREE &middot; 21+.`,
+    link:"https://partiful.com/e/yyX1ZLmlZBRSYt2DUIeW", linkLabel:"RSVP",
+    poster:"images/hye-notes-karaoke-nov6.jpg",
+    art:{bg:"linear-gradient(160deg,#3a0e0e,#6a1a1a 55%,#f2c88a)",fg:"#fff0e6",t:"HYE<br>NOTES #11",ts:"1.8rem",s:"Fri &middot; Nov 6 &middot; The Good Nite",serif:false}
+  },
+  {
+    title:"Vartoush Loves You! — Mary Basmadjian",
+    date:"2026-11-12", start:"19:30", end:"21:30", endDate:"",
+    location:"Flappers Comedy Club, Burbank, CA",
+    category:"Comedy",
+    description:`😂 <strong>Vartoush Loves You!</strong> Come get roasted by Vartoush Tota herself (Mary Basmadjian), with the hilarious Becca Melkonian in the house!<br><br>📅 Thursday, November 12, 2026 &middot; 🕡 Doors 6:30 PM &middot; show 7:30 PM &middot; 📍 Flappers Comedy Club, Burbank &middot; 🎟️ Tickets via the link in @marybasmadjian's bio.`,
+    link:"https://www.instagram.com/marybasmadjian/", linkLabel:"Instagram",
+    poster:"images/vartoush-loves-you-nov12.jpg",
+    art:{bg:"linear-gradient(160deg,#3a0e2a,#8a1f5a 55%,#f2a0c8)",fg:"#fff0f8",t:"VARTOUSH<br>LOVES YOU",ts:"1.6rem",s:"Thu &middot; Nov 12 &middot; Flappers",serif:false}
+  },
+  {
+    title:"ArevaHike — Griffith Park Hike",
+    date:"2026-10-24", start:"08:00", end:"12:00", endDate:"",
+    location:"Griffith Park, Los Angeles, CA",
+    category:"Community", free:true,
+    description:`🥾🌞 Join ArevaHike for a beautiful hike through Griffith Park after the rainy days! Route: Fern Canyon, Hogback, North, Bill Eckert, and Upper Old Zoo Loop.<br><br>📅 Saturday, October 24, 2026 &middot; 🕗 8:00 AM &middot; 📍 Griffith Park &middot; 📏 5.9 miles &middot; ⛰️ 1,220 ft gain &middot; ⏱️ 3–4 hours (loop).<br><br>DM @arevahike to join.`,
+    link:"https://www.instagram.com/arevahike", linkLabel:"Instagram",
+    poster:"images/arevahike-griffith-park-oct24.jpg",
+    art:{bg:"linear-gradient(160deg,#14401f,#2e7a3e 55%,#c9a33e)",fg:"#eafff0",t:"AREVA<br>HIKE",ts:"2rem",s:"Sat &middot; Oct 24 &middot; Griffith Park",serif:false}
+  },
+  {
+    title:"Surj & Paint — NAMI Glendale",
+    date:"2026-10-24", start:"11:00", end:"14:00", endDate:"",
+    location:"Verdugo Park, 1621 Cañada Blvd, Glendale, CA 91208",
+    category:"Community", free:true,
+    description:`☕🎨 Surj & Paint — coffee, a canvas, and a few hours just for you. In Armenian homes, a cup of surj means "sit down, stay a while." Join NAMI Glendale for a relaxed paint & sip: coffee, a canvas and brush, and good company. Chat while you paint, or just enjoy the quiet. No experience needed!<br><br>📅 Saturday, October 24, 2026 &middot; 🕚 11:00 AM – 2:00 PM &middot; 📍 Verdugo Park, 1621 Cañada Blvd, Glendale.<br><br>Contact @namiglendale &middot; (818) 836-7090 &middot; namiglendale.org.`,
+    link:"https://www.instagram.com/namiglendale", linkLabel:"Instagram",
+    poster:"images/nami-surj-and-paint-oct24.jpg",
+    art:{bg:"linear-gradient(160deg,#241a0e,#4a3a1e 55%,#c8a24a)",fg:"#f7efdd",t:"SURJ<br>&amp; PAINT",ts:"1.9rem",s:"Sat &middot; Oct 24 &middot; Verdugo Park",serif:false}
+  },
+  {
+    title:"Spooky Afternoon Tea — WanderCrust",
+    date:"2026-10-24", start:"11:00", end:"13:00", endDate:"",
+    location:"Chatsworth, CA 91311 (RSVP for location)",
+    category:"Social",
+    description:`🫖👻 WanderCrust presents a Spooky Afternoon Tea — a magical, whimsical tea party. Tickets include curated tea and autumnal treats.<br><br>📅 Saturday, October 24, 2026 &middot; 🕚 11:00 AM seating &middot; 📍 Chatsworth &middot; limited seats.<br><br>🎟️ Tickets via the link in @wandercrust_co bio.`,
+    link:"https://www.instagram.com/wandercrust_co", linkLabel:"Instagram",
+    poster:"images/wandercrust-spooky-afternoon-tea-oct24.jpg",
+    art:{bg:"linear-gradient(160deg,#2a1230,#52204a 55%,#d98828)",fg:"#f7e9f5",t:"SPOOKY<br>AFTERNOON<br>TEA",ts:"1.5rem",s:"Sat &middot; Oct 24 &middot; Chatsworth",serif:true}
+  },
+  {
+    title:"Harvest Festival — UACC",
+    date:"2026-10-30", start:"18:30", end:"20:30", endDate:"",
+    location:"United Armenian Congregational Church, 3480 Cahuenga Blvd W, Los Angeles, CA 90068",
+    category:"Festival", free:true,
+    description:`🍂🎃 UACC invites you to the Harvest Festival! Join the community for a fun fall evening.<br><br>📅 Friday, October 30, 2026 &middot; 🕡 6:30 – 8:30 PM &middot; 📍 United Armenian Congregational Church, 3480 Cahuenga Blvd W, Los Angeles &middot; 🎟️ FREE.<br><br>👻 Non-scary costumes encouraged. Hosted by @uacchurch.`,
+    link:"https://www.instagram.com/uacchurch", linkLabel:"Instagram",
+    poster:"images/uacc-harvest-festival-oct30.jpg",
+    art:{bg:"linear-gradient(160deg,#5a2310,#9a3f12 50%,#c9701f)",fg:"#fdf0dc",t:"HARVEST<br>FESTIVAL",ts:"1.8rem",s:"Fri &middot; Oct 30 &middot; UACC",serif:false}
+  },
+  {
+    title:"Walk to End Alzheimer's — ACA L.A.",
+    date:"2026-11-01", start:"09:30", end:"", endDate:"",
+    location:"Crescent Bay Park, 2000 Ocean Ave, Santa Monica, CA 90405",
+    category:"Community", free:true,
+    description:`💜 Walk Against Alzheimer's with ACA L.A. — join the Walk to End Alzheimer's to honor those affected and support the fight for a future without Alzheimer's. A 3-mile walk!<br><br>📅 Sunday, November 1, 2026 &middot; 🕤 9:30 AM near the entrance booths &middot; 📍 Crescent Bay Park, 2000 Ocean Ave, Santa Monica.<br><br>Sign up, set a fundraising goal, and register (QR in the post). DM @aca_losangeles with transportation concerns. #ENDALZ`,
+    link:"https://www.instagram.com/aca_losangeles", linkLabel:"Instagram",
+    poster:"images/aca-walk-to-end-alzheimers-nov1.jpg",
+    art:{bg:"linear-gradient(160deg,#2a1858,#4a2d8a 55%,#8a5fd0)",fg:"#f3ecff",t:"WALK TO END<br>ALZHEIMER'S",ts:"1.5rem",s:"Sun &middot; Nov 1 &middot; Santa Monica",serif:false}
+  },
+  {
+    title:"Spooky Halloween Hike — Beaudry Loop",
+    date:"2026-11-01", start:"16:30", end:"19:30", endDate:"",
+    location:"Beaudry Loop Trailhead, 3111 Beaudry Terrace, Glendale, CA 91208",
+    category:"Community", free:true,
+    description:`🎃👻 Returning to the Beaudry Loop Trail in Glendale for the 2026 Spooky Halloween Hike! Costumes welcomed.<br><br>📅 Sunday, November 1, 2026 &middot; 🕟 Meet 4:30 PM &middot; 📍 Beaudry Loop Trailhead, 3111 Beaudry Terrace, Glendale &middot; 📏 ~5.9 miles (loop), moderate with steep sections.<br><br>🧥 Bring a jacket, headlamp or flashlight, and plenty of water. Hosted by @social.outdoors × @armenvart — a casual group hike, participate at your own risk.`,
+    link:"https://www.instagram.com/social.outdoors", linkLabel:"Instagram",
+    poster:"images/armenvart-beaudry-spooky-hike-nov1.jpg",
+    art:{bg:"linear-gradient(160deg,#160c22,#3a1f52 55%,#d9731f)",fg:"#f6ecff",t:"SPOOKY<br>HALLOWEEN<br>HIKE",ts:"1.5rem",s:"Sun &middot; Nov 1 &middot; Beaudry Loop",serif:false}
+  },
+  {
+    title:"Armenian Frame Drum Workshop",
+    date:"2026-12-13", start:"10:00", end:"12:00", endDate:"",
+    location:"Glendale, CA (details on RSVP)",
+    category:"Music", free:true,
+    description:`🥁 Armenian Frame Drum Workshop — a free gathering dedicated to Armenian frame drums, rhythm, and community. A frame drum circle rooted in Armenian musical traditions. All levels welcome — bring your instrument (dap) for a morning of rhythm, song, and good coffee.<br><br>📅 Sunday, December 13, 2026 &middot; 🕙 Morning (full details on RSVP) &middot; 📍 Glendale &middot; 🎟️ FREE &middot; RSVP by December 1.<br><br>Hosted by Nvagaran Workshop, VERVERI & the Center for Armenian Arts (link in @nvagaran.workshop bio).`,
+    link:"https://www.instagram.com/nvagaran.workshop", linkLabel:"Instagram",
+    poster:"images/armenian-frame-drum-workshop-dec13.jpg",
+    art:{bg:"linear-gradient(160deg,#2a1408,#4a230f 55%,#c99a3e)",fg:"#f7ead3",t:"FRAME DRUM<br>WORKSHOP",ts:"1.6rem",s:"Sun &middot; Dec 13 &middot; Glendale",serif:false}
+  }
+];
+
+const CAT_COLORS={Cultural:"#c2410c",Social:"#3b6fe2",Music:"#ec4899",Sports:"#14b8a6",Community:"#d97706",Shopping:"#db2777",Comedy:"#eab308","Film/TV":"#7c4a1e",Festival:"#e11d48",Gala:"#7e22ce",Art:"#4338ca",Books:"#15803d",Other:"#475569"};
+const MON=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const MONF=["January","February","March","April","May","June","July","August","September","October","November","December"];
+const DAYF=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+const pd=d=>{if(!d)return null;const a=d.split("-").map(Number);return new Date(a[0],a[1]-1,a[2]);};
+function fmtT(t){if(!t)return"";var p=t.split(":").map(Number);var h=p[0],m=p[1];var ap=h>=12?"PM":"AM";h=h%12||12;return m?h+":"+String(m).padStart(2,"0")+" "+ap:h+" "+ap;}
+function tr(e){if(!e.start)return e.date?"All day":"";return e.end?fmtT(e.start)+" - "+fmtT(e.end):fmtT(e.start);}
+function gcal(e){
+  var p=new URLSearchParams();p.set("text",e.title);
+  if(e.location)p.set("location",e.location);
+  var d=e.description||"";if(e.link)d+="\n\n"+e.link;p.set("details",d);
+  if(e.date){
+    var s=e.date.replace(/-/g,""),en=(e.endDate||e.date).replace(/-/g,"");
+    if(e.start){p.set("dates",s+"T"+e.start.replace(":","")+"00/"+en+"T"+(e.end||e.start).replace(":","")+"00");}
+    else{var x=pd(e.endDate||e.date);x.setDate(x.getDate()+1);p.set("dates",s+"/"+x.getFullYear()+String(x.getMonth()+1).padStart(2,"0")+String(x.getDate()).padStart(2,"0"));}
+  }
+  return "https://calendar.google.com/calendar/render?action=TEMPLATE&"+p.toString();
+}
+function posterHTML(e){
+  var a=e.art||{bg:"#222",fg:"#fff",t:e.title,ts:"1.3rem",s:""};
+  var fam=a.serif?'Georgia,"Times New Roman",serif':'inherit';
+  var art='<div class="art" style="background:'+a.bg+';color:'+a.fg+';font-family:'+fam+'"><div class="t" style="font-size:'+a.ts+'">'+a.t+'</div>'+(a.s?'<div class="s">'+a.s+'</div>':'')+'</div>';
+  var img=e.poster?'<img src="'+e.poster+'" alt="'+e.title+' poster" loading="lazy" onerror="this.style.display=\'none\'">':'';
+  return '<div class="poster">'+art+img+'</div>';
+}
+function rangeBadge(e){if(!e.endDate||!e.date||e.endDate===e.date)return"";var s=pd(e.date),en=pd(e.endDate);if(!s||!en)return"";return ' <span class="rangebadge">'+MON[s.getMonth()]+' '+s.getDate()+' &ndash; '+MON[en.getMonth()]+' '+en.getDate()+'</span>';}
+function cardHTML(e){
+  var dt=pd(e.date);
+  var dl=dt?DAYF[dt.getDay()].slice(0,3)+", "+MON[dt.getMonth()]+" "+dt.getDate()+(e.endDate?" - "+MON[pd(e.endDate).getMonth()]+" "+pd(e.endDate).getDate():""):"Date TBD";
+  var t=tr(e);
+  var d=document.createElement("div");d.className="card";d.dataset.idx=EVENTS.indexOf(e);
+  var linkBtn=e.link?'<a class="mini mini-ig" target="_blank" rel="noopener" href="'+e.link+'">'+(e.linkLabel||"Details")+'</a>':'';
+  d.innerHTML=posterHTML(e)+'<div class="cbody"><div class="ctop"><div class="ctags"><span class="cattag" style="background:'+(CAT_COLORS[e.category]||CAT_COLORS.Other)+'">'+(e.category||"Event")+'</span>'+(e.free?'<span class="freebadge">FREE</span>':'')+(e.discount?'<span class="discbadge">'+e.discount+'</span>':'')+'</div><span class="cdate">'+dl+'</span></div><div class="meta">'+(t?'<div class="l">'+t+'</div>':'')+'<div class="l">'+(e.location||"Location TBD")+'</div></div><h3>'+e.title+'</h3><div class="desc">'+(e.description||"")+'</div><div class="acts"><a class="mini mini-cal" target="_blank" rel="noopener" href="'+gcal(e)+'">+ Calendar</a>'+linkBtn+'</div></div>';
+  return d;
+}
+function listItemHTML(e){
+  var dt=pd(e.date);
+  var d=document.createElement("div");d.className="litem";d.dataset.idx=EVENTS.indexOf(e);
+  var _en=(e.endDate&&e.endDate!==e.date)?pd(e.endDate):null;
+  var dchip=dt?(_en?'<div class="ldate multi"><span class="d">'+dt.getDate()+'</span><span class="m">'+MON[dt.getMonth()]+'</span><span class="arr">&darr;</span><span class="d">'+_en.getDate()+'</span><span class="m">'+MON[_en.getMonth()]+'</span><span class="mdtag">Multi-day</span></div>':'<div class="ldate"><span class="dow">'+DAYF[dt.getDay()].slice(0,3)+'</span><span class="d">'+dt.getDate()+'</span><span class="m">'+MON[dt.getMonth()]+'</span></div>'):'<div class="ldate"><span class="m">TBD</span></div>';
+  var thumb=e.poster?'<div class="lthumb"><img src="'+e.poster+'" alt="" loading="lazy" onerror="this.parentNode.style.display=\'none\'"></div>':'';
+  var t=tr(e);
+  var meta=(t?t+' &middot; ':'')+(e.location||'Location TBD');
+  var linkBtn=e.link?'<a class="mini mini-ig" target="_blank" rel="noopener" href="'+e.link+'">'+(e.linkLabel||"Details")+'</a>':'';
+  d.innerHTML=thumb+dchip+'<div class="lmain"><h3>'+e.title+'</h3><div class="lm">'+meta+'</div></div><div class="ctags"><span class="lcat" style="background:'+(CAT_COLORS[e.category]||CAT_COLORS.Other)+'">'+(e.category||"Event")+'</span>'+(e.free?'<span class="freebadge">FREE</span>':'')+(e.discount?'<span class="discbadge">'+e.discount+'</span>':'')+'</div><div class="lacts"><a class="mini mini-cal" target="_blank" rel="noopener" href="'+gcal(e)+'">+ Calendar</a>'+linkBtn+'</div>';
+  return d;
+}
+function byDate(l){return l.slice().sort(function(a,b){return !a.date?1:!b.date?-1:a.date.localeCompare(b.date);});}
+function renderWeek(){
+  var now=new Date();now.setHours(0,0,0,0);
+  var wk=new Date(now);wk.setDate(wk.getDate()+7);
+  var list=byDate(EVENTS.filter(function(e){var d=pd(e.date);return d&&d>=now&&d<=wk;}));
+  var g=document.getElementById("weekGrid");g.innerHTML="";
+  document.getElementById("weekEmpty").style.display=list.length?"none":"block";
+  document.getElementById("weekHint").textContent=list.length?list.length+" event"+(list.length>1?"s":"")+" in the next 7 days":"";
+  list.forEach(function(e){g.appendChild(cardHTML(e));});
+}
+function renderMonth(){
+  var now=new Date();now.setHours(0,0,0,0);
+  var mo=new Date(now);mo.setDate(mo.getDate()+30);
+  var list=byDate(EVENTS.filter(function(e){var d=pd(e.date);return d&&d>=now&&d<=mo;}));
+  var g=document.getElementById("monthGrid");g.innerHTML="";
+  document.getElementById("monthEmpty").style.display=list.length?"none":"block";
+  document.getElementById("monthHint").textContent=list.length?list.length+" event"+(list.length>1?"s":"")+" in the next 30 days":"";
+  list.forEach(function(e){g.appendChild(cardHTML(e));});
+}
+var cats=["All","Free"].concat(Array.from(new Set(EVENTS.map(function(e){return e.category;}))));
+var active="All";
+var dateActive="All";
+function inDate(e){
+  if(dateActive==="All")return true;
+  var d=pd(e.date);if(!d)return false;
+  var now=new Date();var y=now.getFullYear(),m=now.getMonth();
+  if(dateActive==="This Month")return d.getFullYear()===y&&d.getMonth()===m;
+  if(dateActive==="Next Month"){var nm=(m+1)%12,ny=y+(m===11?1:0);return d.getFullYear()===ny&&d.getMonth()===nm;}
+  if(dateActive==="Spring")return d.getMonth()>=2&&d.getMonth()<=4;
+  if(dateActive==="Summer")return d.getMonth()>=5&&d.getMonth()<=7;
+  if(dateActive==="Fall")return d.getMonth()>=8&&d.getMonth()<=10;
+  if(dateActive==="Winter")return d.getMonth()===11||d.getMonth()<=1;
+  return true;
+}
+function isPast(e){var end=pd(e.endDate||e.date);if(!end)return false;var now=new Date();now.setHours(0,0,0,0);return end<now;}
+function renderGrid(){
+  var list=byDate(EVENTS).filter(function(e){return !isPast(e)&&(active==="All"||(active==="Free"?e.free:e.category===active))&&inDate(e);});
+  var g=document.getElementById("grid");g.innerHTML="";
+  document.getElementById("empty").style.display=list.length?"none":"block";
+  list.forEach(function(e){g.appendChild(listItemHTML(e));});
+}
+function buildChips(){
+  var bar=document.getElementById("chips");
+  cats.forEach(function(c){var b=document.createElement("button");b.className="chip"+(c==="All"?" active":"");b.textContent=c;
+    b.onclick=function(){active=c;Array.from(bar.children).forEach(function(x){x.classList.remove("active");});b.classList.add("active");renderGrid();};
+    bar.appendChild(b);});
+}
+var dcats=["All","This Month","Next Month","Summer","Fall","Winter","Spring"];
+function buildDateChips(){
+  var bar=document.getElementById("datechips");
+  dcats.forEach(function(c){var b=document.createElement("button");b.className="chip"+(c==="All"?" active":"");b.textContent=c;
+    b.onclick=function(){dateActive=c;Array.from(bar.children).forEach(function(x){x.classList.remove("active");});b.classList.add("active");renderGrid();};
+    bar.appendChild(b);});
+}
+function openModal(e){
+  var dt=pd(e.date);
+  var dl=dt?DAYF[dt.getDay()]+", "+MONF[dt.getMonth()]+" "+dt.getDate()+(e.endDate?" - "+MONF[pd(e.endDate).getMonth()]+" "+pd(e.endDate).getDate():""):"Date TBD";
+  var t=tr(e);
+  var poster=e.poster?'<div class="modal-poster"><img src="'+e.poster+'" alt=""></div>':'';
+  var linkBtn=e.link?'<a style="background:var(--blue);border:1px solid var(--blue);color:#fff" target="_blank" rel="noopener" href="'+e.link+'">'+(e.linkLabel||"Details")+'</a>':'';
+  document.getElementById("modalContent").innerHTML=poster+'<div class="modal-body"><div class="ctags" style="margin-bottom:10px"><span class="mcat" style="background:'+(CAT_COLORS[e.category]||CAT_COLORS.Other)+';margin-bottom:0">'+(e.category||"Event")+'</span>'+(e.free?'<span class="freebadge">FREE</span>':'')+(e.discount?'<span class="discbadge">'+e.discount+'</span>':'')+'</div><h3>'+e.title+'</h3><div class="mmeta">'+dl+(t?' &middot; '+t:'')+'</div><div class="mmeta">'+(e.location||"Location TBD")+'</div><div class="mdesc">'+(e.description||"")+'</div><div class="modal-acts"><a style="background:var(--apricot);color:#1a1205" target="_blank" rel="noopener" href="'+gcal(e)+'">+ Add to my Google Calendar</a>'+linkBtn+'</div></div>';
+  document.getElementById("modal").classList.add("open");
+  document.body.style.overflow="hidden";
+}
+function closeModal(){document.getElementById("modal").classList.remove("open");document.body.style.overflow="";}
+document.addEventListener("keydown",function(ev){if(ev.key==="Escape")closeModal();});
+document.addEventListener("click",function(ev){var row=ev.target.closest("[data-idx]");if(row&&!ev.target.closest("a")){openModal(EVENTS[+row.dataset.idx]);}});
+function secOffsets(){var arr=[0];["week","month","events","partner"].forEach(function(id){var el=document.getElementById(id);if(el)arr.push(el.offsetTop-10);});var f=document.querySelector("footer");if(f)arr.push(f.offsetTop-10);return arr;}
+function navSection(dir){var s=secOffsets();var y=window.scrollY;if(dir>0){for(var i=0;i<s.length;i++){if(s[i]>y+30){window.scrollTo({top:s[i],behavior:"smooth"});return;}}window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"});}else{for(var j=s.length-1;j>=0;j--){if(s[j]<y-30){window.scrollTo({top:s[j],behavior:"smooth"});return;}}window.scrollTo({top:0,behavior:"smooth"});}}
+function toggleNav(btn){var m=document.getElementById('navmenu');var open=m.classList.toggle('open');if(btn)btn.setAttribute('aria-expanded',open);}
+function closeNav(){var m=document.getElementById('navmenu');m.classList.remove('open');var h=document.getElementById('hambBtn');if(h)h.setAttribute('aria-expanded','false');}
+function goTop(){closeNav();window.scrollTo({top:0,behavior:'smooth'});}
+function navGo(e,id){if(e)e.preventDefault();closeNav();if(id==='top'){window.scrollTo({top:0,behavior:'smooth'});return;}var el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth'});}
+document.addEventListener('click',function(ev){var m=document.getElementById('navmenu');if(m&&m.classList.contains('open')&&!m.contains(ev.target)&&!ev.target.closest('.hamb')){closeNav();}});
+renderWeek();renderMonth();buildChips();buildDateChips();renderGrid();
+</script>
+<div id="modal" class="modal" onclick="if(event.target===this)closeModal()">
+  <button class="modal-x" onclick="closeModal()" aria-label="Close">&times;</button>
+  <div class="modal-card">
+    <div id="modalContent"></div>
+  </div>
+</div>
+<div class="scrollnav">
+  <button onclick="navSection(-1)" aria-label="Scroll up">&#9650;</button>
+  <button onclick="navSection(1)" aria-label="Scroll down">&#9660;</button>
+</div>
+</body>
+</html>

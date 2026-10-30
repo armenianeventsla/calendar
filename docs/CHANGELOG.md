@@ -36,10 +36,16 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
   Pasadena & SGV / Los Angeles / Orange County) to Calendar of Events. North Hollywood and the
   San Fernando Valley split into separate buttons automatically when both have upcoming events.
 - The site now has **23 event cards**.
-- **Proposed (not applied):** a cream background with a red / blue / orange stripe frame around
-  the window, plus a thin burgundy border on every event card (`deploy-previews/2026-10-30/cream-theme.css`, preview in `preview-cream.html`).
-- **Deploy:** preview saved to `/deploy-previews/2026-10-30/`. **Not deployed**; waiting for
-  Gohar's green light.
+- **New look:** a cream background, a red / blue / orange (Armenian flag) stripe frame around
+  the window, and a thin burgundy border on every event card. The styles from
+  `deploy-previews/2026-10-30/cream-theme.css` were added to `index.html`.
+- **Archived** the last dark-design version (`site-history/v7_…`) and this first cream-design
+  version (`site-history/v8_…`).
+- **Deploy:** preview saved to `/deploy-previews/2026-10-30/` (the approved one is
+  `preview-cream.html`). **DEPLOYED to production on 2026-10-30** (Netlify deploy `6ae4ecee`)
+  after Gohar's green light ("deploy events + cream"). The live index.html was checked against
+  the repo and matches it byte-for-byte (23 event cards, cream design). `main` was
+  fast-forwarded to match.
 
 ---
 
