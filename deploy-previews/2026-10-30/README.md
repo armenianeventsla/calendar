@@ -1,0 +1,36 @@
+# Preview — 2026-10-30
+
+Open **`preview.html`**, a self-contained snapshot with the images embedded. The site now has
+**23 event cards** (it had 28).
+
+> Built on the current production version (28 events, deployed 2026-10-24 by another session).
+
+## What changed this round
+
+### 5 new events added, with your uploaded posters (branch `claude/cowork-session-context-t7bjj1`, Oct 30 upload)
+
+| Event | Date | Category | Link |
+|---|---|---|---|
+| **Jack Jr Halloween Party at Lé Brand** | Sat Oct 31, 8 PM · Glendale | Comedy | Instagram (@lebrandrestaurant) |
+| **ArevaHike — Sturtevant Falls Trail Hike** | Sun Nov 1, 7:45 AM · Chantry Flat | Sports · FREE | Instagram (@arevahike) |
+| **APS — Fall Into Good Company** | Thu Nov 5, 6:30 PM · Laya, Hollywood · $35/$50 | Social | **Tickets** → bit.ly/GoodCompanyAPS |
+| **AGBU YPLA Mixer — Reunion & Company** | Fri Nov 13, 7 PM · Silver Lake · $60 | Social | Instagram (@agbuypla) |
+| **Armenian Speed Dating — Ages 26–40** | Thu Nov 19, 7–9 PM · Urartu Coffee · $35 | Social | **Tickets** → armenianspeeddating.com |
+
+### Updated
+- **GiniFest 2026**: moved again, to **Sun Dec 6, 3–9 PM**, and indoors at the **Glendale Civic
+  Auditorium** (1401 N Verdugo Rd). It now uses your new "New Date" poster.
+- **GHOSTED Halloween Party**: moved indoors because of the rain forecast. The new venue is
+  **Vertigo, 400 W Glenoaks Blvd, Glendale**.
+
+### Removed 10 past events (Oct 23–25)
+Holy Cross Food Fair, Holy Cross Backgammon, Peto Poghosyan show, AGBU LA Choir, Serov × TRU8,
+Homenetmen Sipan hike, AAMS Brand Park hike, ArevaHike Griffith Park, Surj & Paint, WanderCrust
+Spooky Tea.
+
+## Notes
+- The **Oct 23 upload** was already handled in the Oct 24 deploy.
+- **Hye Notes #11** is still listed at The Good Nite in **North Hollywood**, and your calendar
+  still says Glendale. This is unconfirmed.
+- Posters were resized to a maximum width of 1080 px for the site.
+- **Not deployed.** Production (`main` / Netlify) is unchanged and waiting for Gohar's green light.

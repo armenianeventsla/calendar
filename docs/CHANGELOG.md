@@ -20,6 +20,21 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 
 ---
 
+## 2026-10-30 — 5 new events + posters, GiniFest & GHOSTED updates (28 → 23)
+
+- **Added 5 new events** from Gohar's Oct 30 poster upload and calendar entries: Jack Jr
+  Halloween Party at Lé Brand (Oct 31), ArevaHike Sturtevant Falls (Nov 1, FREE), APS "Fall Into
+  Good Company" (Nov 5), AGBU YPLA Mixer (Nov 13), and Armenian Speed Dating at Urartu (Nov 19).
+- **Updated GiniFest 2026**: rescheduled to Sun Dec 6 at the Glendale Civic Auditorium
+  (indoors), with the new "New Date" poster.
+- **Updated GHOSTED**: venue moved indoors to Vertigo, 400 W Glenoaks Blvd, Glendale.
+- **Removed 10 newly-past events** (Oct 23–25).
+- The site now has **23 event cards**.
+- **Deploy:** preview saved to `/deploy-previews/2026-10-30/`. **Not deployed**; waiting for
+  Gohar's green light.
+
+---
+
 ## 2026-10-24 — 7 new events + posters (35 → 28)
 
 > Production had advanced to 35 events (deployed 2026-10-12 by another session). This branch
