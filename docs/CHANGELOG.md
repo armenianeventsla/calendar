@@ -29,6 +29,11 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
   (indoors), with the new "New Date" poster.
 - **Updated GHOSTED**: venue moved indoors to Vertigo, 400 W Glenoaks Blvd, Glendale.
 - **Removed 10 newly-past events** (Oct 23–25).
+- **Fixed late-night times**: events ending after midnight now show the right AM time (e.g.
+  "8 PM - 1 AM"), events ending at 11:59 PM read "Late", and the "+ Calendar" link carries the
+  end time over to the next day.
+- **Added an area filter** (📍 Glendale / Burbank / San Fernando Valley / Pasadena & SGV /
+  Los Angeles / Orange County) to Calendar of Events.
 - The site now has **23 event cards**.
 - **Proposed (not applied):** a cream background with a red / blue / orange stripe frame around
   the window, plus a thin burgundy border on every event card (`deploy-previews/2026-10-30/cream-theme.css`, preview in `preview-cream.html`).

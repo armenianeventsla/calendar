@@ -28,6 +28,16 @@ Holy Cross Food Fair, Holy Cross Backgammon, Peto Poghosyan show, AGBU LA Choir,
 Homenetmen Sipan hike, AAMS Brand Park hike, ArevaHike Griffith Park, Surj & Paint, WanderCrust
 Spooky Tea.
 
+### Site improvements (in both previews)
+- **Late-night times fixed.** Events ending after midnight showed nonsense like "8 PM - 1 PM".
+  GHOSTED now reads **"8 PM - 1 AM"**, and events ending at 11:59 PM read **"8 PM - Late"**.
+  The **"+ Calendar"** button for after-midnight events now gives a correct end time on the next
+  day. Before, it built a broken "25:00" link.
+- **New area filter** in Calendar of Events, as a third row of buttons: 📍 All areas ·
+  Glendale · Burbank · San Fernando Valley · Pasadena & San Gabriel Valley · Los Angeles ·
+  Orange County. The area comes from each event's address, and only areas with upcoming events
+  get a button. It works together with the date and category buttons.
+
 ## Optional: new look (separate approval)
 
 Open **`preview-cream.html`**. It has the same events as above, with the proposed new look:
@@ -48,7 +58,6 @@ design. It is **not** in `index.html` yet. Choose either option:
 
 ## Notes
 - The **Oct 23 upload** was already handled in the Oct 24 deploy.
-- **Hye Notes #11** is still listed at The Good Nite in **North Hollywood**, and your calendar
-  still says Glendale. This is unconfirmed.
+- **Hye Notes #11**: Gohar confirmed **North Hollywood**. The site already uses that address.
 - Posters were resized to a maximum width of 1080 px for the site.
 - **Not deployed.** Production (`main` / Netlify) is unchanged and waiting for Gohar's green light.
