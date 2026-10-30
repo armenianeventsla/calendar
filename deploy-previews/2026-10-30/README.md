@@ -28,6 +28,21 @@ Holy Cross Food Fair, Holy Cross Backgammon, Peto Poghosyan show, AGBU LA Choir,
 Homenetmen Sipan hike, AAMS Brand Park hike, ArevaHike Griffith Park, Surj & Paint, WanderCrust
 Spooky Tea.
 
+## Optional: new look (separate approval)
+
+Open **`preview-cream.html`**. It has the same events as above, with the proposed new look:
+- **Cream background** (`#f8f1e3`), white-cream cards, and dark brown text.
+- **Red, blue and orange stripes** (the Armenian flag colors `#D90012` / `#0033A0` / `#F2A800`)
+  around the whole edge of the window. They stay in place while you scroll. Each stripe is 6px
+  wide on computers and 3px on phones.
+- The buttons use the same flag colors. Orange text, like the dates, is a darker orange so it
+  stays readable on cream.
+
+The new look lives in `cream-theme.css`, a set of style changes added on top of the current
+design. It is **not** in `index.html` yet. Choose either option:
+- deploy **just the events** (the current dark design), or
+- deploy **events + new look**, which adds `cream-theme.css` to `index.html` before deploying.
+
 ## Notes
 - The **Oct 23 upload** was already handled in the Oct 24 deploy.
 - **Hye Notes #11** is still listed at The Good Nite in **North Hollywood**, and your calendar

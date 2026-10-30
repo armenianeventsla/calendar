@@ -30,6 +30,8 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 - **Updated GHOSTED**: venue moved indoors to Vertigo, 400 W Glenoaks Blvd, Glendale.
 - **Removed 10 newly-past events** (Oct 23–25).
 - The site now has **23 event cards**.
+- **Proposed (not applied):** a cream background with a red / blue / orange stripe frame around
+  the window (`deploy-previews/2026-10-30/cream-theme.css`, preview in `preview-cream.html`).
 - **Deploy:** preview saved to `/deploy-previews/2026-10-30/`. **Not deployed**; waiting for
   Gohar's green light.
 
