@@ -35,6 +35,9 @@ Open **`preview-cream.html`**. It has the same events as above, with the propose
 - **Red, blue and orange stripes** (the Armenian flag colors `#D90012` / `#0033A0` / `#F2A800`)
   around the whole edge of the window. They stay in place while you scroll. Each stripe is 6px
   wide on computers and 3px on phones.
+- A **thin burgundy border** (`#7a1f2b`, 1.5px) around every event card in **Happening This
+  Week**, **This Month**, and **Calendar of Events**. In the Calendar of Events, each event is
+  now its own bordered card with a small gap between them. Before, they were one stacked list.
 - The buttons use the same flag colors. Orange text, like the dates, is a darker orange so it
   stays readable on cream.
 

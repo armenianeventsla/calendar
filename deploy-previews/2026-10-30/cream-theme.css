@@ -19,4 +19,12 @@
   .freenote{background:rgba(22,163,74,.10);color:#14532d}
   .modal-x{background:rgba(43,30,20,.55)}
   .femail a:hover,.navmenu a:hover{color:var(--accent-text)}
+  /* Burgundy border around every event card (This Week, This Month, Calendar of Events) */
+  :root{--burgundy:#7a1f2b;--cardborder:1.5px}
+  .card{border:var(--cardborder) solid var(--burgundy)}
+  .card:hover{border-color:#9b2a3a}
+  .list{border:none;background:transparent;overflow:visible;gap:10px}
+  .litem{background:var(--card);border:var(--cardborder) solid var(--burgundy);border-radius:14px;box-shadow:0 2px 10px rgba(60,40,20,.06)}
+  .litem:last-child{border-bottom:var(--cardborder) solid var(--burgundy)}
+  .litem:hover{background:var(--card);border-color:#9b2a3a;box-shadow:0 10px 26px rgba(60,40,20,.14)}
   @media(max-width:560px){:root{--frame:3px}.scrollnav{right:calc(8px + 3*var(--frame))}}
