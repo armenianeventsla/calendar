@@ -34,9 +34,11 @@ Spooky Tea.
   The **"+ Calendar"** button for after-midnight events now gives a correct end time on the next
   day. Before, it built a broken "25:00" link.
 - **New area filter** in Calendar of Events, as a third row of buttons: 📍 All areas ·
-  Glendale · Burbank · San Fernando Valley · Pasadena & San Gabriel Valley · Los Angeles ·
-  Orange County. The area comes from each event's address, and only areas with upcoming events
-  get a button. It works together with the date and category buttons.
+  Glendale · Burbank · North Hollywood & San Fernando Valley · Pasadena & San Gabriel Valley ·
+  Los Angeles · Orange County. The area comes from each event's address, and only areas with
+  upcoming events get a button. **North Hollywood** and **San Fernando Valley** get separate
+  buttons whenever both have upcoming events. Otherwise they share one button, which is the case
+  right now: both Valley events are in North Hollywood. It works together with the date and category buttons.
 
 ## Optional: new look (separate approval)
 

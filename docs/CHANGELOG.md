@@ -32,8 +32,9 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 - **Fixed late-night times**: events ending after midnight now show the right AM time (e.g.
   "8 PM - 1 AM"), events ending at 11:59 PM read "Late", and the "+ Calendar" link carries the
   end time over to the next day.
-- **Added an area filter** (📍 Glendale / Burbank / San Fernando Valley / Pasadena & SGV /
-  Los Angeles / Orange County) to Calendar of Events.
+- **Added an area filter** (📍 Glendale / Burbank / North Hollywood & San Fernando Valley /
+  Pasadena & SGV / Los Angeles / Orange County) to Calendar of Events. North Hollywood and the
+  San Fernando Valley split into separate buttons automatically when both have upcoming events.
 - The site now has **23 event cards**.
 - **Proposed (not applied):** a cream background with a red / blue / orange stripe frame around
   the window, plus a thin burgundy border on every event card (`deploy-previews/2026-10-30/cream-theme.css`, preview in `preview-cream.html`).

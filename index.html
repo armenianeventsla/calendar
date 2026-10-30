@@ -545,7 +545,8 @@ var areaActive="All";
 var AREAS=[
   {n:"Glendale",k:["glendale"]},
   {n:"Burbank",k:["burbank"]},
-  {n:"San Fernando Valley",k:["north hollywood","studio city","sherman oaks","encino","van nuys","tarzana","northridge","chatsworth","porter ranch","granada hills","reseda","calabasas","sunland","tujunga","sun valley","valley village","woodland hills"]},
+  {n:"North Hollywood",k:["north hollywood","noho"]},
+  {n:"San Fernando Valley",k:["studio city","sherman oaks","encino","van nuys","tarzana","northridge","chatsworth","porter ranch","granada hills","reseda","calabasas","sunland","tujunga","sun valley","valley village","woodland hills"]},
   {n:"Pasadena & San Gabriel Valley",k:["pasadena","arcadia","alhambra","la cañada","la canada","altadena","monrovia","san gabriel","montebello","pico rivera","south pasadena"]},
   {n:"Los Angeles",k:["los angeles","hollywood","silver lake","echo park","eagle rock","glassell park","atwater","los feliz","westwood","ucla","santa monica","beverly hills","culver city","malibu","venice"]},
   {n:"Orange County",k:["orange county","newport beach","costa mesa","irvine","anaheim","huntington beach","fullerton"]}
@@ -557,6 +558,10 @@ function areaOf(e){
     for(var i=0;i<AREAS.length;i++)for(var j=0;j<AREAS[i].k.length;j++)if(hay.indexOf(AREAS[i].k[j])>=0)return AREAS[i].n;}
   return "Other";
 }
+// North Hollywood and the rest of the Valley get their own buttons only when both have
+// upcoming events; otherwise they share one "North Hollywood & San Fernando Valley" button.
+var NOHO_SFV="North Hollywood & San Fernando Valley",mergeValley=true;
+function areaKey(e){var a=areaOf(e);return mergeValley&&(a==="North Hollywood"||a==="San Fernando Valley")?NOHO_SFV:a;}
 var dateActive="All";
 function inDate(e){
   if(dateActive==="All")return true;
@@ -572,7 +577,7 @@ function inDate(e){
 }
 function isPast(e){var end=pd(e.endDate||e.date);if(!end)return false;var now=new Date();now.setHours(0,0,0,0);return end<now;}
 function renderGrid(){
-  var list=byDate(EVENTS).filter(function(e){return !isPast(e)&&(active==="All"||(active==="Free"?e.free:e.category===active))&&inDate(e)&&(areaActive==="All"||areaOf(e)===areaActive);});
+  var list=byDate(EVENTS).filter(function(e){return !isPast(e)&&(active==="All"||(active==="Free"?e.free:e.category===active))&&inDate(e)&&(areaActive==="All"||areaKey(e)===areaActive);});
   var g=document.getElementById("grid");g.innerHTML="";
   document.getElementById("empty").style.display=list.length?"none":"block";
   list.forEach(function(e){g.appendChild(listItemHTML(e));});
@@ -586,7 +591,10 @@ function buildChips(){
 function buildAreaChips(){
   var bar=document.getElementById("areachips");
   var have={};EVENTS.forEach(function(e){if(!isPast(e))have[areaOf(e)]=1;});
-  var list=["All"].concat(AREAS.map(function(a){return a.n;}).filter(function(n){return have[n];}));if(have.Other)list.push("Other");
+  mergeValley=!(have["North Hollywood"]&&have["San Fernando Valley"]);
+  var names=AREAS.map(function(a){return a.n;});
+  if(mergeValley){names.splice(names.indexOf("North Hollywood"),2,NOHO_SFV);if(have["North Hollywood"]||have["San Fernando Valley"])have[NOHO_SFV]=1;}
+  var list=["All"].concat(names.filter(function(n){return have[n];}));if(have.Other)list.push("Other");
   list.forEach(function(c){var b=document.createElement("button");b.className="chip"+(c==="All"?" active":"");b.textContent=c==="All"?"📍 All areas":c;
     b.onclick=function(){areaActive=c;Array.from(bar.children).forEach(function(x){x.classList.remove("active");});b.classList.add("active");renderGrid();};
     bar.appendChild(b);});
