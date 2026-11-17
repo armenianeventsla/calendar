@@ -35,8 +35,10 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
   "Online" area.
 - **Fix:** event cards without a poster photo keep a 4:5 poster shape instead of collapsing.
 - The site now has **19 event cards**.
-- **Deploy:** preview saved to `/deploy-previews/2026-11-17/`. **Not deployed**; waiting for
-  Gohar's green light.
+- **Deploy:** preview saved to `/deploy-previews/2026-11-17/`. **DEPLOYED to production on
+  2026-11-17** (Netlify deploy `6afcd056`) after Gohar's green light. The live index.html was
+  checked against the repo and matches it byte-for-byte (19 event cards). `main` was
+  fast-forwarded to match.
 
 ---
 

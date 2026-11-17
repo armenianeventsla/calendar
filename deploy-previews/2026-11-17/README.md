@@ -41,4 +41,5 @@ design. The site now has **19 event cards** (it had 23).
   so the card uses a clean styled poster instead. Send a clean flyer if you have one.
 - **Becca Melkonian** is tonight. If this goes live after the show, it simply drops off tomorrow.
 - Posters were resized to a maximum width of 1080 px for the site.
-- **Not deployed.** Production (`main` / Netlify) is unchanged and waiting for Gohar's green light.
+- **DEPLOYED to production on 2026-11-17** (Netlify deploy `6afcd056`) after Gohar's green
+  light. Checked live at armenianeventsla.com; `main` was updated to match.
