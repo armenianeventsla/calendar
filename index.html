@@ -61,6 +61,7 @@
   .card{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:transform .16s,box-shadow .16s,border-color .16s}
   .card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(0,0,0,.45);border-color:#39414f}
   .poster{position:relative;width:100%;overflow:hidden;background:#0b0d11;min-height:40px}
+  .poster.noimg{aspect-ratio:4/5}
   .poster img{display:block;width:100%;height:auto;position:relative;z-index:2}
   .poster .art{position:absolute;inset:0;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px;gap:8px}
   .poster .art .t{font-weight:900;line-height:1.04;letter-spacing:-.5px}
@@ -290,66 +291,6 @@ const EVENTS = [
     art:{bg:"linear-gradient(160deg,#7f1d1d,#b91c1c)",fg:"#fff",t:"GiniFest<br>2026",ts:"2rem",s:"Sun &middot; Dec 6 &middot; Civic Auditorium",serif:true}
   },
   {
-    title:"AUA 35th Anniversary Gala",
-    date:"2026-11-07", start:"17:00", end:"", endDate:"",
-    location:"The Beverly Hilton, International Ballroom, 9876 Wilshire Blvd, Beverly Hills, CA 90210",
-    category:"Gala",
-    description:`The American University of Armenia celebrates its 35th Anniversary with a gala benefiting AUA — <em>Paving the Way for Future Leaders</em>. 🎓<br><br>Join alumni, supporters, and friends from across the Armenian diaspora to celebrate AUA's achievements since it opened on Armenia's independence day, and to honor those instrumental in establishing the university.<br><br>🕔 5:00 PM cocktail reception &middot; 6:30 PM dinner &amp; program<br>🎟️ Tickets &amp; sponsorships available &middot; RSVP by October 5, 2026`,
-    link:"https://philanthropy.aua.am/aua35/", linkLabel:"Tickets",
-    poster:"images/aua-gala.jpg",
-    art:{bg:"linear-gradient(160deg,#0b1b3a,#1e3a8a 55%,#3b6fe2)",fg:"#e8efff",t:"AUA 35th<br>ANNIVERSARY GALA",ts:"1.4rem",s:"Sat &middot; Nov 7",serif:true}
-  },
-  {
-    title:"The Diary of an Armenian Comedian — Stand-Up Special (Antic)",
-    date:"2026-11-06", start:"19:30", end:"21:30", endDate:"",
-    location:"AGBU Vatche & Tamar Manoukian Performing Arts Center, 2495 E Mountain St, Pasadena, CA 91104",
-    category:"Comedy",
-    description:`🎤 C Sharp Entertainment presents "The Diary of an Armenian Comedian" — a new stand-up comedy special from <strong>Antic</strong> (@its_antic).<br><br>📅 Friday, November 6, 2026 &middot; 🕢 7:30 PM &middot; 📍 AGBU Vatche & Tamar Manoukian Performing Arts Center, Pasadena.<br><br>Hosted by @its_antic & @c_sharp_entertainment.`,
-    link:"https://agbupac.ticketspice.com/antic", linkLabel:"Tickets",
-    poster:"images/antic-diary-armenian-comedian-nov6.jpg",
-    art:{bg:"linear-gradient(160deg,#0e0e0e,#2a2a2a 55%,#a11d2b)",fg:"#f7e3e5",t:"DIARY OF AN<br>ARMENIAN<br>COMEDIAN",ts:"1.3rem",s:"Fri &middot; Nov 6 &middot; Pasadena",serif:false}
-  },
-  {
-    title:"AECP Annual Gala — Honoring Dr. Roger V. Ohanesian",
-    date:"2026-11-14", start:"", end:"", endDate:"",
-    location:"Balboa Bay Resort, 1221 W Coast Hwy, Newport Beach, CA (Orange County)",
-    category:"Gala",
-    description:`👁️ The Armenian EyeCare Project's 2026 Annual Gala — an evening celebrating AECP's decades of sight-saving work in Armenia and honoring Founder & President <strong>Dr. Roger V. Ohanesian</strong> with a Lifetime Achievement Award.<br><br>📅 Friday, November 14, 2026 (time TBA) &middot; 📍 Balboa Bay Resort, Newport Beach (Orange County). Hosted by @armenianeyecare.`,
-    link:"https://www.instagram.com/p/DcRQOBJMcIm", linkLabel:"Instagram",
-    poster:"images/aecp-annual-gala-nov14.jpg",
-    art:{bg:"linear-gradient(160deg,#0e0e0e,#2a2a2a 55%,#c79a3e)",fg:"#f7ecd2",t:"AECP<br>ANNUAL GALA",ts:"1.6rem",s:"Fri &middot; Nov 14 &middot; Newport Beach",serif:true}
-  },
-  {
-    title:"Cascad Halloween Party",
-    date:"2026-10-31", start:"19:00", end:"23:00", endDate:"",
-    location:"Glendale, CA — RSVP for location",
-    category:"Social",
-    description:`🎃 Come celebrate Halloween with <strong>Cascad</strong> (Cascadians)! Costumes are mandatory and good vibes are highly encouraged.<br><br>📅 Saturday, October 31, 2026 &middot; 🕖 7:00 – 11:00 PM &middot; 📍 Glendale &middot; 🎟️ $15/person (paid to @oliviaohanian) &middot; Spaces limited — RSVP through Partiful (link in @cascad.co bio). Hosted by @cascad.co.`,
-    link:"https://www.instagram.com/p/DdcbSXRoMa5", linkLabel:"Instagram",
-    poster:"images/cascad-halloween-party-oct31.jpg",
-    art:{bg:"linear-gradient(160deg,#120a1e,#3a1a4a 55%,#e8702a)",fg:"#fff1e0",t:"CASCAD<br>HALLOWEEN",ts:"1.7rem",s:"Sat &middot; Oct 31 &middot; Glendale",serif:false}
-  },
-  {
-    title:"GHOSTED Halloween Party (Genätz × Kyank × Ascenseur House)",
-    date:"2026-10-31", start:"20:00", end:"25:00", endDate:"",
-    location:"Vertigo, 400 W Glenoaks Blvd, Glendale, CA 91202",
-    category:"Music",
-    description:`⚠️ <strong>VENUE UPDATE:</strong> due to the heavy-rain forecast, GHOSTED is moving <strong>indoors to Vertigo</strong>, 400 W Glenoaks Blvd, Glendale.<br><br>👻 <strong>GHOSTED</strong> — a Halloween party by Genätz × Kyank × Ascenseur House. Rock your costume and enjoy a night with the community's hottest DJs, artists, vendors, and caterers.<br><br>🎧 DJs: Bendi, Ara32, Karagusi + special guests &middot; 🍢 Vendors: Smosh Town, Dr. Kebab, Element Hookah, Poppy Tattoo & more.<br><br>📅 Saturday, October 31, 2026 &middot; 🕗 8:00 PM – Late &middot; 📍 Vertigo, 400 W Glenoaks Blvd, Glendale &middot; 🔞 21+ &middot; 🎟️ Tickets on posh.vip. Hosted by @genatz.la, Kyank & Ascenseur House.`,
-    link:"https://www.instagram.com/p/Ddc3sLPlDD6", linkLabel:"Instagram",
-    poster:"images/genatz-ghosted-halloween-oct31.jpg",
-    art:{bg:"linear-gradient(160deg,#050505,#1e1e2e 55%,#8a8aa8)",fg:"#f0f0ff",t:"GHOSTED",ts:"2rem",s:"Sat &middot; Oct 31 &middot; Vertigo Glendale",serif:false}
-  },
-  {
-    title:"Golden Autumn Festival (Voske Ashun)",
-    date:"2026-11-06", start:"15:00", end:"19:00", endDate:"",
-    location:"Saticoy Elementary School, 7850 Ethel Ave, North Hollywood, CA 91605",
-    category:"Festival", free:true,
-    description:`🍂 <strong>Golden Autumn Festival</strong> (Ոսկե Աշուն / Voske Ashun) — celebrate the beauty of the harvest season. In Armenian culture, Golden Autumn is a time to honor abundance, sustenance, and stability, and to come together in gratitude. Folk dancing, delicious food, local vendors, and family-friendly activities inspired by Armenian traditions.<br><br>📅 Friday, November 6, 2026 &middot; 🕒 3:00 – 7:00 PM &middot; 📍 Saticoy Elementary School, 7850 Ethel Ave, North Hollywood &middot; 🎟️ FREE (RSVP). Hosted by @cd2losangeles (Councilmember Adrin Nazarian, LA Council District 2).`,
-    link:"https://www.instagram.com/p/Ddr0bk6CDiY", linkLabel:"Instagram",
-    poster:"images/golden-autumn-festival-nov6.jpg",
-    art:{bg:"linear-gradient(160deg,#3a1a06,#8a4a12 55%,#f0b43a)",fg:"#fff4de",t:"GOLDEN<br>AUTUMN",ts:"1.8rem",s:"Fri &middot; Nov 6 &middot; North Hollywood",serif:true}
-  },
-  {
     title:"Après Ararat — Yeraz Blend Fundraiser for Orran",
     date:"2026-11-19", start:"19:00", end:"22:00", endDate:"",
     location:"La Cañada Flintridge, CA",
@@ -358,36 +299,6 @@ const EVENTS = [
     link:"https://www.instagram.com/p/DdmXcwxvt3G", linkLabel:"Instagram",
     poster:"images/apres-ararat-orran-nov19.jpg",
     art:{bg:"linear-gradient(160deg,#0e1a2a,#2a4a6a 55%,#e8e0d0)",fg:"#f6f2ea",t:"APRÈS<br>ARARAT",ts:"1.8rem",s:"Thu &middot; Nov 19 &middot; La Cañada",serif:true}
-  },
-  {
-    title:"Arbat Fall Fest",
-    date:"2026-11-08", start:"12:00", end:"20:00", endDate:"",
-    location:"Arbat Banquet Hall, 711 S San Fernando Blvd, Burbank, CA 91502",
-    category:"Festival", free:true,
-    description:`🍁 <strong>Arbat Fall Fest</strong> at Arbat Banquet Hall: a day of community, delicious food and drinks, live music, and fun for all ages. Fall is even better when we celebrate together.<br><br>📅 Sunday, November 8, 2026 &middot; 🕛 12:00 – 8:00 PM &middot; 📍 Arbat Banquet Hall, 711 S San Fernando Blvd, Burbank &middot; 🎟️ FREE admission, all ages welcome. Hosted by @lajolieevents.`,
-    link:"https://www.instagram.com/p/DeGPloUqUBx", linkLabel:"Instagram",
-    poster:"images/arbat-fall-fest-nov8.jpg",
-    art:{bg:"linear-gradient(160deg,#3a1a06,#8a3a12 55%,#f2a03a)",fg:"#fff4e6",t:"ARBAT<br>FALL FEST",ts:"1.7rem",s:"Sun &middot; Nov 8 &middot; Burbank",serif:false}
-  },
-  {
-    title:"Homenetmen Day (Western USA)",
-    date:"2026-11-13", start:"19:00", end:"22:00", endDate:"",
-    location:"De Luxe Banquet Hall, Glendale, CA",
-    category:"Community",
-    description:`🏅 <strong>Homenetmen Day</strong>: an evening honoring the region's exemplary members and celebrating Homenetmen (the Armenian General Athletic Union & Scouts).<br><br>📅 Friday, November 13, 2026 &middot; 🕖 7:00 PM &middot; 📍 De Luxe Banquet Hall, Glendale. Save the date; more details to come. Hosted by @homenetmen_western_usa.`,
-    link:"https://www.instagram.com/p/Dd-fu0klAXQ", linkLabel:"Instagram",
-    poster:"images/homenetmen-day-nov13.jpg",
-    art:{bg:"linear-gradient(160deg,#0e1a3a,#1f3a7a 55%,#e8c84a)",fg:"#f0f4ff",t:"HOMENETMEN<br>DAY",ts:"1.6rem",s:"Fri &middot; Nov 13 &middot; De Luxe",serif:false}
-  },
-  {
-    title:"Cars & Coffee — AGBU AYA Pasadena-Glendale Scouts",
-    date:"2026-11-14", start:"09:30", end:"12:00", endDate:"",
-    location:"AGBU Vatche & Tamar Manoukian PAC, 2495 E Mountain St, Pasadena, CA 91104",
-    category:"Community",
-    description:`🚗 AGBU AYA Pasadena-Glendale Scouts present <strong>Cars & Coffee</strong>: a morning of great cars, coffee, and community. Rev your morning where cars bring us together!<br><br>📅 Saturday, November 14, 2026 &middot; 🕤 9:30 AM – 12:00 PM &middot; 📍 2495 E Mountain St, Pasadena (AGBU Vatche & Tamar Manoukian PAC). Car registration details coming soon. Hosted by @agbuscouts & @agbuwr.`,
-    link:"https://www.instagram.com/p/Dd-jf5hTlmO", linkLabel:"Instagram",
-    poster:"images/agbu-scouts-cars-coffee-nov14.jpg",
-    art:{bg:"linear-gradient(160deg,#0a0a0a,#3a1a0e 55%,#e86a2a)",fg:"#fff0e6",t:"CARS &amp;<br>COFFEE",ts:"1.8rem",s:"Sat &middot; Nov 14 &middot; Pasadena",serif:false}
   },
   {
     title:"Queernissage — LGBTQ+ SWANA Holiday Market (GALAS)",
@@ -400,56 +311,6 @@ const EVENTS = [
     art:{bg:"linear-gradient(160deg,#3a1030,#7a1f6a 45%,#e0a53a)",fg:"#fbe9f5",t:"QUEER-<br>NISSAGE",ts:"1.8rem",s:"Sat &middot; Nov 28 &middot; Sooki Studio",serif:false}
   },
   {
-    title:"Hye Notes #11 — Armenian Karaoke Night (1 Year!)",
-    date:"2026-11-06", start:"19:00", end:"23:30", endDate:"",
-    location:"The Good Nite, 10721 Burbank Blvd, North Hollywood, CA 91601",
-    category:"Social", free:true,
-    description:`🎤 <strong>Hye Notes #11</strong>, an Armenian social mixer karaoke night, celebrating its 1-year anniversary! Come from 7 PM to the end of the night (come early for a higher chance to sing, the bar fills up quick). Free to enter and open to all: Armenians, non-Armenians, friends and family.<br><br>Browse the song catalog at karafun.com, or share a YouTube karaoke link with the KJ the day of.<br><br>📅 Friday, November 6, 2026 &middot; 🕖 7 PM – Late &middot; 📍 The Good Nite &middot; 🎟️ FREE &middot; 21+.`,
-    link:"https://partiful.com/e/yyX1ZLmlZBRSYt2DUIeW", linkLabel:"RSVP",
-    poster:"images/hye-notes-karaoke-nov6.jpg",
-    art:{bg:"linear-gradient(160deg,#3a0e0e,#6a1a1a 55%,#f2c88a)",fg:"#fff0e6",t:"HYE<br>NOTES #11",ts:"1.8rem",s:"Fri &middot; Nov 6 &middot; The Good Nite",serif:false}
-  },
-  {
-    title:"Vartoush Loves You! — Mary Basmadjian",
-    date:"2026-11-12", start:"19:30", end:"21:30", endDate:"",
-    location:"Flappers Comedy Club, Burbank, CA",
-    category:"Comedy",
-    description:`😂 <strong>Vartoush Loves You!</strong> Come get roasted by Vartoush Tota herself (Mary Basmadjian), with the hilarious Becca Melkonian in the house!<br><br>📅 Thursday, November 12, 2026 &middot; 🕡 Doors 6:30 PM &middot; show 7:30 PM &middot; 📍 Flappers Comedy Club, Burbank &middot; 🎟️ Tickets via the link in @marybasmadjian's bio.`,
-    link:"https://www.instagram.com/marybasmadjian/", linkLabel:"Instagram",
-    poster:"images/vartoush-loves-you-nov12.jpg",
-    art:{bg:"linear-gradient(160deg,#3a0e2a,#8a1f5a 55%,#f2a0c8)",fg:"#fff0f8",t:"VARTOUSH<br>LOVES YOU",ts:"1.6rem",s:"Thu &middot; Nov 12 &middot; Flappers",serif:false}
-  },
-  {
-    title:"Harvest Festival — UACC",
-    date:"2026-10-30", start:"18:30", end:"20:30", endDate:"",
-    location:"United Armenian Congregational Church, 3480 Cahuenga Blvd W, Los Angeles, CA 90068",
-    category:"Festival", free:true,
-    description:`🍂🎃 UACC invites you to the Harvest Festival! Join the community for a fun fall evening.<br><br>📅 Friday, October 30, 2026 &middot; 🕡 6:30 – 8:30 PM &middot; 📍 United Armenian Congregational Church, 3480 Cahuenga Blvd W, Los Angeles &middot; 🎟️ FREE.<br><br>👻 Non-scary costumes encouraged. Hosted by @uacchurch.`,
-    link:"https://www.instagram.com/uacchurch", linkLabel:"Instagram",
-    poster:"images/uacc-harvest-festival-oct30.jpg",
-    art:{bg:"linear-gradient(160deg,#5a2310,#9a3f12 50%,#c9701f)",fg:"#fdf0dc",t:"HARVEST<br>FESTIVAL",ts:"1.8rem",s:"Fri &middot; Oct 30 &middot; UACC",serif:false}
-  },
-  {
-    title:"Walk to End Alzheimer's — ACA L.A.",
-    date:"2026-11-01", start:"09:30", end:"", endDate:"",
-    location:"Crescent Bay Park, 2000 Ocean Ave, Santa Monica, CA 90405",
-    category:"Community", free:true,
-    description:`💜 Walk Against Alzheimer's with ACA L.A. — join the Walk to End Alzheimer's to honor those affected and support the fight for a future without Alzheimer's. A 3-mile walk!<br><br>📅 Sunday, November 1, 2026 &middot; 🕤 9:30 AM near the entrance booths &middot; 📍 Crescent Bay Park, 2000 Ocean Ave, Santa Monica.<br><br>Sign up, set a fundraising goal, and register (QR in the post). DM @aca_losangeles with transportation concerns. #ENDALZ`,
-    link:"https://www.instagram.com/aca_losangeles", linkLabel:"Instagram",
-    poster:"images/aca-walk-to-end-alzheimers-nov1.jpg",
-    art:{bg:"linear-gradient(160deg,#2a1858,#4a2d8a 55%,#8a5fd0)",fg:"#f3ecff",t:"WALK TO END<br>ALZHEIMER'S",ts:"1.5rem",s:"Sun &middot; Nov 1 &middot; Santa Monica",serif:false}
-  },
-  {
-    title:"Spooky Halloween Hike — Beaudry Loop",
-    date:"2026-11-01", start:"16:30", end:"19:30", endDate:"",
-    location:"Beaudry Loop Trailhead, 3111 Beaudry Terrace, Glendale, CA 91208",
-    category:"Community", free:true,
-    description:`🎃👻 Returning to the Beaudry Loop Trail in Glendale for the 2026 Spooky Halloween Hike! Costumes welcomed.<br><br>📅 Sunday, November 1, 2026 &middot; 🕟 Meet 4:30 PM &middot; 📍 Beaudry Loop Trailhead, 3111 Beaudry Terrace, Glendale &middot; 📏 ~5.9 miles (loop), moderate with steep sections.<br><br>🧥 Bring a jacket, headlamp or flashlight, and plenty of water. Hosted by @social.outdoors × @armenvart — a casual group hike, participate at your own risk.`,
-    link:"https://www.instagram.com/social.outdoors", linkLabel:"Instagram",
-    poster:"images/armenvart-beaudry-spooky-hike-nov1.jpg",
-    art:{bg:"linear-gradient(160deg,#160c22,#3a1f52 55%,#d9731f)",fg:"#f6ecff",t:"SPOOKY<br>HALLOWEEN<br>HIKE",ts:"1.5rem",s:"Sun &middot; Nov 1 &middot; Beaudry Loop",serif:false}
-  },
-  {
     title:"Armenian Frame Drum Workshop",
     date:"2026-12-13", start:"10:00", end:"12:00", endDate:"",
     location:"Glendale, CA (details on RSVP)",
@@ -460,46 +321,6 @@ const EVENTS = [
     art:{bg:"linear-gradient(160deg,#2a1408,#4a230f 55%,#c99a3e)",fg:"#f7ead3",t:"FRAME DRUM<br>WORKSHOP",ts:"1.6rem",s:"Sun &middot; Dec 13 &middot; Glendale",serif:false}
   },
   {
-    title:"Jack Jr Halloween Party at Lé Brand",
-    date:"2026-10-31", start:"20:00", end:"23:59", endDate:"",
-    location:"Lé Brand, 933 N Brand Blvd, Glendale, CA 91202",
-    category:"Comedy",
-    description:`🎃🎤 A little mystery, a lot of laughter: this Halloween, <strong>Lé Brand</strong> welcomes <strong>Jack Jr.</strong> for a special evening. Enjoy DJ entertainment, your favorite cocktails, and a delicious dinner in Lé Brand's Halloween atmosphere.<br><br>📅 Saturday, October 31, 2026 &middot; 🕗 8:00 PM &middot; 📍 Lé Brand, 933 N Brand Blvd, Glendale &middot; 📞 Reservations: (818) 488-6188, or DM @lebrandrestaurant to book your table.`,
-    link:"https://www.instagram.com/lebrandrestaurant/", linkLabel:"Instagram",
-    poster:"images/le-brand-jack-jr-halloween-oct31.jpg",
-    art:{bg:"linear-gradient(160deg,#1a0a04,#5a1e0a 55%,#f28a1a)",fg:"#fff0e0",t:"JACK JR<br>HALLOWEEN",ts:"1.7rem",s:"Sat &middot; Oct 31 &middot; Lé Brand",serif:false}
-  },
-  {
-    title:"ArevaHike — Sturtevant Falls Trail Hike",
-    date:"2026-11-01", start:"07:45", end:"11:45", endDate:"",
-    location:"Sturtevant Falls Trail, Chantry Flat Rd, Arcadia, CA",
-    category:"Sports", free:true,
-    description:`🥾 Back to a favorite after the rainy nights: <strong>ArevaHike</strong> returns to <strong>Sturtevant Falls</strong>! A moderate hike: 3.3 miles, 680 ft elevation gain, 3–4 hours.<br><br>📅 Sunday, November 1, 2026 &middot; 🕢 7:45 AM &middot; 📍 Sturtevant Falls Trail, Chantry Flat (Arcadia) &middot; 🎟️ FREE. ⚠️ No phone reception &middot; limited parking with permit &middot; carpool highly recommended. DM @arevahike to join.`,
-    link:"https://www.instagram.com/arevahike/", linkLabel:"Instagram",
-    poster:"images/arevahike-sturtevant-falls-nov1.jpg",
-    art:{bg:"linear-gradient(160deg,#0e2a1a,#2a6a3a 55%,#f2d27a)",fg:"#f2fbef",t:"STURTEVANT<br>FALLS",ts:"1.6rem",s:"Sun &middot; Nov 1 &middot; Chantry Flat",serif:false}
-  },
-  {
-    title:"APS — Fall Into Good Company",
-    date:"2026-11-05", start:"18:30", end:"21:00", endDate:"",
-    location:"Laya Restaurant, Hollywood, CA",
-    category:"Social",
-    description:`🍂🥂 <strong>Fall Into Good Company</strong> with the Armenian Professional Society (APS), a fall evening of networking and community.<br><br>📅 Thursday, November 5, 2026 &middot; 🕡 6:30 PM &middot; 📍 Laya Restaurant, Hollywood &middot; 🎟️ $35 members / $50 non-members (includes one drink ticket, while supplies last). Reserve your spot at bit.ly/GoodCompanyAPS.`,
-    link:"https://bit.ly/GoodCompanyAPS", linkLabel:"Tickets",
-    poster:"images/aps-fall-into-good-company-nov5.jpg",
-    art:{bg:"linear-gradient(160deg,#2a1a0e,#6a3a1a 55%,#e8c08a)",fg:"#fbf2e6",t:"FALL INTO<br>GOOD COMPANY",ts:"1.5rem",s:"Thu &middot; Nov 5 &middot; Laya",serif:true}
-  },
-  {
-    title:"AGBU YPLA Mixer — Reunion & Company",
-    date:"2026-11-13", start:"19:00", end:"22:00", endDate:"",
-    location:"Reunion & Company, 1903 Hyperion Ave, Los Angeles, CA 90027",
-    category:"Social",
-    description:`🍷 <strong>AGBU Young Professionals Los Angeles Mixer</strong>: a night of reconnecting with friends, meeting new faces, and making new connections.<br><br>📅 Friday, November 13, 2026 &middot; 🕖 7:00 PM &middot; 📍 Reunion & Company, 1903 Hyperion Ave, Silver Lake &middot; 🎟️ $60, includes an open wine bar throughout the night. Tickets at the link in @agbuypla's bio.`,
-    link:"https://www.instagram.com/agbuypla/", linkLabel:"Instagram",
-    poster:"images/agbu-ypla-mixer-nov13.jpg",
-    art:{bg:"linear-gradient(160deg,#1a1a1a,#3a3a3a 55%,#c8c8c8)",fg:"#f6f6f6",t:"AGBU YPLA<br>MIXER",ts:"1.7rem",s:"Fri &middot; Nov 13 &middot; Silver Lake",serif:false}
-  },
-  {
     title:"Armenian Speed Dating — Ages 26–40 (Nov 19, Urartu Coffee)",
     date:"2026-11-19", start:"19:00", end:"21:00", endDate:"",
     location:"Urartu Coffee, 119 N Artsakh Ave, Glendale, CA 91206",
@@ -508,6 +329,146 @@ const EVENTS = [
     link:"https://armenianspeeddating.com", linkLabel:"Tickets",
     poster:"images/armenian-speed-dating-urartu-nov19.jpg",
     art:{bg:"linear-gradient(160deg,#3a1a06,#8a4a12 55%,#f2c24a)",fg:"#fff4de",t:"SPEED<br>DATING",ts:"1.8rem",s:"Thu &middot; Nov 19 &middot; Urartu",serif:false}
+  },
+  {
+    title:"Boba for Change — SMC ASA × MENA Charity Fundraiser",
+    date:"2026-11-16", start:"", end:"", endDate:"2026-11-22",
+    location:"Dr. T House, 1709 Pico Blvd, Santa Monica, CA",
+    category:"Community",
+    description:`🧋 <strong>Boba for Change</strong>, a charity fundraiser by Santa Monica College's ASA × MENA. Mention "Boba for Change" at checkout for <strong>15% off all drinks and food, all week</strong>.<br><br>Proceeds support the <strong>Lorik Humanitarian Fund</strong> (housing for displaced Armenian families from Artsakh, and student scholarships) and <strong>One Ummah</strong> (winter relief packages for families in need).<br><br>📅 November 16–22, 2026 &middot; 📍 Dr. T House, 1709 Pico Blvd, Santa Monica.`,
+    link:"https://www.instagram.com/p/Dfz-b3hSTrH", linkLabel:"Instagram",
+    poster:"images/boba-for-change-dr-t-house-nov16-22.jpg",
+    art:{bg:"linear-gradient(160deg,#3a0e1e,#8a2a4a 55%,#f2b0c0)",fg:"#fff0f4",t:"BOBA FOR<br>CHANGE",ts:"1.7rem",s:"Nov 16&ndash;22 &middot; Dr. T House",serif:false}
+  },
+  {
+    title:"Becca Melkonian & Friends Comedy Night",
+    date:"2026-11-17", start:"18:00", end:"21:00", endDate:"",
+    location:"Eden Garden Bar & Grill, Pasadena, CA",
+    category:"Comedy",
+    description:`😂 Eden Garden Pasadena presents <strong>Becca Melkonian & Friends Comedy Night</strong>, with Becca's headlining set! Featuring Mary Basmadjian (Vartoush), Samantha Hale, Steve Boghossian & Gisele Lajevardi.<br><br>📅 Tuesday, November 17, 2026 &middot; 🕕 Doors open 6 PM &middot; 📍 Eden Garden Bar & Grill, Pasadena &middot; 🎟️ Tickets via the link in @becca_melkonian's bio.`,
+    link:"https://www.instagram.com/p/DfvJ8WBSP3V", linkLabel:"Instagram",
+    poster:"images/becca-melkonian-comedy-night-nov17.jpg",
+    art:{bg:"linear-gradient(160deg,#1a1a0a,#4a4a12 55%,#f2d24a)",fg:"#fffbe6",t:"BECCA<br>MELKONIAN",ts:"1.7rem",s:"Tue &middot; Nov 17 &middot; Pasadena",serif:false}
+  },
+  {
+    title:"Friendsgiving Potluck — USC ASA",
+    date:"2026-11-19", start:"19:00", end:"21:30", endDate:"",
+    location:"Los Angeles, CA — location on Partiful RSVP",
+    category:"Social",
+    description:`🍁🦃 <strong>USC ASA Friendsgiving Potluck</strong>: bring your favorite dish and good vibes!<br><br>📅 Thursday, November 19, 2026 &middot; 🕖 7:00 PM &middot; 📍 Location drops on Partiful. RSVP via the link in @usc_asa's bio (the Partiful also links the potluck sign-up sheet).`,
+    link:"https://www.instagram.com/p/DfqVO1phArR", linkLabel:"Instagram",
+    poster:"images/usc-asa-friendsgiving-potluck-nov19.jpg",
+    art:{bg:"linear-gradient(160deg,#3a1a06,#8a4a12 55%,#f2c24a)",fg:"#fff4de",t:"FRIENDS-<br>GIVING",ts:"1.8rem",s:"Thu &middot; Nov 19 &middot; USC ASA",serif:true}
+  },
+  {
+    title:"LuysHike #6 — Walk in the Light (Q&A with Fr. Khajag)",
+    date:"2026-11-21", start:"07:30", end:"10:00", endDate:"",
+    location:"Griffith Park, Los Angeles, CA",
+    category:"Sports",
+    description:`🥾🌿 <strong>LuysHike #6 — Walk in the Light!</strong> A faith-and-fellowship hike, this time with a Q&A session with Fr. Khajag Shahbazyan. Prepare your questions!<br><br>📅 Saturday, November 21, 2026 &middot; 🕢 7:30 AM &middot; 📍 Griffith Park (easy trail) &middot; ⏳ Registration deadline: November 18, link in @stleonwelcomingcommittee's bio. An initiative of St. Leon Armenian Cathedral's Welcoming Committee, under the auspices of Rev. Fr. Khajag Shahbazyan.`,
+    link:"https://www.instagram.com/p/Dfi1d3Fp_v5", linkLabel:"Instagram",
+    poster:"images/luyshike-6-griffith-nov21.jpg",
+    art:{bg:"linear-gradient(160deg,#0e2a1a,#2a6a3a 55%,#f2d27a)",fg:"#f2fbef",t:"LUYSHIKE<br>#6",ts:"1.8rem",s:"Sat &middot; Nov 21 &middot; Griffith Park",serif:false}
+  },
+  {
+    title:"Sing Yerevan Sing — Armenia's Golden Hits",
+    date:"2026-11-22", start:"", end:"", endDate:"",
+    location:"Peacock Theater, 777 Chick Hearn Ct, Los Angeles, CA 90015",
+    category:"Music",
+    description:`🎶 <strong>Sing Yerevan Sing</strong> brings the legendary songs of Armenia's Golden Fund back to life: state-of-the-art technology, vivid animation, an extraordinary cast of artists, and a full symphony orchestra conducted by Maestro Sergey Smbatyan, with archival memories and theatrical storytelling. Directed by Arman Nshanian.<br><br>📅 Sunday, November 22, 2026 (see the ticket link for showtime) &middot; 📍 Peacock Theater, Los Angeles &middot; 🎟️ Tickets on sale now, link in @peacock_theater's bio.`,
+    link:"https://www.instagram.com/p/DdJ5bCuGoyT", linkLabel:"Instagram",
+    poster:"images/sing-yerevan-sing-peacock-nov22.jpg",
+    art:{bg:"linear-gradient(160deg,#1a0e06,#6a3a1a 55%,#e8b86a)",fg:"#fff4e6",t:"SING YEREVAN<br>SING",ts:"1.6rem",s:"Sun &middot; Nov 22 &middot; Peacock Theater",serif:true}
+  },
+  {
+    title:"Grateful Hearts & Intentional Sparks — Virtual Armenian Speed Dating",
+    date:"2026-11-22", start:"16:00", end:"17:30", endDate:"",
+    location:"Online (virtual)",
+    category:"Social",
+    description:`💛 Achkt Louys Armenian Matchmaking presents <strong>"Grateful Hearts & Intentional Sparks"</strong>, a <strong>virtual</strong> speed-dating event.<br><br>📅 Sunday, November 22, 2026 &middot; 🕓 4 PM PST / 7 PM EST &middot; 💻 Online &middot; Women 24–36 &middot; Men 26–38. Limited seats; apply via the link in @achkt.louys.matchmaking's bio.`,
+    link:"https://www.instagram.com/p/DfNREx-tT0q", linkLabel:"Instagram",
+    poster:"",
+    art:{bg:"linear-gradient(160deg,#3a2a1a,#8a5a2a 50%,#e8c88a)",fg:"#fff6e6",t:"GRATEFUL HEARTS<br>&amp; INTENTIONAL<br>SPARKS",ts:"1.25rem",s:"Sun &middot; Nov 22 &middot; Virtual speed dating",serif:true}
+  },
+  {
+    title:"Zhengyalov Hats Cooking Night — UCLA ASA × HRI",
+    date:"2026-11-23", start:"18:00", end:"20:30", endDate:"",
+    location:"UCLA Apartments, Los Angeles, CA (address sent to RSVPs)",
+    category:"Cultural",
+    description:`🥬🫓 <strong>Cooking Night: Zhengyalov Hats</strong>. In honor of Artsakh Awareness Month, come make this traditional Artsakhtsi dish, learn about its cultural significance, and eat! All proceeds go to the Hidden Road Initiative, supporting displaced Artsakhtsi students.<br><br>📅 Monday, November 23, 2026 &middot; 🕕 6:00 PM &middot; 📍 UCLA Apartments (address sent 1–2 days before to RSVP'd attendees) &middot; ⚠️ Spots are limited. Hosted by @ucla_asa × @ucla_hri.`,
+    link:"https://forms.gle/5TKKtjAsYbwu9YDV7", linkLabel:"RSVP",
+    poster:"images/ucla-asa-zhengyalov-hats-nov23.jpg",
+    art:{bg:"linear-gradient(160deg,#1a2a0e,#3a6a1a 55%,#d8e88a)",fg:"#f6fbe6",t:"ZHENGYALOV<br>HATS",ts:"1.7rem",s:"Mon &middot; Nov 23 &middot; UCLA",serif:false}
+  },
+  {
+    title:"Thanksgiving Turkey Trot Hike — Yeraz Foundation",
+    date:"2026-11-26", start:"09:00", end:"11:30", endDate:"",
+    location:"Western Canyon Rd Parking Lot, Griffith Park, Los Angeles, CA",
+    category:"Sports",
+    description:`🦃🤎 <strong>Yeraz Foundation's 2nd Annual Thanksgiving Turkey Trot</strong>: a Thanksgiving-morning hike full of community, gratitude, and giving back. All proceeds support the children at Luysi Tun in Vedi, Armenia.<br><br>📅 Thursday, November 26, 2026 &middot; 🕘 9:00 AM &middot; 🥾 West Trail and Turner Trail to Captain's Roost and Mount Hollywood &middot; 📍 Meet at the Western Canyon Road parking lot, Griffith Park &middot; 🎟️ $10 donation (form via the QR code on the flyer or @yerazfoundation's Linktree).`,
+    link:"https://www.instagram.com/p/DfiazZPPoxo", linkLabel:"Instagram",
+    poster:"images/yeraz-turkey-trot-griffith-nov26.jpg",
+    art:{bg:"linear-gradient(160deg,#3a1a06,#9a4a12 55%,#f2a03a)",fg:"#fff4e6",t:"TURKEY<br>TROT",ts:"1.9rem",s:"Thu &middot; Nov 26 &middot; Griffith Park",serif:false}
+  },
+  {
+    title:"Cascad Friendsgiving #31 — Armo-Style Park Day",
+    date:"2026-11-29", start:"13:00", end:"16:00", endDate:"",
+    location:"Glendale, CA (park — address on RSVP)",
+    category:"Social",
+    description:`🦃 <strong>Cascad Friendsgiving: #31</strong>, armo style! A Friendsgiving park day with the Cascad community. Be there or be square (and be hungry!).<br><br>📅 Sunday, November 29, 2026 &middot; 🕐 1:00 PM &middot; 📍 A park in the Glendale area. RSVP for the address via the link in @cascad.co's bio.`,
+    link:"https://www.instagram.com/p/Df1HEx3KylS", linkLabel:"Instagram",
+    poster:"images/cascad-friendsgiving-nov29.jpg",
+    art:{bg:"linear-gradient(160deg,#1a2a3a,#3a5a7a 55%,#f2d24a)",fg:"#f0f6ff",t:"CASCAD<br>FRIENDSGIVING",ts:"1.5rem",s:"Sun &middot; Nov 29 &middot; Glendale",serif:false}
+  },
+  {
+    title:"Echoes of Artsakh — UCLA ASA",
+    date:"2026-11-30", start:"19:00", end:"21:30", endDate:"",
+    location:"Kerckhoff Grand Salon, UCLA, 308 Westwood Plaza, Los Angeles, CA 90095",
+    category:"Cultural", free:true,
+    description:`🫶 <strong>Echoes of Artsakh</strong>: an evening dedicated to keeping the memory of Artsakh alive through artistic performances honoring its cultural heritage. Student performances by UCLA and USC ASA members, followed by an interactive dance workshop led by Lernazang.<br><br>📅 Monday, November 30, 2026 &middot; 🕖 7:00 PM &middot; 📍 Kerckhoff Grand Salon, UCLA &middot; 🎟️ FREE admission. Want to perform? Sign up by Nov 19 via the QR code in the post or message @ucla_asa.`,
+    link:"https://www.instagram.com/p/Df0AL1dE1Bu", linkLabel:"Instagram",
+    poster:"images/ucla-asa-echoes-of-artsakh-nov30.jpg",
+    art:{bg:"linear-gradient(160deg,#1a2a3a,#4a6a8a 55%,#e8d8b8)",fg:"#f6f2ea",t:"ECHOES OF<br>ARTSAKH",ts:"1.7rem",s:"Mon &middot; Nov 30 &middot; UCLA",serif:true}
+  },
+  {
+    title:"Armenian Professional Forum 2026 — APS",
+    date:"2026-12-05", start:"", end:"", endDate:"",
+    location:"Glen Arden Club, Glendale, CA",
+    category:"Community",
+    description:`💼 The Armenian Professional Society presents its inaugural <strong>Armenian Professional Forum</strong>: a day of engaging conversations, networking, and community connection, followed by APS's Annual Awards ceremony. Panel discussions and fireside chats on leadership, career development, entrepreneurship, community impact, personal branding, and more.<br><br>📅 Saturday, December 5, 2026 (see the ticket link for times) &middot; 📍 Glen Arden Club, Glendale &middot; 🎟️ Tickets and details via the link in @armenianprofessionalsociety's bio.`,
+    link:"https://www.instagram.com/p/DfvxglWm_eN", linkLabel:"Instagram",
+    poster:"images/aps-armenian-professional-forum-dec5.jpg",
+    art:{bg:"linear-gradient(160deg,#0e1a3a,#1f3a7a 55%,#e8c86a)",fg:"#f0f4ff",t:"PROFESSIONAL<br>FORUM 2026",ts:"1.5rem",s:"Sat &middot; Dec 5 &middot; Glen Arden Club",serif:false}
+  },
+  {
+    title:"Stitch & Brew — Nor Serount × Kavat Cafe",
+    date:"2026-12-05", start:"11:00", end:"14:00", endDate:"",
+    location:"Kavat Cafe, 1638 Colorado Blvd, Los Angeles, CA 90041",
+    category:"Art",
+    description:`🧵☕ <strong>STITCH & BREW</strong>, a collaboration between Nor Serount and Kavat Cafe. Spend the afternoon exploring Armenian embroidery and enjoying traditional Armenian coffee!<br><br>📅 Saturday, December 5, 2026 &middot; 🕚 11:00 AM – 2:00 PM &middot; 📍 Kavat Cafe, 1638 Colorado Blvd, Eagle Rock &middot; 🎟️ $25 per ticket. Reserve via the link in @kavatcoffee's or @norserount.pasadena's bio.`,
+    link:"https://www.instagram.com/p/Df0a4sqBfLb", linkLabel:"Instagram",
+    poster:"images/stitch-and-brew-kavat-dec5.jpg",
+    art:{bg:"linear-gradient(160deg,#2a0a0a,#6a1a1a 55%,#e8c8a8)",fg:"#fff4ea",t:"STITCH &amp;<br>BREW",ts:"1.8rem",s:"Sat &middot; Dec 5 &middot; Kavat Cafe",serif:true}
+  },
+  {
+    title:"Paint & Sip for a Purpose — Homenetmen Massis",
+    date:"2026-12-06", start:"13:00", end:"15:00", endDate:"",
+    location:"Massis Gym, 20953 Osborne St, Canoga Park, CA 91304",
+    category:"Community",
+    description:`🎨🥂 <strong>Paint & Sip for a Purpose</strong>: calling all Massis moms, sisters, aunts, and friends! An afternoon of guided painting, drinks, light bites, and raffle prizes. No experience needed; all supplies included. 100% of proceeds support the Massis "Building Next Door" campaign.<br><br>📅 Sunday, December 6, 2026 &middot; 🕐 1:00 – 3:00 PM &middot; 📍 Massis Gym, 20953 Osborne St, Canoga Park &middot; 🎟️ $100 minimum donation, presale only. RSVP by November 30.`,
+    link:"https://www.zeffy.com/en-US/team/massis-wine-and-sip-night", linkLabel:"Tickets",
+    poster:"images/homenetmen-massis-paint-sip-dec6.jpg",
+    art:{bg:"linear-gradient(160deg,#3a0a0e,#8a1a22 55%,#f2a0a8)",fg:"#fff0f2",t:"PAINT &amp;<br>SIP",ts:"1.9rem",s:"Sun &middot; Dec 6 &middot; Canoga Park",serif:true}
+  },
+  {
+    title:"AGBU LA Choir — L.A. County Holiday Celebration",
+    date:"2026-12-20", start:"11:00", end:"17:00", endDate:"",
+    location:"Dorothy Chandler Pavilion, 135 N Grand Ave, Los Angeles, CA 90012",
+    category:"Music", free:true,
+    description:`🎄🎶 The <strong>AGBU LA Choir</strong> takes the stage at the iconic Dorothy Chandler Pavilion as part of the <strong>67th Annual L.A. County Holiday Celebration</strong>! Also broadcast on PBS on Christmas Eve and Christmas Day.<br><br>📅 Sunday, December 20, 2026 (new date) &middot; 🕚 Performances at 11 AM & 3 PM &middot; 📍 Dorothy Chandler Pavilion, Los Angeles &middot; 🎟️ FREE admission, reservation required. Hosted by @agbuwr × @agbulachoir.`,
+    link:"https://www.musiccenter.org/tickets-free-events/tmc-arts/l-a-county-holiday-celebration", linkLabel:"RSVP",
+    poster:"images/agbu-la-choir-holiday-celebration-dec20.jpg",
+    art:{bg:"linear-gradient(160deg,#0a0a1a,#1a1a4a 55%,#c8a8f8)",fg:"#f4f0ff",t:"AGBU LA<br>CHOIR",ts:"1.8rem",s:"Sun &middot; Dec 20 &middot; Dorothy Chandler",serif:true}
   }
 ];
 
@@ -538,8 +499,8 @@ function posterHTML(e){
   var a=e.art||{bg:"#222",fg:"#fff",t:e.title,ts:"1.3rem",s:""};
   var fam=a.serif?'Georgia,"Times New Roman",serif':'inherit';
   var art='<div class="art" style="background:'+a.bg+';color:'+a.fg+';font-family:'+fam+'"><div class="t" style="font-size:'+a.ts+'">'+a.t+'</div>'+(a.s?'<div class="s">'+a.s+'</div>':'')+'</div>';
-  var img=e.poster?'<img src="'+e.poster+'" alt="'+e.title+' poster" loading="lazy" onerror="this.style.display=\'none\'">':'';
-  return '<div class="poster">'+art+img+'</div>';
+  var img=e.poster?'<img src="'+e.poster+'" alt="'+e.title+' poster" loading="lazy" onerror="this.style.display=\'none\';this.parentNode.classList.add(\'noimg\')">':'';
+  return '<div class="poster'+(e.poster?'':' noimg')+'">'+art+img+'</div>';
 }
 function rangeBadge(e){if(!e.endDate||!e.date||e.endDate===e.date)return"";var s=pd(e.date),en=pd(e.endDate);if(!s||!en)return"";return ' <span class="rangebadge">'+MON[s.getMonth()]+' '+s.getDate()+' &ndash; '+MON[en.getMonth()]+' '+en.getDate()+'</span>';}
 function cardHTML(e){
@@ -589,10 +550,11 @@ var AREAS=[
   {n:"Glendale",k:["glendale"]},
   {n:"Burbank",k:["burbank"]},
   {n:"North Hollywood",k:["north hollywood","noho"]},
-  {n:"San Fernando Valley",k:["studio city","sherman oaks","encino","van nuys","tarzana","northridge","chatsworth","porter ranch","granada hills","reseda","calabasas","sunland","tujunga","sun valley","valley village","woodland hills"]},
+  {n:"San Fernando Valley",k:["studio city","sherman oaks","encino","van nuys","tarzana","northridge","chatsworth","porter ranch","granada hills","reseda","calabasas","sunland","tujunga","sun valley","valley village","woodland hills","canoga park","west hills","winnetka"]},
   {n:"Pasadena & San Gabriel Valley",k:["pasadena","arcadia","alhambra","la cañada","la canada","altadena","monrovia","san gabriel","montebello","pico rivera","south pasadena"]},
   {n:"Los Angeles",k:["los angeles","hollywood","silver lake","echo park","eagle rock","glassell park","atwater","los feliz","westwood","ucla","santa monica","beverly hills","culver city","malibu","venice"]},
-  {n:"Orange County",k:["orange county","newport beach","costa mesa","irvine","anaheim","huntington beach","fullerton"]}
+  {n:"Orange County",k:["orange county","newport beach","costa mesa","irvine","anaheim","huntington beach","fullerton"]},
+  {n:"Online",k:["online","virtual"]}
 ];
 function areaOf(e){
   var L=e.location||"",m=L.match(/([^,]+),\s*CA\b/g);

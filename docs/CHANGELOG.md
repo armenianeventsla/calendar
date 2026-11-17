@@ -20,6 +20,26 @@ Newest entries first. Each dated entry corresponds to a snapshot saved in
 
 ---
 
+## 2026-11-17 — 14 new events + posters (23 → 19)
+
+- **Kept Gohar's Nov 9 edit** on `main` (the schema.org Person search tag in the page head).
+- **Added 14 new events** from Gohar's Nov 17 poster upload and calendar entries: Boba for Change
+  (Nov 16–22), Becca Melkonian & Friends (Nov 17), USC ASA Friendsgiving (Nov 19), LuysHike #6
+  (Nov 21), Sing Yerevan Sing (Nov 22), Grateful Hearts virtual speed dating (Nov 22),
+  Zhengyalov Hats Cooking Night (Nov 23), Yeraz Turkey Trot (Nov 26), Cascad Friendsgiving
+  (Nov 29), Echoes of Artsakh (Nov 30), APS Professional Forum (Dec 5), Stitch & Brew (Dec 5),
+  Massis Paint & Sip (Dec 6), and the AGBU LA Choir holiday celebration (Dec 20).
+- **Removed 18 newly-past events** (Oct 30 – Nov 14).
+- **Skipped:** GCC Armenian Culture Day (Nov 17, 12–2 PM, already over).
+- **Area filter:** added Canoga Park / West Hills / Winnetka to San Fernando Valley, and an
+  "Online" area.
+- **Fix:** event cards without a poster photo keep a 4:5 poster shape instead of collapsing.
+- The site now has **19 event cards**.
+- **Deploy:** preview saved to `/deploy-previews/2026-11-17/`. **Not deployed**; waiting for
+  Gohar's green light.
+
+---
+
 ## 2026-10-30 — 5 new events + posters, GiniFest & GHOSTED updates (28 → 23)
 
 - **Added 5 new events** from Gohar's Oct 30 poster upload and calendar entries: Jack Jr
